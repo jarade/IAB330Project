@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork", "SuncorpNetwork\SuncorpNetwork.csproj", "{314C7DC5-AA11-42AC-9915-C1C77D0CF88A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork.Droid", "Droid\SuncorpNetwork.Droid.csproj", "{A1FBF674-8215-4FD0-99FF-F85D4F28B49C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork.UITests", "UITests\SuncorpNetwork.UITests.csproj", "{BC04BB5E-8769-4E6F-B496-118A79536068}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{314C7DC5-AA11-42AC-9915-C1C77D0CF88A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314C7DC5-AA11-42AC-9915-C1C77D0CF88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314C7DC5-AA11-42AC-9915-C1C77D0CF88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314C7DC5-AA11-42AC-9915-C1C77D0CF88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FBF674-8215-4FD0-99FF-F85D4F28B49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FBF674-8215-4FD0-99FF-F85D4F28B49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FBF674-8215-4FD0-99FF-F85D4F28B49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FBF674-8215-4FD0-99FF-F85D4F28B49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC04BB5E-8769-4E6F-B496-118A79536068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC04BB5E-8769-4E6F-B496-118A79536068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC04BB5E-8769-4E6F-B496-118A79536068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC04BB5E-8769-4E6F-B496-118A79536068}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
