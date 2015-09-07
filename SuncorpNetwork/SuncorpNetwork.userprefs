@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_15" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\SuncorpNetwork.cs">
+    <Files>
+      <File FileName="SuncorpNetwork\SuncorpNetwork.cs" Line="3" Column="7" />
+      <File FileName="Droid\MainActivity.cs" Line="18" Column="16" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

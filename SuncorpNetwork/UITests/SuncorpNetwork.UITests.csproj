@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC04BB5E-8769-4E6F-B496-118A79536068}</ProjectGuid>
+    <ProjectGuid>{8C9E8D71-564F-42F2-B34E-AD1456A4D4AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>SuncorpNetwork.UITests</RootNamespace>
     <AssemblyName>SuncorpNetwork.UITests</AssemblyName>
@@ -29,16 +29,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.0.7.1\lib\Xamarin.UITest.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Droid\SuncorpNetwork.Droid.csproj">
-      <Project>{A1FBF674-8215-4FD0-99FF-F85D4F28B49C}</Project>
+      <Project>{06367115-5965-45C1-8D12-80655AD31590}</Project>
       <Name>SuncorpNetwork.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
@@ -48,7 +42,4 @@
     <Compile Include="Tests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
 </Project>
