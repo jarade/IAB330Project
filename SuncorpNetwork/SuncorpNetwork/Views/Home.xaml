@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!---
+Not to be confused with BusinessProfile or PersonProfile.
+This page is to show the profile of the user and 
+will be the main page if remember me is applied.
+Original Author: Jarrod Eades Created: 9/09/2015
+-->
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="SuncorpNetwork.Home"
+				Title="Home"
+				Padding="0, 0, 0, 0"
+				BackgroundColor="Green">
+			
+			<AbsoluteLayout VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+
+                <!--- Background Stuff -->
+                	<Frame BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"  AbsoluteLayout.LayoutFlags="All"/>
+        	 	<!--- End -->
+
+        	 	<!-- Header Start -->
+	              	<Frame BackgroundColor="Green" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 0.15"  AbsoluteLayout.LayoutFlags="All"/>	
+
+	 				<Button 	BackgroundColor="White"
+
+	                			AbsoluteLayout.LayoutBounds="0.05, 0.03, 0.15, 0.1"  
+								AbsoluteLayout.LayoutFlags="All"
+							/>
+
+					<Label 	Text="Home Page"
+							FontSize="Large"
+							FontAttributes="Bold"
+							TextColor="White" 
+							XAlign="Center"
+							YAlign="End"
+							AbsoluteLayout.LayoutBounds="0.5, 0.0, 0.7, 0.1"  
+							AbsoluteLayout.LayoutFlags="All"
+						/>
+				<!-- Header End -->
+
+				<!-- Content Start -->
+					<Button AbsoluteLayout.LayoutBounds="0.05, 0.162, 0.3, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+							Text = "Tag"
+							FontSize = "12"
+							x:Name = "TagsBtn"
+							BorderRadius="0"
+							BorderWidth="0"
+						/>
+
+					<Picker	
+							AbsoluteLayout.LayoutBounds="0.5, 0.162, 0.3, 0.07"  
+							AbsoluteLayout.LayoutFlags="All"
+							Title="Sort By"
+							x:Name="SortByPicker"
+						/>
+
+					<StackLayout 	AbsoluteLayout.LayoutBounds="0.0, 0.7, 1.0, 0.675"  
+									AbsoluteLayout.LayoutFlags="All" 
+									x:Name="NewsSection" 
+									Spacing = "10"
+									Padding = "10,10,10,10"
+									VerticalOptions = "Start"
+									Orientation ="Vertical"
+									HorizontalOptions = "Center">
+								<!-- Add News from programming Data section to this area -->
+								<Grid	BackgroundColor="White">
+									<BoxView BackgroundColor="Blue"/>
+									<Label Text="NameFirst Last"/>
+									
+								</Grid>
+
+								<AbsoluteLayout
+												VerticalOptions="Fill"
+               				 					HorizontalOptions="Fill" 
+												BackgroundColor="White">
+									<Label Text="Hello"
+											AbsoluteLayout.LayoutBounds="0.1, 0.4, 1.0, 0.7"  
+											AbsoluteLayout.LayoutFlags="All" />
+								</AbsoluteLayout>
+						</StackLayout>
+						
+					
+					
+				<!-- Content End -->
+
+				<!-- Footer Start -->
+					<Frame BackgroundColor="Green" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+
+					<Button BackgroundColor="White"
+                			AbsoluteLayout.LayoutBounds="0.05, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+						/>
+
+					<Button BackgroundColor="White"
+	        				AbsoluteLayout.LayoutBounds="0.275, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+						/>
+
+					<Button BackgroundColor="White"
+	        				AbsoluteLayout.LayoutBounds="0.5, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+						/>
+
+					<Button BackgroundColor="White"
+	        				AbsoluteLayout.LayoutBounds="0.725, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+						/>
+
+					<Button BackgroundColor="White"
+	        				AbsoluteLayout.LayoutBounds="0.95, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+						/>
+
+				<!-- Footer Start -->
+			</AbsoluteLayout>
+</ContentPage>

@@ -9,17 +9,10 @@ namespace SuncorpNetwork
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
+			// if logged in previosly
+			MainPage = new Home(); 
+			// else
+			// MainPage = new Login();
 		}
 
 		protected override void OnStart ()

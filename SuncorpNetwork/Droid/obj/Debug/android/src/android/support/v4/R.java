@@ -13,8 +13,4 @@ public final class R {
     public static final class drawable {
         public static int icon=0x7f020000;
     }
-    public static final class string {
-        public static int ApplicationName=0x7f030001;
-        public static int Hello=0x7f030000;
-    }
 }
