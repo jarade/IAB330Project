@@ -10,7 +10,7 @@ namespace SuncorpNetwork
 		private Dictionary<string, int> gotTags = new Dictionary<string, int>();
 		private string[] sortBy = {"Recent", "Interests"};
 		private bool tagLock = false;
-		tags[] tag;
+		tags[] tagAr;
 
 		public Home ()
 		{
@@ -31,7 +31,7 @@ namespace SuncorpNetwork
 
 		private tags[] initTags(){
 			// Get tags from database...
-			tags[] tags = {
+			tags[] tempTagAr = {
 				new tags{Name = "IT", TextColour = Color.White, isChecked = false}, 
 				new tags{Name = "Education", TextColour = Color.White, isChecked = false},
 				new tags{Name = "Website", TextColour = Color.White, isChecked = false}, 
@@ -39,19 +39,18 @@ namespace SuncorpNetwork
 				new tags{Name = "Etc", TextColour = Color.White, isChecked = false}
 			};
 			int index = 0;
-			foreach (tags tag in tags) {
+			foreach (tags tag in tempTagAr) {
 				if (!gotTags.ContainsKey (tag.Name)) {
 					gotTags.Add (tag.Name, index);
 					index++;
 				}
 			}
 
-			return tags;
+			return tempTagAr;
 		}
 
 		private void createTagChoices(){
-			tag = initTags ();
-
+			tagAr = initTags ();
 
 			ListView lView = new ListView {
 				RowHeight = 40,
@@ -70,8 +69,8 @@ namespace SuncorpNetwork
 			DataTemplate template = new DataTemplate (typeof (TextCell));
 			template.SetBinding (TextCell.TextProperty, "Name");
 			template.SetBinding (TextCell.TextColorProperty, "TextColour");
-
-			lView.ItemsSource = tag;
+		
+			lView.ItemsSource = tagAr;
 			lView.ItemTemplate = template;
 
 			StackLayout options = new StackLayout {
@@ -93,10 +92,13 @@ namespace SuncorpNetwork
 		}
 
 		private void tappedSelection(object sender, ItemTappedEventArgs e){
-			int thisTag;
-			gotTags.TryGetValue(e.Item.ToString(), out thisTag);
-			tag [thisTag].isChecked = !tag [thisTag].isChecked;
-			DisplayAlert ("Tapped" , tag [thisTag].isChecked.ToString(), "Done");
+			int thisTag; // ((tags)e.Item).Name == gives string id name
+			gotTags.TryGetValue(((tags)e.Item).Name.ToString(), out thisTag);
+			tagAr [thisTag].isChecked = !tagAr [thisTag].isChecked;
+
+//			DisplayAlert ("Tapped", 
+//				tagAr [thisTag].isChecked.ToString(), "Done");
+			
 		}
 
 		/**	Disable the selection event for the tag selection 
@@ -136,21 +138,5 @@ namespace SuncorpNetwork
 			set;
 		}
 	}
-
-//	public class curvedGrid : Grid{
-//		public static readonly BindableProperty CornerRadiusProperty = 
-//			BindableProperty.Create<curvedGrid, double>(
-//				p => p.CornerRadius, default(double));
-//
-//		public double CornerRadius{
-//			get{ return(double)GetValue (CornerRadiusProperty); }
-//			set{ SetValue (CornerRadiusProperty, value); }
-//		}
-//	}
-//	public class tagCells:ViewCell{
-//		public tagsCell(){
-//
-//		}
-//	}
 }
 
