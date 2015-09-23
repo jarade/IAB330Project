@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!---
-Not to be confused with BusinessProfile or PersonProfile.
-This page is to show the profile of the user and 
+This page is to show the news feed of the user and 
 will be the main page if remember me is applied.
 Original Author: Jarrod Eades Created: 9/09/2015
 -->
@@ -16,11 +15,11 @@ Original Author: Jarrod Eades Created: 9/09/2015
                 HorizontalOptions="FillAndExpand">
 
                 <!--- Background Stuff -->
-                	<Frame BackgroundColor="Gray" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"  AbsoluteLayout.LayoutFlags="All"/>
+                	<Frame BackgroundColor="#0DA195" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"  AbsoluteLayout.LayoutFlags="All"/>
         	 	<!--- End -->
 
         	 	<!-- Header Start -->
-	              	<Frame BackgroundColor="Green" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 0.15"  AbsoluteLayout.LayoutFlags="All"/>	
+	              	<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 0.15"  AbsoluteLayout.LayoutFlags="All"/>	
 
 	 				<Button 	BackgroundColor="White"
 
@@ -65,20 +64,80 @@ Original Author: Jarrod Eades Created: 9/09/2015
 									Orientation ="Vertical"
 									HorizontalOptions = "Center">
 								<!-- Add News from programming Data section to this area -->
-								<Grid	BackgroundColor="White">
-									<BoxView BackgroundColor="Blue"/>
-									<Label Text="NameFirst Last"/>
-									
-								</Grid>
 
-								<AbsoluteLayout
-												VerticalOptions="Fill"
-               				 					HorizontalOptions="Fill" 
-												BackgroundColor="White">
-									<Label Text="Hello"
-											AbsoluteLayout.LayoutBounds="0.1, 0.4, 1.0, 0.7"  
-											AbsoluteLayout.LayoutFlags="All" />
-								</AbsoluteLayout>
+								<Grid	Padding = "10,10,10,10" 
+										BackgroundColor ="White">
+									<Grid.RowDefinitions>
+								      <RowDefinition Height="25" />
+								      <RowDefinition Height="50" />
+								      <RowDefinition Height="25" />
+								    </Grid.RowDefinitions>
+
+								    <Grid.ColumnDefinitions>
+								      <ColumnDefinition Width="Auto" />
+								      <ColumnDefinition Width="Auto" />
+								      <ColumnDefinition Width="Auto" />
+								    </Grid.ColumnDefinitions>
+
+									<Grid
+										Grid.Row = "0"
+										Grid.Column = "0">
+										<Grid.RowDefinitions>
+								      		<RowDefinition Height="25" />
+								      	</Grid.RowDefinitions>
+								      	 <Grid.ColumnDefinitions>
+								      		<ColumnDefinition Width="50" />
+								      		<ColumnDefinition Width="Auto" />
+								   		 </Grid.ColumnDefinitions>
+								   		 	<Image Source = "profile_filler.png"
+								   		 		BackgroundColor = "#007064"
+													Grid.Row = "0"
+													Grid.Column = "0"
+													WidthRequest = "25"
+													HeightRequest = "25"/>
+											<Grid
+												Grid.Row = "0"
+												Grid.Column = "1">
+												<Grid.RowDefinitions>
+										      		<RowDefinition Height="15" />
+										      		<RowDefinition Height="10" />
+										      	</Grid.RowDefinitions>
+										      	 <Grid.ColumnDefinitions>
+										      		<ColumnDefinition Width="Auto" />
+										   		 </Grid.ColumnDefinitions>
+												<Label 	Text="FirstName LastName"
+														TextColor = "#007064"
+														FontSize = "12"
+														FontAttributes = "Bold"
+														Grid.Row = "0"
+														Grid.Column = "0"/>
+												<Label 	Text = "##:##xx ## MMM YYYY"
+														TextColor = "#007064"
+														FontSize = "8"
+														FontAttributes = "Italic"
+														Grid.Row = "1"
+														Grid.Column = "0"/>
+											</Grid>
+									</Grid>
+
+									<Label	Text="I have started a business featuring an education based website. Pm me for More info."
+											TextColor = "#007064"
+											FontSize = "10"
+											Grid.Row = "1"
+											Grid.Column = "0" />
+
+									<Label	Text="#Education"
+											TextColor = "#007064"
+											FontSize = "8"
+											Grid.Row = "2"
+											Grid.Column = "0" />
+
+									<Label	Text="Read More.."
+											TextColor = "#007064"
+											FontSize = "10"
+											Grid.Row = "2"
+											Grid.Column = "1" />
+								</Grid>
 						</StackLayout>
 						
 					
@@ -86,31 +145,37 @@ Original Author: Jarrod Eades Created: 9/09/2015
 				<!-- Content End -->
 
 				<!-- Footer Start -->
-					<Frame BackgroundColor="Green" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+					<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
 
-					<Button BackgroundColor="White"
+					<Button 
                 			AbsoluteLayout.LayoutBounds="0.05, 0.9875, 0.15, 0.075"  
 							AbsoluteLayout.LayoutFlags="All"
+							Image = "ic_chat_white_24dp.png"
 						/>
 
-					<Button BackgroundColor="White"
+					<Button
 	        				AbsoluteLayout.LayoutBounds="0.275, 0.9875, 0.15, 0.075"  
 							AbsoluteLayout.LayoutFlags="All"
+							Image = "ic_notifications_white_24dp.png"
 						/>
 
-					<Button BackgroundColor="White"
+					<Button
 	        				AbsoluteLayout.LayoutBounds="0.5, 0.9875, 0.15, 0.075"  
 							AbsoluteLayout.LayoutFlags="All"
+							Image = "ic_account_balance_white_24dp.png"
+
 						/>
 
-					<Button BackgroundColor="White"
+					<Button
 	        				AbsoluteLayout.LayoutBounds="0.725, 0.9875, 0.15, 0.075"  
 							AbsoluteLayout.LayoutFlags="All"
+							Image = "ic_add_circle_white_24dp.png"
 						/>
 
-					<Button BackgroundColor="White"
+					<Button
 	        				AbsoluteLayout.LayoutBounds="0.95, 0.9875, 0.15, 0.075"  
 							AbsoluteLayout.LayoutFlags="All"
+							Image = "ic_account_circle_white_24dp.png"
 						/>
 
 				<!-- Footer Start -->

@@ -18,3 +18,13 @@ D:\IAB330\Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.csprojR
 D:\IAB330\Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.dll
 D:\IAB330\Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.pdb
 D:\IAB330\Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Home.xaml.g.cs
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\SuncorpNetwork.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\SuncorpNetwork.pdb
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\Xamarin.Forms.Core.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\Xamarin.Forms.Core.xml
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.csprojResolveAssemblyReference.cache
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Home.xaml.g.cs
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.pdb
