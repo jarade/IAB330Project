@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.smallerTest" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\Home.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\Home.xaml.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\Home.xaml" Line="119" Column="40" />
-      <File FileName="SuncorpNetwork\Views\Home.xaml.cs" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\Home.xaml" Line="69" Column="9" />
+      <File FileName="SuncorpNetwork\Views\Home.xaml.cs" Line="143" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

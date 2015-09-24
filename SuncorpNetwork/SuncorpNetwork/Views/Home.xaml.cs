@@ -38,6 +38,7 @@ namespace SuncorpNetwork
 				new tags{Name = "Construction", TextColour = Color.White, isChecked = false}, 
 				new tags{Name = "Etc", TextColour = Color.White, isChecked = false}
 			};
+
 			int index = 0;
 			foreach (tags tag in tempTagAr) {
 				if (!gotTags.ContainsKey (tag.Name)) {
@@ -53,7 +54,6 @@ namespace SuncorpNetwork
 			tagAr = initTags ();
 
 			ListView lView = new ListView {
-				RowHeight = 40,
 				BackgroundColor = Color.Black
 			};
 
@@ -66,10 +66,14 @@ namespace SuncorpNetwork
 			lView.ItemTapped += tappedSelection;
 			done.Clicked += sendBack;
 
-			DataTemplate template = new DataTemplate (typeof (TextCell));
-			template.SetBinding (TextCell.TextProperty, "Name");
-			template.SetBinding (TextCell.TextColorProperty, "TextColour");
-		
+			DataTemplate template = new DataTemplate (typeof (ImageCell));
+				
+			template.SetBinding(ImageCell.TextProperty, "Name");
+			template.SetBinding(ImageCell.TextColorProperty, "TextColour");
+			template.SetBinding (ImageCell.ImageSourceProperty, "checkImage");
+			//template.SetBinding (TextCell.TextProperty, "Name");
+			//template.SetBinding (TextCell.TextColorProperty, "TextColour");
+
 			lView.ItemsSource = tagAr;
 			lView.ItemTemplate = template;
 
@@ -96,8 +100,8 @@ namespace SuncorpNetwork
 			gotTags.TryGetValue(((tags)e.Item).Name.ToString(), out thisTag);
 			tagAr [thisTag].isChecked = !tagAr [thisTag].isChecked;
 
-//			DisplayAlert ("Tapped", 
-//				tagAr [thisTag].isChecked.ToString(), "Done");
+			//DisplayAlert ("Tapped", 
+			//	tagAr [thisTag].TextColour.ToString(), "Done");
 			
 		}
 
@@ -119,9 +123,15 @@ namespace SuncorpNetwork
 			// string mssage = "This message will be displayed as a message. It will be replaced by the database text.";
 			//string name = "Jarrod Eades";
 			//Image image;
+
+//			var grid = new Grid {
+//				RowSpacing = 20
+//			};
 		}
 	}
 
+	/**	A class for the tags to set colour, if it is checked as its id is Name.
+	 **/
 	public class tags{
 		public string Name {
 			get;
@@ -136,6 +146,19 @@ namespace SuncorpNetwork
 		public bool isChecked {
 			get;
 			set;
+		}
+
+		public String checkImage {
+			get {
+				String sourceImageFileName;
+				if (isChecked) {
+					sourceImageFileName = "icon.png";//"checked.png";
+				}else{
+					sourceImageFileName = "profile_filler.png";//"unchecked.png";
+				}
+
+				return sourceImageFileName;
+			}
 		}
 	}
 }
