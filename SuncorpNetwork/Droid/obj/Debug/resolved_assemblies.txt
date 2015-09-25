@@ -59,6 +59,10 @@ D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System.Xml.ReaderWriter.dll
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System.Xml.XDocument.dll
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System.Xml.XmlSerializer.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\SuncorpNetwork.Data.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\GalaSoft.MvvmLight.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\Microsoft.Practices.ServiceLocation.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\GalaSoft.MvvmLight.Extras.dll
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System.Runtime.Serialization.dll
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System.Net.Http.dll
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\assemblies\System.ComponentModel.DataAnnotations.dll

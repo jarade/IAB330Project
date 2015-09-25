@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!---
+This page is to show the news feed of the user and 
+will be the main page if remember me is applied.
+Original Author: Jarrod Eades Created: 9/09/2015
+-->
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="SuncorpNetwork.Home"
+				Title="Home"
+				Padding="0, 0, 0, 0"
+				BackgroundColor="#0DA195">
+
+			<AbsoluteLayout VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+
+				<!-- Content Start -->
+					<Button AbsoluteLayout.LayoutBounds="0.95, 0.162, 0.3, 0.0"  
+							AbsoluteLayout.LayoutFlags="All"
+							Text = "Tag"
+							FontSize = "12"
+							x:Name = "TagsBtn"
+							BorderRadius="0"
+							BorderWidth="0"
+						/>
+
+					<Picker	
+							AbsoluteLayout.LayoutBounds="0.5, 0.162, 0.3, 0.00"  
+							AbsoluteLayout.LayoutFlags="All"
+							BackgroundColor = "White"
+							HeightRequest = "25"
+							Title="Sort By"
+							x:Name="SortByPicker"
+						/>
+
+					<StackLayout 	AbsoluteLayout.LayoutBounds="0.0, 0.7, 1.0, 0.675"  
+									AbsoluteLayout.LayoutFlags="All" 
+									x:Name="NewsSection" 
+									Spacing = "10"
+									Padding = "10,10,10,10"
+									VerticalOptions = "Start"
+									Orientation ="Vertical"
+									HorizontalOptions = "Center">
+						<!-- Add News from programming Data section to this area -->
+					</StackLayout>
+
+				<!-- Content End -->
+				<!-- Footer Start -->
+					<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+
+					<Button 
+               	 			AbsoluteLayout.LayoutBounds="0.05, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+							BackgroundColor = "Transparent"
+							Image = "ic_chat_white_24dp.png"
+							Clicked = "messageBtnClicked"
+						/>
+
+					<Button
+	        				AbsoluteLayout.LayoutBounds="0.275, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+							BackgroundColor = "Transparent"
+							Image = "ic_notifications_white_24dp.png"
+							Clicked = "alertBtnClicked"
+						/>
+
+					<Button
+	        				AbsoluteLayout.LayoutBounds="0.5, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+							BackgroundColor = "Transparent"
+							Image = "ic_account_balance_white_24dp.png"
+							Clicked = "homeBtnClicked"
+						/>
+
+					<Button
+	        				AbsoluteLayout.LayoutBounds="0.725, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+							BackgroundColor = "Transparent"
+							Image = "ic_add_circle_white_24dp.png"
+							Clicked = "addBtnClicked"
+						/>
+
+					<Button
+	        				AbsoluteLayout.LayoutBounds="0.95, 0.9875, 0.15, 0.075"  
+							AbsoluteLayout.LayoutFlags="All"
+							BackgroundColor = "Transparent"
+							Image = "ic_account_circle_white_24dp.png"
+							Clicked = "profileBtnClicked"
+						/>
+
+				<!-- Footer End -->
+			</AbsoluteLayout>
+</ContentPage>

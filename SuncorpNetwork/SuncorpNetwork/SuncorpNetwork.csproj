@@ -32,8 +32,48 @@
   <ItemGroup>
     <Compile Include="SuncorpNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Home.xaml.cs">
+    <Compile Include="Views\MainPages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\Contact_Us.xaml.cs">
+      <DependentUpon>Contact_Us.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\Forums.xaml.cs">
+      <DependentUpon>Forums.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\InsuranceFinance.xaml.cs">
+      <DependentUpon>InsuranceFinance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\Learning_Resources.xaml.cs">
+      <DependentUpon>Learning_Resources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\SideBar\MenuItem.cs" />
+    <Compile Include="Views\SideBar\SideBar\MenuListData.cs" />
+    <Compile Include="Views\SideBar\SideBar\MenuListView.cs" />
+    <Compile Include="Views\SideBar\SideBar\MenuPage.cs" />
+    <Compile Include="Views\SideBar\SideBar\SideNavi.xaml.cs">
+      <DependentUpon>SideNavi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\Searching_Business.xaml.cs">
+      <DependentUpon>Searching_Business.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\SubPages\Add.xaml.cs">
+      <DependentUpon>..\..\SubPages\Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\SubPages\Alert.xaml.cs">
+      <DependentUpon>..\..\SubPages\Alert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\SubPages\Messages.xaml.cs">
+      <DependentUpon>..\..\SubPages\Messages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\SubPages\PersonalProfile.xaml.cs">
+      <DependentUpon>..\..\SubPages\PersonalProfile.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -47,14 +87,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="Views\packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="Views\SideBar\" />
+    <Folder Include="Views\MainPages\" />
+    <Folder Include="Views\SideBar\Pages\" />
+    <Folder Include="Views\SideBar\SideBar\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Home.xaml">
+    <EmbeddedResource Include="Views\MainPages\Home.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\Contact_Us.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\Forums.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\InsuranceFinance.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\Learning_Resources.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPages\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\SideBar\SideNavi.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\Searching_Business.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPages\SubPages\Add.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPages\SubPages\Alert.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPages\SubPages\Messages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPages\SubPages\PersonalProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuncorpNetwork.Data\SuncorpNetwork.Data.csproj">
+      <Project>{F59ED77B-9621-48DA-B36C-0EE467448138}</Project>
+      <Name>SuncorpNetwork.Data</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

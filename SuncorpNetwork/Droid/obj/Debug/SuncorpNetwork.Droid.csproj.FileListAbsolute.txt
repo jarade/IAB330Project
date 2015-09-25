@@ -98,3 +98,14 @@ D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable-xxxh
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable-xxxhdpi\ic_chat_white_24dp.png
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable-xxxhdpi\ic_notifications_white_24dp.png
 D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\profile_filler.png
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\SuncorpNetwork.Data.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\GalaSoft.MvvmLight.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\SuncorpNetwork.Data.pdb
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\GalaSoft.MvvmLight.pdb
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\GalaSoft.MvvmLight.xml
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+D:\IAB330\Project\IAB330Project\SuncorpNetwork\Droid\bin\Debug\GalaSoft.MvvmLight.Extras.xml

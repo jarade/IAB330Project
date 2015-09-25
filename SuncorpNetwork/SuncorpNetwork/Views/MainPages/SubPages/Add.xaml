@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Add"				Title="Messages"
+				Padding="0, 0, 0, 0"
+				BackgroundColor="Green">
+
+	<AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <!--- Background Stuff -->
+        	<Frame BackgroundColor="#0DA195" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"  AbsoluteLayout.LayoutFlags="All"/>
+	 	<!--- End -->
+
+	 	<!-- Header Start -->
+          	<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 0.15"  AbsoluteLayout.LayoutFlags="All"/>	
+
+			<Button 	BackgroundColor="White"
+            			AbsoluteLayout.LayoutBounds="0.05, 0.03, 0.15, 0.1"  
+						AbsoluteLayout.LayoutFlags="All"
+					/>
+
+			<Label 	Text="Messages"
+					FontSize="Large"
+					FontAttributes="Bold"
+					TextColor="White" 
+					XAlign="Center"
+					YAlign="End"
+					AbsoluteLayout.LayoutBounds="0.5, 0.0, 0.7, 0.1"  
+					AbsoluteLayout.LayoutFlags="All"
+				/>
+		<!-- Header End -->
+
+		<!-- Footer Start -->
+			<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+
+			<Button 
+        			AbsoluteLayout.LayoutBounds="0.05, 0.9875, 0.15, 0.075"  
+					AbsoluteLayout.LayoutFlags="All"
+					BackgroundColor = "Transparent"
+					Image = "ic_chat_white_24dp.png"
+				/>
+
+			<Button
+				AbsoluteLayout.LayoutBounds="0.275, 0.9875, 0.15, 0.075"  
+				AbsoluteLayout.LayoutFlags="All"
+				BackgroundColor = "Transparent"
+				Image = "ic_notifications_white_24dp.png"/>
+
+			<Button
+    				AbsoluteLayout.LayoutBounds="0.5, 0.9875, 0.15, 0.075"  
+					AbsoluteLayout.LayoutFlags="All"
+					BackgroundColor = "Transparent"
+					Image = "ic_account_balance_white_24dp.png"
+
+				/>
+
+			<Button
+    				AbsoluteLayout.LayoutBounds="0.725, 0.9875, 0.15, 0.075"  
+					AbsoluteLayout.LayoutFlags="All"
+					BackgroundColor = "Transparent"
+					Image = "ic_add_circle_white_24dp.png"
+				/>
+
+			<Button
+    				AbsoluteLayout.LayoutBounds="0.95, 0.9875, 0.15, 0.075"  
+					AbsoluteLayout.LayoutFlags="All"
+					BackgroundColor = "Transparent"
+					Image = "ic_account_circle_white_24dp.png"
+				/>
+
+		<!-- Footer End -->
+	</AbsoluteLayout>
+</ContentPage>

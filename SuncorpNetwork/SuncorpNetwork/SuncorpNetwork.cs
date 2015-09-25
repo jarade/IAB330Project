@@ -8,11 +8,18 @@ namespace SuncorpNetwork
 	{
 		public App ()
 		{
-			// The root page of your application
+			MainPage = GetMainPage();// The root page of your application
+		}
+
+		public static Page GetMainPage(){
+			Page main;
 			// if logged in previosly
-			MainPage = new Home(); 
 			// else
 			// MainPage = new Login();
+			main = new Login();
+
+			return main; 
+		
 		}
 
 		protected override void OnStart ()

@@ -9,24 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork.UITests", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork.Data", "SuncorpNetwork.Data\SuncorpNetwork.Data.csproj", "{F59ED77B-9621-48DA-B36C-0EE467448138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork.Data.Droid", "Droid\SuncorpNetwork.Data.Droid.csproj", "{4D92D713-509C-47A0-BAC5-A24D8390FAC3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuncorpNetwork.Data.UITests", "UITests\SuncorpNetwork.Data.UITests.csproj", "{73FB650D-289D-4719-8243-FB74713E2FF3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D92D713-509C-47A0-BAC5-A24D8390FAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D92D713-509C-47A0-BAC5-A24D8390FAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D92D713-509C-47A0-BAC5-A24D8390FAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D92D713-509C-47A0-BAC5-A24D8390FAC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73FB650D-289D-4719-8243-FB74713E2FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73FB650D-289D-4719-8243-FB74713E2FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73FB650D-289D-4719-8243-FB74713E2FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73FB650D-289D-4719-8243-FB74713E2FF3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A93302C7-FE3B-4C74-B7F4-A3B3DC564803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A93302C7-FE3B-4C74-B7F4-A3B3DC564803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A93302C7-FE3B-4C74-B7F4-A3B3DC564803}.Release|Any CPU.ActiveCfg = Release|Any CPU
