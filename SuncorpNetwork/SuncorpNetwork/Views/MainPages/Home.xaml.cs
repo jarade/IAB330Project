@@ -174,7 +174,7 @@ namespace SuncorpNetwork
 				FontSize = 10,
 				BackgroundColor = Color.Transparent,
 				HeightRequest = 25,
-				WidthRequest = 25
+				WidthRequest = 50
 			};
 
 			// Add children
@@ -194,18 +194,22 @@ namespace SuncorpNetwork
 			Grid grid = new Grid {
 				Padding = new Thickness(10,5,10,5), 
 				RowSpacing = 1,
+				VerticalOptions = LayoutOptions.FillAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 				BackgroundColor = Color.White
 			};
 
 			RowDefinition r = new RowDefinition ();
 			r.Height = 40;
-			grid.RowDefinitions.Add (r);
+			grid.RowDefinitions.Insert (0, r);
 
-			r.Height = 50;
-			grid.RowDefinitions.Add (r);
+			RowDefinition r1 = new RowDefinition ();
+			r1.Height = 60;
+			grid.RowDefinitions.Insert (1 , r1);
 
-			r.Height = 30;
-			grid.RowDefinitions.Add (r);
+			RowDefinition r2 = new RowDefinition ();
+			r2.Height = 30;
+			grid.RowDefinitions.Insert (2 , r2);
 
 			ColumnDefinition c = new ColumnDefinition ();
 			c.Width = GridLength.Auto;
@@ -224,24 +228,29 @@ namespace SuncorpNetwork
 			Grid innerGrid = new Grid {
 				Padding = 0
 			};
-
 			ColumnDefinition c = new ColumnDefinition();
-			c.Width = 25;
-			innerGrid.ColumnDefinitions.Add(c);
+			ColumnDefinition c1 = new ColumnDefinition();
+			ColumnDefinition c2 = new ColumnDefinition();
 
-			c.Width = GridLength.Auto;
-			innerGrid.ColumnDefinitions.Add(c);
+			c.Width = 25;
+			innerGrid.ColumnDefinitions.Insert(0, c);
+
+			c1.Width = 50;
+			innerGrid.ColumnDefinitions.Insert(1, c1);
+
+			c2.Width = 50;
+			innerGrid.ColumnDefinitions.Insert(2, c2);
 
 			// Create the profile image
 			Image profileImage = new Image {
 				Source = profileImageLoc,
-				HeightRequest = 25,
+				HeightRequest = 15,
 				WidthRequest = 25,
 				BackgroundColor = Color.FromHex("#007064")
 			};
 
 			innerGrid.Children.Add (profileImage, 0 ,0);
-			innerGrid.Children.Add (createLabelGrid(), 1, 3, 0, 1);
+			innerGrid.Children.Add (createLabelGrid(), 1, 10, 0, 1);
 
 			return innerGrid;
 		}
@@ -259,21 +268,24 @@ namespace SuncorpNetwork
 			};
 
 			RowDefinition r = new RowDefinition ();
-			r.Height = 10;
+			r.Height = GridLength.Auto;;
 			labelGrid.RowDefinitions.Add(r);
-			r.Height = 13;
-			labelGrid.RowDefinitions.Add(r);
+		
+			ColumnDefinition c = new ColumnDefinition();
+			c.Width = 60;
+			labelGrid.ColumnDefinitions.Add (c);
 
 			// Create Labels
 			Label name = createFeedLabel (nameText, 12);
 			name.FontAttributes = FontAttributes.Bold;
+			name.WidthRequest = 200;
 
-			Label dateTime = createFeedLabel (dataTimeText, 10);
+			Label dateTime = createFeedLabel (dataTimeText, 8);
 			dateTime.FontAttributes = FontAttributes.Italic;
 
 			// Add lables
-			labelGrid.Children.Add (name, 0, 2, 0, 1);
-			labelGrid.Children.Add (dateTime, 1, 2, 1, 2);
+			labelGrid.Children.Add (name, 0, 8, 0, 1);
+			labelGrid.Children.Add (dateTime, 3, 7, 1, 2);
 
 			return labelGrid;
 		}

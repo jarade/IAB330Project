@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.smallerTest" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\Home.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\Home.xaml.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListData.cs" Line="12" Column="5" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuPage.cs" Line="23" Column="19" />
+      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListData.cs" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuPage.cs" Line="1" Column="1" />
       <File FileName="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml.cs" Line="18" Column="32" />
+      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml.cs" Line="1" Column="1" />
       <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListView.cs" Line="20" Column="4" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="11" Column="15" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="64" Column="37" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="281" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

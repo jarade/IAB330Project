@@ -16,16 +16,16 @@ namespace SuncorpNetwork {
     
     public partial class Home : ContentPage {
         
-        private Button TagsBtn;
-        
         private Picker SortByPicker;
+        
+        private Button TagsBtn;
         
         private StackLayout NewsSection;
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Home));
-            TagsBtn = this.FindByName<Button>("TagsBtn");
             SortByPicker = this.FindByName<Picker>("SortByPicker");
+            TagsBtn = this.FindByName<Button>("TagsBtn");
             NewsSection = this.FindByName<StackLayout>("NewsSection");
         }
     }

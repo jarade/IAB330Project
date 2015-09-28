@@ -11,83 +11,98 @@ Original Author: Jarrod Eades Created: 9/09/2015
 				Padding="0, 0, 0, 0"
 				BackgroundColor="#0DA195">
 
-			<AbsoluteLayout VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height = "1*"/>
+						<RowDefinition Height = "8*"/>
+						<RowDefinition Height = "1.2*"/>
+					</Grid.RowDefinitions>
+					<!-- Content Start -->
+						<StackLayout
+									Grid.Row = "0"
+									Orientation = "Horizontal"
+									HorizontalOptions = "End"
+									VerticalOptions = "CenterAndExpand"
+								>
+							<Picker	
+									BackgroundColor = "White"
+									HeightRequest = "40"
+									WidthRequest = "100"
+									Title="Sort By"
+									x:Name="SortByPicker"
+								/>
 
-				<!-- Content Start -->
-					<Button AbsoluteLayout.LayoutBounds="0.95, 0.162, 0.3, 0.0"  
-							AbsoluteLayout.LayoutFlags="All"
-							Text = "Tag"
-							FontSize = "12"
-							x:Name = "TagsBtn"
-							BorderRadius="0"
-							BorderWidth="0"
-						/>
+							<Button
+									Text = "Tag"
+									FontSize = "12"
+									x:Name = "TagsBtn"
+									BorderRadius="0"
+									BorderWidth="0"
+									HeightRequest = "40"
+									WidthRequest = "100"
+								/>
+						</StackLayout>
 
-					<Picker	
-							AbsoluteLayout.LayoutBounds="0.5, 0.162, 0.3, 0.00"  
-							AbsoluteLayout.LayoutFlags="All"
-							BackgroundColor = "White"
-							HeightRequest = "25"
-							Title="Sort By"
-							x:Name="SortByPicker"
-						/>
-
-					<StackLayout 	AbsoluteLayout.LayoutBounds="0.0, 0.7, 1.0, 0.675"  
-									AbsoluteLayout.LayoutFlags="All" 
+						<StackLayout
+									Grid.Row = "1"
 									x:Name="NewsSection" 
 									Spacing = "10"
 									Padding = "10,10,10,10"
-									VerticalOptions = "Start"
+									VerticalOptions = "StartAndExpand"
 									Orientation ="Vertical"
-									HorizontalOptions = "Center">
-						<!-- Add News from programming Data section to this area -->
-					</StackLayout>
+									HorizontalOptions = "Center"
+								>
+							<!-- Add News from programming Data section to this area -->
+						</StackLayout>
 
-				<!-- Content End -->
-				<!-- Footer Start -->
-					<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+					<!-- Content End -->
+					<!-- Footer Start -->
+						<Frame 
+								Grid.Row = "2"
+								Padding = "0,0,0,0"
+								BackgroundColor = "#007064"
+								OutlineColor = "Transparent" 
+							>
+							<StackLayout 
+										Orientation = "Horizontal"
+										HorizontalOptions = "CenterAndExpand"
+										>
+								<Button 
+										BackgroundColor = "#007064"
+										Image = "ic_chat_white_24dp.png"
+										Clicked = "messageBtnClicked"
+										WidthRequest = "50"
+									/>
 
-					<Button 
-               	 			AbsoluteLayout.LayoutBounds="0.05, 0.9875, 0.15, 0.075"  
-							AbsoluteLayout.LayoutFlags="All"
-							BackgroundColor = "Transparent"
-							Image = "ic_chat_white_24dp.png"
-							Clicked = "messageBtnClicked"
-						/>
+								<Button
+										BackgroundColor = "#007064"
+										Image = "ic_notifications_white_24dp.png"
+										Clicked = "alertBtnClicked"
+										WidthRequest = "50"
+									/>
 
-					<Button
-	        				AbsoluteLayout.LayoutBounds="0.275, 0.9875, 0.15, 0.075"  
-							AbsoluteLayout.LayoutFlags="All"
-							BackgroundColor = "Transparent"
-							Image = "ic_notifications_white_24dp.png"
-							Clicked = "alertBtnClicked"
-						/>
+								<Button
+										BackgroundColor = "#007064"
+										Image = "ic_account_balance_white_24dp.png"
+										Clicked = "homeBtnClicked"
+										WidthRequest = "50"
+									/>
 
-					<Button
-	        				AbsoluteLayout.LayoutBounds="0.5, 0.9875, 0.15, 0.075"  
-							AbsoluteLayout.LayoutFlags="All"
-							BackgroundColor = "Transparent"
-							Image = "ic_account_balance_white_24dp.png"
-							Clicked = "homeBtnClicked"
-						/>
+								<Button
+										BackgroundColor = "#007064"
+										Image = "ic_add_circle_white_24dp.png"
+										Clicked = "addBtnClicked"
+										WidthRequest = "50"
+									/>
 
-					<Button
-	        				AbsoluteLayout.LayoutBounds="0.725, 0.9875, 0.15, 0.075"  
-							AbsoluteLayout.LayoutFlags="All"
-							BackgroundColor = "Transparent"
-							Image = "ic_add_circle_white_24dp.png"
-							Clicked = "addBtnClicked"
-						/>
-
-					<Button
-	        				AbsoluteLayout.LayoutBounds="0.95, 0.9875, 0.15, 0.075"  
-							AbsoluteLayout.LayoutFlags="All"
-							BackgroundColor = "Transparent"
-							Image = "ic_account_circle_white_24dp.png"
-							Clicked = "profileBtnClicked"
-						/>
-
-				<!-- Footer End -->
-			</AbsoluteLayout>
+								<Button
+										BackgroundColor = "#007064"
+										Image = "ic_account_circle_white_24dp.png"
+										Clicked = "profileBtnClicked"
+										WidthRequest = "50"
+									/>
+							</StackLayout>
+						</Frame>
+					<!-- Footer End -->
+				</Grid>
 </ContentPage>
