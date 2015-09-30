@@ -16,8 +16,14 @@ namespace SuncorpNetwork {
     
     public partial class Alert : ContentPage {
         
+        private Grid GridContent;
+        
+        private StackLayout NotificationListSection;
+        
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Alert));
+            GridContent = this.FindByName<Grid>("GridContent");
+            NotificationListSection = this.FindByName<StackLayout>("NotificationListSection");
         }
     }
 }

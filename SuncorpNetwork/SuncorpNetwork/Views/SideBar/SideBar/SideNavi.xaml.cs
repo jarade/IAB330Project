@@ -13,17 +13,27 @@ namespace SuncorpNetwork
 			menuPage.Menu.ItemSelected += (sender, e) => NavigateTo (e.SelectedItem as MenuItem);
 			Master = menuPage;
 
-			var homePage = new NavigationPage (new Home ());
-			homePage.BarBackgroundColor = Color.FromHex("#007064");
-			homePage.HeightRequest = 50;
-			Detail = homePage;
+			Detail = setupPage(new Home());
 		}
 
-		private void NavigateTo (MenuItem menu){
+		public void NavigateTo (MenuItem menu){
 			Page displayPage = (Page)Activator.CreateInstance (menu.TargetType);
-			Detail = new NavigationPage (displayPage);
+			Detail =setupPage(displayPage);
 
 			IsPresented = false;
+		}
+
+		public void switchTo(Page displayPage){
+			Detail = setupPage(displayPage);
+
+			IsPresented = false;
+		}
+
+		private NavigationPage setupPage(Page displayPage){
+			var page = new NavigationPage (displayPage);
+			page.BarBackgroundColor = Color.FromHex("#007064");
+			page.HeightRequest = 50;
+			return page;
 		}
 	}
 }

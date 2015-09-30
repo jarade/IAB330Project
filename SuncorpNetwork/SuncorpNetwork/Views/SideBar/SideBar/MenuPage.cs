@@ -28,6 +28,7 @@ namespace SuncorpNetwork
 				Spacing = 0, 
 				VerticalOptions = LayoutOptions.FillAndExpand
 			};
+
 			layout.Children.Add (menuLabel);
 			layout.Children.Add (Menu);
 

@@ -42,19 +42,22 @@ Original Author: Jarrod Eades Created: 9/09/2015
 									WidthRequest = "100"
 								/>
 						</StackLayout>
-
-						<StackLayout
+						<ScrollView 
 									Grid.Row = "1"
-									x:Name="NewsSection" 
-									Spacing = "10"
-									Padding = "10,10,10,10"
-									VerticalOptions = "StartAndExpand"
-									Orientation ="Vertical"
-									HorizontalOptions = "Center"
+									Orientation = "Vertical"
+									Padding = "0, 0, 0, 0"
 								>
-							<!-- Add News from programming Data section to this area -->
-						</StackLayout>
-
+							<StackLayout
+										x:Name="NewsSection" 
+										Spacing = "10"
+										Padding = "10,10,10,10"
+										VerticalOptions = "StartAndExpand"
+										Orientation ="Vertical"
+										HorizontalOptions = "CenterAndExpand"
+									>
+								<!-- Add News from programming Data section to this area -->
+							</StackLayout>
+						</ScrollView>
 					<!-- Content End -->
 					<!-- Footer Start -->
 						<Frame 

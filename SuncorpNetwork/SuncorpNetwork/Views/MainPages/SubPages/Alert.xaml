@@ -1,72 +1,71 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Alert"				Title="Messages"
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="SuncorpNetwork.Alert"				
+				Title="Alerts"
 				Padding="0, 0, 0, 0"
-				BackgroundColor="Green">
+				BackgroundColor="#0DA195">
+	<Grid x:Name = "GridContent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "9*"/>
+			<RowDefinition Height = "1.2*"/>
+		</Grid.RowDefinitions>
 
-	<AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<StackLayout 
+					Grid.Row = "0"
+					Padding = "0,5,0,0"
+					x:Name = "NotificationListSection"
+					>
 
-        <!--- Background Stuff -->
-        	<Frame BackgroundColor="#0DA195" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"  AbsoluteLayout.LayoutFlags="All"/>
-	 	<!--- End -->
-
-	 	<!-- Header Start -->
-          	<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 0.15"  AbsoluteLayout.LayoutFlags="All"/>	
-
-			<Button 	BackgroundColor="White"
-            			AbsoluteLayout.LayoutBounds="0.05, 0.03, 0.15, 0.1"  
-						AbsoluteLayout.LayoutFlags="All"
-					/>
-
-			<Label 	Text="Messages"
-					FontSize="Large"
-					FontAttributes="Bold"
-					TextColor="White" 
-					XAlign="Center"
-					YAlign="End"
-					AbsoluteLayout.LayoutBounds="0.5, 0.0, 0.7, 0.1"  
-					AbsoluteLayout.LayoutFlags="All"
-				/>
-		<!-- Header End -->
+		</StackLayout>
 
 		<!-- Footer Start -->
-			<Frame BackgroundColor="#007064" AbsoluteLayout.LayoutBounds="0.0, 1.0, 1.0, 0.1"  AbsoluteLayout.LayoutFlags="All"/>
+			<Frame 
+					Grid.Row = "1"
+					Padding = "0,0,0,0"
+					BackgroundColor = "#007064"
+					OutlineColor = "Transparent" 
+				>
+				<StackLayout 
+							Orientation = "Horizontal"
+							HorizontalOptions = "CenterAndExpand"
+							>
+					<Button 
+							BackgroundColor = "#007064"
+							Image = "ic_chat_white_24dp.png"
+							Clicked = "messageBtnClicked"
+							WidthRequest = "50"
+						/>
 
-			<Button 
-        			AbsoluteLayout.LayoutBounds="0.05, 0.9875, 0.15, 0.075"  
-					AbsoluteLayout.LayoutFlags="All"
-					BackgroundColor = "Transparent"
-					Image = "ic_chat_white_24dp.png"
-				/>
+					<Button
+							BackgroundColor = "#007064"
+							Image = "ic_notifications_white_24dp.png"
+							Clicked = "alertBtnClicked"
+							WidthRequest = "50"
+						/>
 
-			<Button
-				AbsoluteLayout.LayoutBounds="0.275, 0.9875, 0.15, 0.075"  
-				AbsoluteLayout.LayoutFlags="All"
-				BackgroundColor = "Transparent"
-				Image = "ic_notifications_white_24dp.png"/>
+					<Button
+							BackgroundColor = "#007064"
+							Image = "ic_account_balance_white_24dp.png"
+							Clicked = "homeBtnClicked"
+							WidthRequest = "50"
+						/>
 
-			<Button
-    				AbsoluteLayout.LayoutBounds="0.5, 0.9875, 0.15, 0.075"  
-					AbsoluteLayout.LayoutFlags="All"
-					BackgroundColor = "Transparent"
-					Image = "ic_account_balance_white_24dp.png"
+					<Button
+							BackgroundColor = "#007064"
+							Image = "ic_add_circle_white_24dp.png"
+							Clicked = "addBtnClicked"
+							WidthRequest = "50"
+						/>
 
-				/>
-
-			<Button
-    				AbsoluteLayout.LayoutBounds="0.725, 0.9875, 0.15, 0.075"  
-					AbsoluteLayout.LayoutFlags="All"
-					BackgroundColor = "Transparent"
-					Image = "ic_add_circle_white_24dp.png"
-				/>
-
-			<Button
-    				AbsoluteLayout.LayoutBounds="0.95, 0.9875, 0.15, 0.075"  
-					AbsoluteLayout.LayoutFlags="All"
-					BackgroundColor = "Transparent"
-					Image = "ic_account_circle_white_24dp.png"
-				/>
-
+					<Button
+							BackgroundColor = "#007064"
+							Image = "ic_account_circle_white_24dp.png"
+							Clicked = "profileBtnClicked"
+							WidthRequest = "50"
+						/>
+				</StackLayout>
+			</Frame>
 		<!-- Footer End -->
-	</AbsoluteLayout>
+	</Grid>
 </ContentPage>

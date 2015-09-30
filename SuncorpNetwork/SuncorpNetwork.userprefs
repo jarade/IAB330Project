@@ -1,15 +1,37 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.smallerTest" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Test" />
   <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\Home.xaml.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListData.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuPage.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListView.cs" Line="20" Column="4" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="64" Column="37" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="281" Column="27" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="54" Column="6" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuncorpNetwork" expanded="True">
+            <Node name="SuncorpNetwork" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="MainPages" expanded="True">
+                  <Node name="SubPages" expanded="True">
+                    <Node name="Alert.xaml" expanded="True" />
+                  </Node>
+                  <Node name="Home.xaml" expanded="True">
+                    <Node name="Home.xaml.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="SideBar" expanded="True">
+                  <Node name="SideBar" expanded="True">
+                    <Node name="SideNavi.xaml" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+            <Node name="SuncorpNetwork.Data" expanded="True">
+              <Node name="ViewModel" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

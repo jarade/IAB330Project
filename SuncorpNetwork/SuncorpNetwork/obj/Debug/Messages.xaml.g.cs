@@ -14,7 +14,7 @@ namespace SuncorpNetwork {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class Messages : NavigationPage {
+    public partial class Messages : ContentPage {
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Messages));

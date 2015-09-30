@@ -10,16 +10,21 @@ namespace SuncorpNetwork
 	public partial class Home : ContentPage
 	{
 		//[PrimaryKey]
-		private Dictionary<string, int> gotTags = new Dictionary<string, int>();
 		private string[] sortBy = {"Recent", "Interests"};
 		private bool tagLock = false;
-		Tags[] tagAr;
 
 		public Home ()
 		{
 			InitializeComponent ();
 			createSearchBy ();
 			NewsSection.Children.Add (createNewsPost());
+			NewsSection.Children.Add (createNewsPost());
+			NewsSection.Children.Add (createNewsPost());
+			NewsSection.Children.Add (createNewsPost());
+			NewsSection.Children.Add (createNewsPost());
+			NewsSection.Children.Add (createNewsPost());
+			NewsSection.Children.Add (createNewsPost());
+
 			TagsBtn.Clicked += tagBtnOnClick;
 		}
 
@@ -48,15 +53,6 @@ namespace SuncorpNetwork
 				new Tags{Name = "Etc", TextColour = Color.White, isChecked = false}
 			};
 
-			// Setup lookup dictionary for tags
-			int index = 0;
-			foreach (Tags tag in tempTagAr) {
-				if (!gotTags.ContainsKey (tag.Name)) {
-					gotTags.Add (tag.Name, index);
-					index++;
-				}
-			}
-
 			return tempTagAr;
 		}
 
@@ -64,7 +60,7 @@ namespace SuncorpNetwork
 		 **/
 		private void createTagChoices(){
 			// Initialise tags
-			tagAr = initTags ();
+			Tags[] tagAr = initTags ();
 
 			// Create the shown elements
 			ListView lView = new ListView {
@@ -108,10 +104,15 @@ namespace SuncorpNetwork
 		 * 			SelectedItemChangedEventArgs: The event argument - convert e.Item to tags class
 		 **/
 		private void tappedSelection(object sender, ItemTappedEventArgs e){
-			int thisTag; // ((Tags)e.Item).Name == gives string id name
-			gotTags.TryGetValue(((Tags)e.Item).Name.ToString(), out thisTag);
-			tagAr [thisTag].isChecked = !tagAr [thisTag].isChecked;
+			((Tags)e.Item).isChecked = !((Tags)e.Item).isChecked;
 			((ListView)sender).ItemTemplate = tagsChoiceListViewData();
+		}
+		/**	Disable the selection event for the tag selection 
+		 * 	Pre: 	Object: the object that calls this event
+		 * 			SelectedItemChangedEventArgs: The event arguments.
+		 **/
+		private void noSelection (object sender, SelectedItemChangedEventArgs e){
+			((ListView)sender).SelectedItem = null;
 		}
 
 		/** Create a DataTemplate for the tags list view.
@@ -125,14 +126,6 @@ namespace SuncorpNetwork
 			template.SetBinding (ImageCell.ImageSourceProperty, "checkImage");
 
 			return template;
-		}
-
-		/**	Disable the selection event for the tag selection 
-		 * 	Pre: 	Object: the object that calls this event
-		 * 			SelectedItemChangedEventArgs: The event arguments.
-		 **/
-		private void noSelection (object sender, SelectedItemChangedEventArgs e){
-			((ListView)sender).SelectedItem = null;
 		}
 
 		/**	Tag button click event
@@ -278,7 +271,7 @@ namespace SuncorpNetwork
 			// Create Labels
 			Label name = createFeedLabel (nameText, 12);
 			name.FontAttributes = FontAttributes.Bold;
-			name.WidthRequest = 200;
+			name.WidthRequest = 500;
 
 			Label dateTime = createFeedLabel (dataTimeText, 8);
 			dateTime.FontAttributes = FontAttributes.Italic;
@@ -306,30 +299,35 @@ namespace SuncorpNetwork
 
 			return l;
 		}
-
+			
 		public void messageBtnClicked(object sender, EventArgs e){
 			// Navigate to the Page.
-			this.Navigation.PushModalAsync (new Messages());
+			switchPage(new Messages ());
 		}
 
 		public void alertBtnClicked(object sender, EventArgs e){
 			// Navigate to the Page.
-			this.Navigation.PushModalAsync (new Alert());
+			switchPage(new Alert ());
 		}
 
 		public void homeBtnClicked(object sender, EventArgs e){
 			// Navigate to the Page.
-			this.Navigation.PushModalAsync (new Home());
+			switchPage(new Home ());
 		}
 
 		public void addBtnClicked(object sender, EventArgs e){
 			// Navigate to the Page.
-			this.Navigation.PushModalAsync (new Add());
+			switchPage(new Add ());
 		}
 
 		public void profileBtnClicked(object sender, EventArgs e){
 			// Navigate to the Page.
-			this.Navigation.PushModalAsync (new PersonalProfile());
+			switchPage(new PersonalProfile ());
+		}
+
+		private void switchPage(Page page){
+			SideNavi curNavi = (SideNavi)this.Parent.Parent;
+			curNavi.switchTo(page);
 		}
 
 //		public string[] searchTags(){
