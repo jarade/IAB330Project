@@ -11,6 +11,16 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static int icon=0x7f020000;
+        public static int ic_account_balance_white_24dp=0x7f020000;
+        public static int ic_account_circle_white_24dp=0x7f020001;
+        public static int ic_add_circle_white_24dp=0x7f020002;
+        public static int ic_chat_white_24dp=0x7f020003;
+        public static int ic_notifications_white_24dp=0x7f020004;
+        public static int icon=0x7f020005;
+        public static int profile_filler=0x7f020006;
+    }
+    public static final class string {
+        public static int ApplicationName=0x7f030001;
+        public static int Hello=0x7f030000;
     }
 }

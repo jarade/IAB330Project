@@ -1,37 +1,12 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Test" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 7 (Jelly Bean)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\Home.xaml.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="54" Column="6" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="26" Column="32" />
+      <File FileName="SuncorpNetwork.Data\Database\ProjectDetailsDatabase.cs" Line="15" Column="24" />
+      <File FileName="SuncorpNetwork.Data\Model\ProjectDetails.cs" Line="38" Column="9" />
+      <File FileName="SuncorpNetwork.Data\Model\Tags.cs" Line="24" Column="8" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuncorpNetwork" expanded="True">
-            <Node name="SuncorpNetwork" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="MainPages" expanded="True">
-                  <Node name="SubPages" expanded="True">
-                    <Node name="Alert.xaml" expanded="True" />
-                  </Node>
-                  <Node name="Home.xaml" expanded="True">
-                    <Node name="Home.xaml.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="SideBar" expanded="True">
-                  <Node name="SideBar" expanded="True">
-                    <Node name="SideNavi.xaml" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-            <Node name="SuncorpNetwork.Data" expanded="True">
-              <Node name="ViewModel" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

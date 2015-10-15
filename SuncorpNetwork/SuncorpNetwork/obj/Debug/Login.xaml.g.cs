@@ -14,7 +14,7 @@ namespace SuncorpNetwork {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class Login : ContentPage {
+    public partial class Login : BaseView {
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Login));

@@ -1,5 +1,5 @@
 ﻿using System;
-
+using GalaSoft.MvvmLight.Ioc;
 using Xamarin.Forms;
 
 namespace SuncorpNetwork
