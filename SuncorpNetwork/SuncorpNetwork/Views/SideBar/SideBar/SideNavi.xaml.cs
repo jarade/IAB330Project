@@ -18,7 +18,7 @@ namespace SuncorpNetwork
 
 		public void NavigateTo (MenuItem menu){
 			Page displayPage = (Page)Activator.CreateInstance (menu.TargetType);
-			Detail =setupPage(displayPage);
+			Detail = setupPage(displayPage);
 
 			IsPresented = false;
 		}

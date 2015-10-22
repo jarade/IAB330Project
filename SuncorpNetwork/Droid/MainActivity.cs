@@ -7,20 +7,25 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.WindowsAzure.MobileServices;
+using SuncorpNetwork.Data;
 
 namespace SuncorpNetwork.Droid
 {
 	[Activity (Label = "SuncorpNetwork.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
+		public static MobileServiceClient MobileService = new MobileServiceClient(
+			"https://suncorpnetwork.azure-mobile.net/",
+			"nWaDxQYaSGAIlEYlJtiiGNWeVkqXST96"
+		);
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-
 			LoadApplication (new App ());
 		}
 	}
 }
-

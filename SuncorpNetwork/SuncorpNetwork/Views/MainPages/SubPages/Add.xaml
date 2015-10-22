@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+<TabbedPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 				x:Class="SuncorpNetwork.Add"				
 				Title="Add"
@@ -12,6 +12,34 @@
 						<RowDefinition Height = "8*"/>
 						<RowDefinition Height = "1.2*"/>
 					</Grid.RowDefinitions>
+
+					<StackLayout 
+								Padding = "50,0,0,0"
+								Orientation = "Vertical"
+								VerticalOptions = "CenterAndExpand"
+								HorizontalOptions = "StartAndExpand"
+								x:Name = "content"
+							>
+							<StackLayout 
+										HorizontalOptions = "StartAndExpand"
+										Orientation = "Horizontal"
+									>
+								<Label 		
+											Text = "Title		"
+											TextColor = "White"
+											FontSize = "Large"
+										/>
+								<Entry 
+											BackgroundColor = "White"
+											TextColor = "Black"
+											MinimumWidthRequest = "200"
+											WidthRequest = "200"
+											x:Name = "titleEntry"
+										/>
+							</StackLayout> 
+
+					</StackLayout>
+
 					<!-- Footer Start -->
 						<Frame 
 								Grid.Row = "2"
@@ -44,7 +72,7 @@
 										WidthRequest = "50"
 									/>
 
-								<Button
+								<Button 
 										BackgroundColor = "#007064"
 										Image = "ic_add_circle_white_24dp.png"
 										Clicked = "addBtnClicked"
@@ -61,4 +89,4 @@
 						</Frame>
 					<!-- Footer End -->
 				</Grid>
-</ContentPage>
+</TabbedPage>

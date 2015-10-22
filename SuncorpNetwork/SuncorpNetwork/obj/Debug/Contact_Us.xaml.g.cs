@@ -14,10 +14,25 @@ namespace SuncorpNetwork {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class Contact_Us : ContentPage {
+    public partial class Contact_Us : BaseView {
+        
+        private StackLayout content;
+        
+        private Entry emailAddress;
+        
+        private Picker problemPicker;
+        
+        private StackLayout subjectSection;
+        
+        private Switch respondSwitch;
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Contact_Us));
+            content = this.FindByName<StackLayout>("content");
+            emailAddress = this.FindByName<Entry>("emailAddress");
+            problemPicker = this.FindByName<Picker>("problemPicker");
+            subjectSection = this.FindByName<StackLayout>("subjectSection");
+            respondSwitch = this.FindByName<Switch>("respondSwitch");
         }
     }
 }

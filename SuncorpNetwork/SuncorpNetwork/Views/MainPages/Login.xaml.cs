@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace SuncorpNetwork
 {
@@ -13,12 +14,15 @@ namespace SuncorpNetwork
 			base.Init ();
 		}
 
-		public void loginBtnClicked(object sender, EventArgs e){
-			Navigation.PushModalAsync (new SideNavi ());
+		public async void loginBtnClicked(object sender, EventArgs e){
+			await Navigation.PushModalAsync (new SideNavi ());
 		}
 
-		public void registerBtnClicked(object sender, EventArgs e){
-			Navigation.PushModalAsync (new Registration ());
+		public void cancelBtnClicked(object sender, EventArgs e){
+		}
+
+		public async void registerBtnClicked(object sender, EventArgs e){
+			await Navigation.PushModalAsync (new Registration ());
 		}
 	}
 }

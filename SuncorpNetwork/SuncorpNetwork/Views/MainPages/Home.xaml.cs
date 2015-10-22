@@ -4,6 +4,8 @@ using System.Linq;
 using Xamarin.Forms;
 using SuncorpNetwork.Data;
 using SuncorpNetwork.Data.ViewModel;
+using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace SuncorpNetwork
 {
@@ -11,47 +13,65 @@ namespace SuncorpNetwork
 	{
 		private string[] sortBy = {"Recent", "Interests"};
 		private bool tagLock = false;
-		private HomeViewModel viewModel = new HomeViewModel();
+		private newsfeedPost post = new newsfeedPost ();
+		private TagList tlist = new TagList();
 		private int NewsCounter {set; get;}
+
+		public static MobileServiceClient MobileService = new MobileServiceClient(
+			"https://suncorpnetwork.azure-mobile.net/",
+			"nWaDxQYaSGAIlEYlJtiiGNWeVkqXST96"
+		);
 
 		public Home ()
 		{
 			InitializeComponent ();
 			createSearchBy ();
-			setupDatabaseFeed ();
 			NewsCounter = 0;
+
+			//setupBottomNavigation ();
+
+			setupDatabaseFeed ();
 			TagsBtn.Clicked += tagBtnOnClick;
+		}
+
+//		private void setupBottomNavigation(){
+//			TapGestureRecognizer t = new TapGestureRecognizer ();
+//			t.Tapped +=   (object sender, EventArgs e) => {
+//				Page page = new Messages();
+//				switchPage(page);
+//			};
+//
+//			msgBtn.GestureRecognizers.Add (t);
+//		}
+//
+		private void insertDummyRow(ProjectDetailsDatabase database){
+			string[] s = {"IT"};
+			if(s != null){
+				ProjectDetails p = new ProjectDetails ("Jarrod", "Eades");
+				p.Information = "Some basic information.";
+				database.InsertOrUpdateProject (p);
+			}
 		}
 
 		public void setupDatabaseFeed(){
 			var database = new ProjectDetailsDatabase ();
-			var databaseItems = database.GetItems ();
-
-			// Add an extra 5 posts to the feed if possible.
+			var databaseItems = database.GetItems ().OrderByDescending( x => x.TimeStamp);
+			//var rows = getItems ();
+			//// Add an extra posts to the feed if possible.
 			foreach (ProjectDetails item in databaseItems) {
 				NewsCounter++;
-				NewsSection.Children.Add (viewModel.createNewsPost (item));
+				NewsSection.Children.Add (post.createNewsPost (item));
 			}
-			DisplayAlert ("Number Of Posts", NewsCounter.ToString (), "Done");
-//			for (int i = NewsCounter; i < NewsCounter + 5; i++) {
-//				var item = databaseItems.ElementAt(NewsCounter);
-//				if (item != null) {
-//					string[] tags = item.convertStringToTagArray ();
-//					ProjectDetails proj = new ProjectDetails (item.FirstName, item.LastName, tags);
-//					proj.addInfo (item.Information);
-//				
-//					NewsCounter++;
-//					NewsSection.Children.Add (viewModel.createNewsPost (proj));
-//				}
-//			}
-
 		}
 
+		private async Task<List<ProjectDetails>> getItems(){
+			return await MobileService.GetTable<ProjectDetails> ().OrderBy (x => x.TimeStamp).ToListAsync ();
+		}
 		/** Create the tag choices temporary page.
 		 **/
 		public void createTagChoices(){
 			// Initialise tags
-			Tags[] tagAr = viewModel.initTags ();
+			Tags[] tagAr = tlist.initTags ();
 
 			// Create the shown elements
 			ListView lView = new ListView {
@@ -63,8 +83,8 @@ namespace SuncorpNetwork
 			};
 
 			// Setup those elements
-			lView.ItemSelected += viewModel.noSelection;
-			lView.ItemTapped += viewModel.tappedSelection;
+			lView.ItemSelected += tlist.noSelection;
+			lView.ItemTapped += tlist.tappedSelection;
 			done.Clicked += sendBack;
 
 			DataTemplate template = new DataTemplate (typeof (ImageCell));
@@ -110,17 +130,17 @@ namespace SuncorpNetwork
 
 		/**	Return to the main screen
 		 **/
-		public void sendBack(object sender, EventArgs e){
-			Navigation.PopModalAsync ();
+		public async void sendBack(object sender, EventArgs e){
+			await Navigation.PopModalAsync ();
 			tagLock = false;
 		}
 
 		/** Navigate to a new page
 		 * 	stack: the layout view to use
 		 **/
-		public void navigateToTemporaryPage(StackLayout stack){
+		public async void navigateToTemporaryPage(StackLayout stack){
 			// Create the temporary page
-			Navigation.PushModalAsync (new BaseView {
+			await Navigation.PushModalAsync (new BaseView {
 				Content = stack
 			});
 		}
@@ -154,7 +174,6 @@ namespace SuncorpNetwork
 			SideNavi curNavi = (SideNavi)this.Parent.Parent;
 			curNavi.switchTo(page);
 		}
-
 	}
 }
 

@@ -29,6 +29,7 @@ namespace SuncorpNetwork.Data
 		/// <returns>The items.</returns>
 		public List<ProjectDetails> GetItems(){
 			var items = database.Table<ProjectDetails> ().ToList<ProjectDetails> ();
+		
 			return items;
 		}
 

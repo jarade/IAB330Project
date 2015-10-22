@@ -45,7 +45,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 						<ScrollView 
 									Grid.Row = "1"
 									Orientation = "Vertical"
-									Padding = "0, 0, 0, 0"
+									Padding = "0, 10, 0, 25"
 								>
 							<StackLayout
 										x:Name="NewsSection" 
@@ -62,44 +62,50 @@ Original Author: Jarrod Eades Created: 9/09/2015
 					<!-- Footer Start -->
 						<Frame 
 								Grid.Row = "2"
-								Padding = "0,0,0,0"
+								Padding = "25,0,25,0"
 								BackgroundColor = "#007064"
 								OutlineColor = "Transparent" 
 							>
-							<StackLayout 
+							<StackLayout  Padding = "25,0,25,0"
 										Orientation = "Horizontal"
 										HorizontalOptions = "CenterAndExpand"
 										>
+								
 								<Button 
-										BackgroundColor = "#007064"
+										Scale = "2"
+										BackgroundColor = "Transparent"
 										Image = "ic_chat_white_24dp.png"
 										Clicked = "messageBtnClicked"
 										WidthRequest = "50"
 									/>
 
 								<Button
-										BackgroundColor = "#007064"
+										Scale = "2"
+										BackgroundColor = "Transparent"
 										Image = "ic_notifications_white_24dp.png"
 										Clicked = "alertBtnClicked"
 										WidthRequest = "50"
 									/>
 
 								<Button
-										BackgroundColor = "#007064"
+										Scale = "2"
+										BackgroundColor = "Transparent"
 										Image = "ic_account_balance_white_24dp.png"
 										Clicked = "homeBtnClicked"
 										WidthRequest = "50"
 									/>
 
 								<Button
-										BackgroundColor = "#007064"
+										Scale = "2"
+										BackgroundColor = "Transparent"
 										Image = "ic_add_circle_white_24dp.png"
 										Clicked = "addBtnClicked"
 										WidthRequest = "50"
 									/>
 
 								<Button
-										BackgroundColor = "#007064"
+										Scale = "2"
+										BackgroundColor = "Transparent"
 										Image = "ic_account_circle_white_24dp.png"
 										Clicked = "profileBtnClicked"
 										WidthRequest = "50"

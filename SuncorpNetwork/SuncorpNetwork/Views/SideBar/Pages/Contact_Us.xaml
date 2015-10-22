@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+<BaseView 	xmlns="http://xamarin.com/schemas/2014/forms" 
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 				x:Class="SuncorpNetwork.Contact_Us"
 				Title="Contact Us"
@@ -7,58 +7,156 @@
 				BackgroundColor="#0DA195">
 
 	<Grid>
-					<Grid.RowDefinitions>
-						<RowDefinition Height = "1*"/>
-						<RowDefinition Height = "8*"/>
-						<RowDefinition Height = "1.2*"/>
-					</Grid.RowDefinitions>
-					<!-- Footer Start -->
-						<Frame 
-								Grid.Row = "2"
-								Padding = "0,0,0,0"
-								BackgroundColor = "#007064"
-								OutlineColor = "Transparent" 
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "9*"/>
+			<RowDefinition Height = "1.2*"/>
+		</Grid.RowDefinitions>
+
+			<StackLayout 
+						Padding = "5,5,5,5"
+						x:Name = "content"
+						Orientation = "Vertical"
+						HorizontalOptions = "CenterAndExpand"
+						VerticalOptions = "CenterAndExpand"
+					>
+				<StackLayout 
+							HorizontalOptions = "StartAndExpand"
+							Orientation = "Horizontal"
+						>
+						<Label
+							Text = "Email:		"
+							TextColor = "White"
+							FontSize = "Large"
+						/>
+
+						<Entry
+								x:Name = "emailAddress"
+								BackgroundColor = "White"
+								TextColor = "Black"
+								WidthRequest = "420"
+						/>
+				</StackLayout>
+
+				<StackLayout 
+							HorizontalOptions = "StartAndExpand"
+							Orientation = "Horizontal"
+						>
+						<Label
+							Text = "Type Of Problem:		"
+							TextColor = "White"
+							FontSize = "Large"
+						/>
+
+						<Picker
+								x:Name = "problemPicker"
+								BackgroundColor = "#0DA195"
+								SelectedIndex = "0"
+								HeightRequest = "50"
+								WidthRequest = "300"
 							>
-							<StackLayout 
-										Orientation = "Horizontal"
-										HorizontalOptions = "CenterAndExpand"
-										>
-								<Button 
-										BackgroundColor = "#007064"
-										Image = "ic_chat_white_24dp.png"
-										Clicked = "messageBtnClicked"
-										WidthRequest = "50"
-									/>
+							<Picker.Items>
+								<x:String>Pick a Problem</x:String>
+								<x:String>Account</x:String>
+								<x:String>Application</x:String>
+								<x:String>Other Users</x:String>
+								<x:String>Custom</x:String>
+							</Picker.Items>
+						</Picker>
 
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_notifications_white_24dp.png"
-										Clicked = "alertBtnClicked"
-										WidthRequest = "50"
-									/>
+				</StackLayout>
 
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_account_balance_white_24dp.png"
-										Clicked = "homeBtnClicked"
-										WidthRequest = "50"
-									/>
+				<StackLayout 
+							HorizontalOptions = "StartAndExpand"
+							Orientation = "Horizontal"
+							x:Name = "subjectSection"
+						>
+						<Label
+							Text = "Subject:		"
+							TextColor = "White"
+							FontSize = "Large"
+						/>
 
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_add_circle_white_24dp.png"
-										Clicked = "addBtnClicked"
-										WidthRequest = "50"
-									/>
+				</StackLayout>
 
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_account_circle_white_24dp.png"
-										Clicked = "profileBtnClicked"
-										WidthRequest = "50"
-									/>
-							</StackLayout>
-						</Frame>
-					<!-- Footer End -->
-				</Grid>
-</ContentPage>
+				<StackLayout 
+							HorizontalOptions = "StartAndExpand"
+							Orientation = "Horizontal"
+						>
+						<Label
+							Text = "Would you like a response:		"
+							TextColor = "White"
+							FontSize = "Large"
+						/>
+
+						<Switch
+								x:Name = "respondSwitch"
+						/>
+
+				</StackLayout>
+
+
+				<Button
+						Text = "Send"
+						BackgroundColor = "White"
+						WidthRequest = "200"
+						TextColor = "Black"
+						Clicked = "send"
+				/>
+
+				<Label
+						Text = "Or get Phone Support at: (##) #### ####"
+						TextColor = "White"
+						FontSize = "Large"
+					/>
+			</StackLayout>
+
+			<!-- Footer Start -->
+				<Frame 
+						Grid.Row = "1"
+						Padding = "0,0,0,0"
+						BackgroundColor = "#007064"
+						OutlineColor = "Transparent" 
+					>
+					<StackLayout 
+								Orientation = "Horizontal"
+								HorizontalOptions = "CenterAndExpand"
+								>
+						<Button 
+								BackgroundColor = "#007064"
+								Image = "ic_chat_white_24dp.png"
+								Clicked = "messageBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								BackgroundColor = "#007064"
+								Image = "ic_notifications_white_24dp.png"
+								Clicked = "alertBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								BackgroundColor = "#007064"
+								Image = "ic_account_balance_white_24dp.png"
+								Clicked = "homeBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								BackgroundColor = "#007064"
+								Image = "ic_add_circle_white_24dp.png"
+								Clicked = "addBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								BackgroundColor = "#007064"
+								Image = "ic_account_circle_white_24dp.png"
+								Clicked = "profileBtnClicked"
+								WidthRequest = "50"
+							/>
+					</StackLayout>
+				</Frame>
+			<!-- Footer End -->
+	</Grid>
+</BaseView>

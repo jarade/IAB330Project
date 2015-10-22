@@ -8,13 +8,41 @@
 
 	<Grid>
 					<Grid.RowDefinitions>
-						<RowDefinition Height = "1*"/>
-						<RowDefinition Height = "8*"/>
+						<RowDefinition Height = "9*"/>
 						<RowDefinition Height = "1.2*"/>
 					</Grid.RowDefinitions>
+
+<!--					<StackLayout
+									Grid.Row = "0"
+									Orientation = "Horizontal"
+									HorizontalOptions = "CenterAndExpand"
+									VerticalOptions = "CenterAndExpand"
+								>
+								<Grid
+										VerticalOptions = "FillAndExpand"
+										HorizontalOptions = "FillAndExpand"
+										BackgroundColor = "White">
+										<Grid.RowDefinitions>
+											<RowDefinition Height = "2*"/>
+											<RowDefinition Height = "2*"/>
+										</Grid.RowDefinitions>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinitions Width = "2*"/>
+											<ColumnDefinitions Width = "2*"/>
+										</Grid.ColumnDefinitions>
+											<Image 	Grid.Row = "0" 
+													
+													Source = "icon.png"/>
+											<Label	Grid.Row = "0" 
+													
+													Text = "WORKING"
+													TextColor = "Black"
+												/>
+								</Grid>
+					</StackLayout>-->
 					<!-- Footer Start -->
 						<Frame 
-								Grid.Row = "2"
+								Grid.Row = "1"
 								Padding = "0,0,0,0"
 								BackgroundColor = "#007064"
 								OutlineColor = "Transparent" 

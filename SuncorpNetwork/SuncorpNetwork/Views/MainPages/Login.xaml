@@ -4,19 +4,53 @@
 				x:Class="SuncorpNetwork.Login"
 				BackgroundColor="#0DA195"
 				Padding = "20,20,20,10">
-	<ContentPage.Content>
-		<StackLayout>
-			<Button BackgroundColor="White"
-					Clicked = "loginBtnClicked"
-					WidthRequest = "50"
-					HeightRequest = "25"
-			/>
-			<Button BackgroundColor="White"
-					Clicked = "registerBtnClicked"
-					WidthRequest = "50"
-					HeightRequest = "25"
-			/>
-		</StackLayout>
 
-	</ContentPage.Content>
+		<StackLayout 
+					VerticalOptions="CenterAndExpand"
+					Padding = "25,5,25,5"
+					Spacing = "15"
+					>
+			<Entry  
+					BackgroundColor = "White"
+					TextColor = "Black"
+					Placeholder = "Username"
+					/>
+
+			<Entry	
+					BackgroundColor = "White"
+					IsPassword = "true"
+					TextColor = "Black"
+					Placeholder = "password"
+					/>
+	
+
+			<StackLayout HorizontalOptions="CenterAndExpand"
+						 Orientation = "Horizontal"
+						 Spacing = "25">	
+
+				<Button		BackgroundColor = "White"
+							Text = "Login"
+							TextColor = "Black"
+							Clicked = "loginBtnClicked"
+							WidthRequest = "100"
+							HeightRequest = "50"
+							/>	
+
+				<Button 	BackgroundColor = "White"
+							Text = "Cancel"
+							TextColor = "Black"
+							Clicked = "cancelBtnClicked"
+							WidthRequest = "100"
+							HeightRequest = "50"
+							/>
+
+				<Button 	BackgroundColor = "White"
+							Clicked = "registerBtnClicked"
+							Text = "Register"
+							TextColor = "Black"
+							WidthRequest = "100"
+							HeightRequest = "50"
+							/>
+			</StackLayout>
+		</StackLayout>
 </BaseView>
