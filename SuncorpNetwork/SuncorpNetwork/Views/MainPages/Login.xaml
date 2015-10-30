@@ -3,17 +3,18 @@
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 				x:Class="SuncorpNetwork.Login"
 				BackgroundColor="#0DA195"
-				Padding = "20,20,20,10">
+				Padding = "15">
 
 		<StackLayout 
 					VerticalOptions="CenterAndExpand"
-					Padding = "25,5,25,5"
+					Padding = "15"
 					Spacing = "15"
 					>
 			<Entry  
 					BackgroundColor = "White"
 					TextColor = "Black"
 					Placeholder = "Username"
+					x:Name = "emailField"
 					/>
 
 			<Entry	
@@ -23,9 +24,9 @@
 					Placeholder = "password"
 					/>
 	
-			<StackLayout HorizontalOptions="CenterAndExpand"
+			<StackLayout HorizontalOptions="Center"
 						 Orientation = "Horizontal"
-						 Spacing = "25">	
+						 Spacing = "15">	
 
 				<Button		BackgroundColor = "White"
 							Text = "Login"

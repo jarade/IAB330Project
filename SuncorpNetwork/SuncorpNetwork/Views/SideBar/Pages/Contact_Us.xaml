@@ -11,7 +11,11 @@
 			<RowDefinition Height = "9*"/>
 			<RowDefinition Height = "1.2*"/>
 		</Grid.RowDefinitions>
-
+		<ScrollView
+							Grid.Row = "0"
+							Orientation = "Vertical"
+							Padding = "0, 10, 0, 25"
+						>
 			<StackLayout 
 						Padding = "0,0,0,0"
 						x:Name = "content"
@@ -19,100 +23,106 @@
 						HorizontalOptions = "CenterAndExpand"
 						VerticalOptions = "CenterAndExpand"
 					>
-				<StackLayout 
-							HorizontalOptions = "StartAndExpand"
-							Orientation = "Horizontal"
-						>
-						<Label
-							Text = "Email:		"
-							TextColor = "White"
-							FontSize = "Large"
-						/>
-
-						<Entry
-								x:Name = "emailAddress"
-								BackgroundColor = "White"
-								TextColor = "Black"
-								WidthRequest = "420"
-						/>
-				</StackLayout>
-
-				<StackLayout 
-							HorizontalOptions = "StartAndExpand"
-							Orientation = "Horizontal"
-						>
-						<Label
-							Text = "Type Of Problem:		"
-							TextColor = "White"
-							FontSize = "Large"
-						/>
-
-						<Picker
-								x:Name = "problemPicker"
-								BackgroundColor = "#0DA195"
-								SelectedIndex = "0"
-								HeightRequest = "50"
-								WidthRequest = "300"
+				
+					<StackLayout 
+								HorizontalOptions = "StartAndExpand"
+								Orientation = "Horizontal"
+								Spacing = "15"
 							>
-							<Picker.Items>
-								<x:String>Pick a Problem</x:String>
-								<x:String>Account</x:String>
-								<x:String>Application</x:String>
-								<x:String>Other Users</x:String>
-								<x:String>Custom</x:String>
-							</Picker.Items>
-						</Picker>
+							<Label
+								Text = "Email:		"
+								TextColor = "White"
+								FontSize = "14"
+							/>
 
-				</StackLayout>
+							<Entry
+									x:Name = "emailAddress"
+									BackgroundColor = "White"
+									TextColor = "Black"
+									WidthRequest = "300"
+							/>
+					</StackLayout>
 
-				<StackLayout 
-							HorizontalOptions = "StartAndExpand"
-							Orientation = "Horizontal"
-							x:Name = "subjectSection"
-						>
-						<Label
-							Text = "Subject:		"
+					<StackLayout 
+								HorizontalOptions = "StartAndExpand"
+								Orientation = "Horizontal"
+								Spacing = "15"
+							>
+							<Label
+								Text = "Type Of Problem:		"
+								TextColor = "White"
+								FontSize = "14"
+							/>
+
+							<Picker
+									x:Name = "problemPicker"
+									BackgroundColor = "#0DA195"
+									SelectedIndex = "0"
+									HeightRequest = "50"
+									WidthRequest = "200"
+								>
+								<Picker.Items>
+									<x:String>Pick a Problem</x:String>
+									<x:String>Account</x:String>
+									<x:String>Application</x:String>
+									<x:String>Other Users</x:String>
+									<x:String>Custom</x:String>
+								</Picker.Items>
+							</Picker>
+
+					</StackLayout>
+
+					<StackLayout 
+								HorizontalOptions = "StartAndExpand"
+								Orientation = "Vertical"
+								x:Name = "subjectSection"
+								Spacing = "15"
+							>
+							<Label
+								Text = "Subject:		"
+								TextColor = "White"
+								FontSize = "14"
+							/>
+
+					</StackLayout>
+
+					<StackLayout 
+								HorizontalOptions = "StartAndExpand"
+								Orientation = "Horizontal"
+							>
+							<Label
+								Text = "Would you like a response:		"
+								TextColor = "White"
+								FontSize = "16"
+							/>
+
+							<Switch
+									x:Name = "respondSwitch"
+							/>
+
+					</StackLayout>
+
+
+					<Button
+							Text = "Send"
+							BackgroundColor = "White"
+							WidthRequest = "300"
+							TextColor = "Black"
+							Clicked = "send"
+							HorizontalOptions = "Center"
+						/>
+
+					<Label
+							Text = "Or get Phone Support at: (##) #### ####"
 							TextColor = "White"
-							FontSize = "Large"
+							FontSize = "16"
 						/>
-
-				</StackLayout>
-
-				<StackLayout 
-							HorizontalOptions = "StartAndExpand"
-							Orientation = "Horizontal"
-						>
-						<Label
-							Text = "Would you like a response:		"
-							TextColor = "White"
-							FontSize = "Large"
-						/>
-
-						<Switch
-								x:Name = "respondSwitch"
-						/>
-
-				</StackLayout>
-
-
-				<Button
-						Text = "Send"
-						BackgroundColor = "White"
-						WidthRequest = "200"
-						TextColor = "Black"
-						Clicked = "send"
-				/>
-
-				<Label
-						Text = "Or get Phone Support at: (##) #### ####"
-						TextColor = "White"
-						FontSize = "Large"
-					/>
+				
 			</StackLayout>
-
+			</ScrollView>
 			<!-- Footer Start -->
 						<Frame 
-								Grid.Row = "2"
+								Grid.Row = "1"
 								Padding = "25,0,25,0"
 								BackgroundColor = "#007064"
 								OutlineColor = "Transparent" 
@@ -120,7 +130,7 @@
 							<StackLayout  Padding = "25,0,25,0"
 										Orientation = "Horizontal"
 										HorizontalOptions = "CenterAndExpand"
-										Spacing = "45"
+										Spacing = "15"
 										>
 								
 								<Button 

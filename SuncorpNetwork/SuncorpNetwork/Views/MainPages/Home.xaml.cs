@@ -31,9 +31,13 @@ namespace SuncorpNetwork
 			//setupBottomNavigation ();
 
 			setupDatabaseFeed ();
+
 			TagsBtn.Clicked += tagBtnOnClick;
 		}
 			
+		public void Scrolled(){
+			DisplayAlert("H","H","H",);
+		}
 		private void insertDummyRow(ProjectDetailsDatabase database){
 			string[] s = {"IT"};
 			if(s != null){

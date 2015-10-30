@@ -20,7 +20,7 @@ namespace SuncorpNetwork
 
 		private void createCustomEditor(){
 			subjectEditor = new MyEditor ();
-			subjectEditor.WidthRequest = 400;
+			subjectEditor.WidthRequest = 350;
 			subjectEditor.HeightRequest = 200;
 			subjectSection.Children.Add (subjectEditor);
 		}

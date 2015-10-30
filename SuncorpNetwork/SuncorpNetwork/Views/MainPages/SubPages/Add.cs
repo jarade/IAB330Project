@@ -105,14 +105,13 @@ namespace SuncorpNetwork
 			Label titleLabel = new Label {
 				Text = "*Title:\t\t\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Entry titleEntry = new Entry {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 250
 			};
 
 			titleEntry.TextChanged += (object sender, TextChangedEventArgs e) => {
@@ -139,15 +138,14 @@ namespace SuncorpNetwork
 			Label tagLabel = new Label {
 				Text = "*Tags:\t\t\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Button tagBtn = new Button{
 				Text = "Select Tags",
 				TextColor = Color.Black,
 				BackgroundColor = Color.White,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 250
 			};
 
 			tagBtn.Clicked += tagClicked;
@@ -163,14 +161,13 @@ namespace SuncorpNetwork
 			Label locationLabel = new Label {
 				Text = "Location:\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Entry locationEntry = new Entry {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 250
 			};
 
 			locationEntry.TextChanged += (object sender, TextChangedEventArgs e) => {
@@ -187,11 +184,11 @@ namespace SuncorpNetwork
 			Label detailLabel = new Label {
 				Text = "*Details:\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			MyEditor information = new MyEditor {
-				WidthRequest = 400,
+				WidthRequest = 300,
 				HeightRequest = 200
 			};
 
@@ -209,11 +206,11 @@ namespace SuncorpNetwork
 			Label peopleLabel = new Label {
 				Text = "*Expertise Wanted:\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			MyEditor peopleEditor = new MyEditor {
-				WidthRequest = 400,
+				WidthRequest = 300,
 				HeightRequest = 200
 			};
 
@@ -263,7 +260,7 @@ namespace SuncorpNetwork
 			
 			StackLayout footer = new StackLayout {
 				Padding = new Thickness(25,0,25,0),
-				Spacing = 45,
+				Spacing = 15,
 				Orientation = StackOrientation.Horizontal,
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
