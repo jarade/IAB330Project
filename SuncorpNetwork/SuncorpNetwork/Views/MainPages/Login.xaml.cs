@@ -15,7 +15,11 @@ namespace SuncorpNetwork
 		}
 
 		public async void loginBtnClicked(object sender, EventArgs e){
+			//var database = new PersonalDB ();
+			//bool accepted = database.GetEmail (emailField.text);
+			// if accepted {
 			await Navigation.PushModalAsync (new SideNavi ());
+			// } else { DisplayAlert("Error", "Your email is not correct.", "Done"); }
 		}
 
 		public void cancelBtnClicked(object sender, EventArgs e){

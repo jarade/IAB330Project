@@ -339,3 +339,8 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\images.jpg
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\R.cs.flag
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\uploadflags.txt
+<<<<<<< HEAD
+=======
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\images.jpg
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\images.jpg
+>>>>>>> origin/master
