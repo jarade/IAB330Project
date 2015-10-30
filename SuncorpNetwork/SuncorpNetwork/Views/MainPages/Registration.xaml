@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Registration">
-	<ContentPage.Content>
-	</ContentPage.Content>
-</ContentPage>
+<BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Registration">
+
+		<StackLayout Orientation="Vertical" Padding="30" Spacing="10">
+		<StackLayout Orientation="Horizontal" Spacing="5">
+		<Label Text ="First Name:" Font = "Large" />
+		<Entry x:Name="entryFirstName" HorizontalOptions="FillAndExpand"/>
+		</StackLayout>
+
+		<StackLayout Orientation="Horizontal" Spacing="5">
+		<Label Text ="Last Name:" Font = "Large" />
+		<Entry x:Name="entryLastName" HorizontalOptions="FillAndExpand"/>
+		</StackLayout>
+
+		<StackLayout Orientation="Horizontal" Spacing="5">
+		<Label Text ="Email:" Font = "Large" />
+		<Entry x:Name="entryEmail" HorizontalOptions="FillAndExpand"/>
+		</StackLayout>
+
+		<Button		HorizontalOptions="End"
+			BackgroundColor = "White"
+			Text = "Register"
+			TextColor = "Black"
+			WidthRequest = "100"
+			HeightRequest = "50"
+			Clicked = "SubmitReg"
+		/>	
+
+	</StackLayout>
+</BaseView>
