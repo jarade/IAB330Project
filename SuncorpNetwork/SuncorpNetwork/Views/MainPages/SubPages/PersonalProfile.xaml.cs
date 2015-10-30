@@ -7,8 +7,26 @@ namespace SuncorpNetwork
 {
 	public partial class PersonalProfile : ContentPage
 	{
+		public PersonalDetails TheDetails {	get; set; }
+
 		public PersonalProfile ()
 		{
+			TheDetails = new PersonalDetails();
+			TheDetails.FirstName = "Jay";
+			TheDetails.LastName = "Chou";
+			TheDetails.Email = "lu.03566@gmail.com";
+			TheDetails.Availability = false ;
+			if (TheDetails.Availability == false ) {
+				TheDetails.Availability_2 = "Not Available";
+			}
+
+			//TheDetails.ProfilePic = ImageSource.FromFile("images.jpg");
+
+			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
+
+			TheDetails.Pros = "Xamarin,IOS Development, Android Development";
+			TheDetails.Overview = "I develop cross-platform mobile apps including games for iOS, Android & Windows platforms. I know everything about mobile development including adnetworks integration, in-app purchases on every platform, social functionality (login/sharing etc), cross-platform back-end services like Parse. oDesk has recognized me as one of their top Mobile Developers. See the badge on the right of my profile for more information ";
+			BindingContext = TheDetails;
 			InitializeComponent ();
 		}
 
@@ -40,6 +58,14 @@ namespace SuncorpNetwork
 		private void switchPage(Page page){
 			SideNavi curNavi = (SideNavi)this.Parent.Parent;
 			curNavi.switchTo(page);
+		}
+
+		public void MsgBtnClicked(object sender, EventArgs e){
+			switchPage(new Messages ());
+		}
+
+
+		public async void FollowBtnClicked(object sender, EventArgs e){
 		}
 
 	}
