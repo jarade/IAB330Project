@@ -11,7 +11,6 @@ namespace SuncorpNetwork.Data
 {
 	public class newsfeedPost
 	{
-
 		/** Create a news post grid layout
 		 * 	Post: Grid - the news post grid layout
 		**/
@@ -21,19 +20,20 @@ namespace SuncorpNetwork.Data
 
 			// Create the grid
 			Grid grid = createFeedGridMain ();
-
+			grid.Padding = new Thickness (10);
+		
 			// Create the labels
-			Label info = createFeedLabel (infoText, 10);
-			Label tagFooter = createFeedLabel (footerText, 8);
-
+			Label info = createFeedLabel (infoText, 14);
+			Label tagFooter = createFeedLabel (footerText, 12);
+			tagFooter.VerticalOptions = LayoutOptions.EndAndExpand;
 			// Create the readmore link
 			Button readMore = new Button {
 				Text = "Read More...",
 				TextColor = Color.FromHex("#007064"),
-				FontSize = 10,
+				FontSize = 12,
 				BackgroundColor = Color.Transparent,
-				HeightRequest = 25,
-				WidthRequest = 50
+				VerticalOptions = LayoutOptions.EndAndExpand,
+				HorizontalOptions = LayoutOptions.EndAndExpand
 			};
 
 			readMore.Clicked += (sender, e) => {
@@ -53,29 +53,32 @@ namespace SuncorpNetwork.Data
 		 * 	Post: Grid - the main grid
 		 **/
 		public Grid createFeedGridMain(){
+			
 			// Setup the grid
 			Grid grid = new Grid {
 				Padding = new Thickness(10,5,10,5), 
-				RowSpacing = 1,
+				RowSpacing = 10,
+				HeightRequest = 200,
+				WidthRequest = 500,
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
-				BackgroundColor = Color.White
+				BackgroundColor = Color.White, 
 			};
 
 			RowDefinition r = new RowDefinition ();
-			r.Height = 40;
+			r.Height = new GridLength(1.25, GridUnitType.Star);
 			grid.RowDefinitions.Insert (0, r);
 
 			RowDefinition r1 = new RowDefinition ();
-			r1.Height = 60;
+			r1.Height = new GridLength(1.5, GridUnitType.Star);
 			grid.RowDefinitions.Insert (1 , r1);
 
 			RowDefinition r2 = new RowDefinition ();
-			r2.Height = 30;
+			r2.Height = new GridLength(0.75, GridUnitType.Star);
 			grid.RowDefinitions.Insert (2 , r2);
 
 			ColumnDefinition c = new ColumnDefinition ();
-			c.Width = 400;
+			c.Width = GridLength.Auto;
 			grid.ColumnDefinitions.Add (c);
 
 			return grid;
@@ -89,26 +92,26 @@ namespace SuncorpNetwork.Data
 
 			// Setup the inner grid that holds profile picture + label grid
 			Grid innerGrid = new Grid {
-				Padding = 0
+				Padding = 5
 			};
 			ColumnDefinition c = new ColumnDefinition();
 			ColumnDefinition c1 = new ColumnDefinition();
 			ColumnDefinition c2 = new ColumnDefinition();
 
-			c.Width = 25;
+			c.Width = new GridLength(1, GridUnitType.Star);
 			innerGrid.ColumnDefinitions.Insert(0, c);
 
-			c1.Width = 50;
+			c1.Width = new GridLength(2, GridUnitType.Star);;
 			innerGrid.ColumnDefinitions.Insert(1, c1);
 
-			c2.Width = 50;
+			c2.Width = new GridLength(2, GridUnitType.Star);;
 			innerGrid.ColumnDefinitions.Insert(2, c2);
 
 			// Create the profile image
 			Image profileImage = new Image {
 				Source = profileImageLoc,
-				HeightRequest = 15,
-				WidthRequest = 25,
+				HeightRequest = 25,
+				WidthRequest = 35,
 				BackgroundColor = Color.FromHex("#007064")
 			};
 
@@ -131,19 +134,19 @@ namespace SuncorpNetwork.Data
 			};
 
 			RowDefinition r = new RowDefinition ();
-			r.Height = GridLength.Auto;;
+			r.Height = new GridLength(1, GridUnitType.Star);
 			labelGrid.RowDefinitions.Add(r);
 
 			ColumnDefinition c = new ColumnDefinition();
-			c.Width = 60;
+			c.Width = new GridLength(1, GridUnitType.Star);
 			labelGrid.ColumnDefinitions.Add (c);
 
 			// Create Labels
-			Label name = createFeedLabel (nameText, 12);
+			Label name = createFeedLabel (nameText, 16);
 			name.FontAttributes = FontAttributes.Bold;
 			name.WidthRequest = 500;
 
-			Label dateTime = createFeedLabel (dataTimeText, 8);
+			Label dateTime = createFeedLabel (dataTimeText, 12);
 			dateTime.FontAttributes = FontAttributes.Italic;
 			dateTime.HorizontalOptions = LayoutOptions.EndAndExpand;
 			// Add lables

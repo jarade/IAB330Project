@@ -9,7 +9,7 @@ using Microsoft.WindowsAzure.MobileServices;
 
 namespace SuncorpNetwork
 {
-	public partial class Home : ContentPage
+	public partial class Home : BaseView
 	{
 		private string[] sortBy = {"Recent", "Interests"};
 		private bool tagLock = false;
@@ -33,17 +33,7 @@ namespace SuncorpNetwork
 			setupDatabaseFeed ();
 			TagsBtn.Clicked += tagBtnOnClick;
 		}
-
-//		private void setupBottomNavigation(){
-//			TapGestureRecognizer t = new TapGestureRecognizer ();
-//			t.Tapped +=   (object sender, EventArgs e) => {
-//				Page page = new Messages();
-//				switchPage(page);
-//			};
-//
-//			msgBtn.GestureRecognizers.Add (t);
-//		}
-//
+			
 		private void insertDummyRow(ProjectDetailsDatabase database){
 			string[] s = {"IT"};
 			if(s != null){
@@ -57,55 +47,39 @@ namespace SuncorpNetwork
 			var database = new ProjectDetailsDatabase ();
 			var databaseItems = database.GetItems ().OrderByDescending( x => x.TimeStamp);
 			//var rows = getItems ();
-			//// Add an extra posts to the feed if possible.
+
+			int current = NewsCounter;
 			foreach (ProjectDetails item in databaseItems) {
-				NewsCounter++;
-				NewsSection.Children.Add (post.createNewsPost (item));
+				if (current+4 >= NewsCounter) {
+					NewsCounter++;
+
+					Grid g = post.createNewsPost (item);
+
+					NewsSection.Children.Add (g);
+				} else {
+					break;
+				}
 			}
 		}
 
 		private async Task<List<ProjectDetails>> getItems(){
 			return await MobileService.GetTable<ProjectDetails> ().OrderBy (x => x.TimeStamp).ToListAsync ();
 		}
+
 		/** Create the tag choices temporary page.
 		 **/
 		public void createTagChoices(){
-			// Initialise tags
-			Tags[] tagAr = tlist.initTags ();
-
-			// Create the shown elements
-			ListView lView = new ListView {
-				BackgroundColor = Color.Black
-			};
-
 			Button done = new Button {
-				Text = "Done"
+				Text = "Done",
+				BackgroundColor = Color.White,
+				TextColor = Color.Black
 			};
-
-			// Setup those elements
-			lView.ItemSelected += tlist.noSelection;
-			lView.ItemTapped += tlist.tappedSelection;
 			done.Clicked += sendBack;
 
-			DataTemplate template = new DataTemplate (typeof (ImageCell));
-			template.SetBinding(ImageCell.TextProperty, "Name");
-			template.SetBinding(ImageCell.TextColorProperty, "TextColour");
-			template.SetBinding (ImageCell.ImageSourceProperty, "checkImage");
-
-			lView.ItemsSource = tagAr;
-			lView.ItemTemplate = template;
-
-			// Create the layout to show those elements
-			StackLayout options = new StackLayout {
-				Spacing = 10,
-				VerticalOptions = LayoutOptions.StartAndExpand,
-				Orientation = StackOrientation.Vertical,
-				HorizontalOptions = LayoutOptions.EndAndExpand,
-				Children = {lView, done}
-			};
-
+			StackLayout options = tlist.createTagListStack (done);
 			navigateToTemporaryPage (options);
 		}
+
 
 		/**	Creates the search by picker with a string[].
 		 **/
@@ -141,6 +115,8 @@ namespace SuncorpNetwork
 		public async void navigateToTemporaryPage(StackLayout stack){
 			// Create the temporary page
 			await Navigation.PushModalAsync (new BaseView {
+				Padding = new Thickness(15,5,15,5),
+				BackgroundColor = Color.FromHex("#0DA195"),
 				Content = stack
 			});
 		}

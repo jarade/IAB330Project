@@ -4,7 +4,7 @@ This page is to show the news feed of the user and
 will be the main page if remember me is applied.
 Original Author: Jarrod Eades Created: 9/09/2015
 -->
-<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+<BaseView 	xmlns="http://xamarin.com/schemas/2014/forms" 
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 				x:Class="SuncorpNetwork.Home"
 				Title="Home"
@@ -23,6 +23,8 @@ Original Author: Jarrod Eades Created: 9/09/2015
 									Orientation = "Horizontal"
 									HorizontalOptions = "End"
 									VerticalOptions = "CenterAndExpand"
+									Padding = "5"
+									Spacing = "10"
 								>
 							<Picker	
 									BackgroundColor = "White"
@@ -43,6 +45,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 								/>
 						</StackLayout>
 						<ScrollView 
+									x:Name = "newsfeedScroll"
 									Grid.Row = "1"
 									Orientation = "Vertical"
 									Padding = "0, 10, 0, 25"
@@ -69,6 +72,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 							<StackLayout  Padding = "25,0,25,0"
 										Orientation = "Horizontal"
 										HorizontalOptions = "CenterAndExpand"
+										Spacing = "45"
 										>
 								
 								<Button 
@@ -114,4 +118,4 @@ Original Author: Jarrod Eades Created: 9/09/2015
 						</Frame>
 					<!-- Footer End -->
 				</Grid>
-</ContentPage>
+</BaseView>

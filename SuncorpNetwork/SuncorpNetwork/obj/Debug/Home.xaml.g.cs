@@ -14,11 +14,13 @@ namespace SuncorpNetwork {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class Home : ContentPage {
+    public partial class Home : BaseView {
         
         private Picker SortByPicker;
         
         private Button TagsBtn;
+        
+        private ScrollView newsfeedScroll;
         
         private StackLayout NewsSection;
         
@@ -26,6 +28,7 @@ namespace SuncorpNetwork {
             this.LoadFromXaml(typeof(Home));
             SortByPicker = this.FindByName<Picker>("SortByPicker");
             TagsBtn = this.FindByName<Button>("TagsBtn");
+            newsfeedScroll = this.FindByName<ScrollView>("newsfeedScroll");
             NewsSection = this.FindByName<StackLayout>("NewsSection");
         }
     }

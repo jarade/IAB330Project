@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace SuncorpNetwork
 {
-	public partial class Settings : ContentPage
+	public partial class Settings : BaseView
 	{
 		public Settings ()
 		{

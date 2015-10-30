@@ -13,6 +13,18 @@ namespace SuncorpNetwork.Data
 		public Tags (){
 		}
 
+		public Tags(string name){
+			Name = name;
+			TextColour = Color.White;
+			isChecked = false;
+		}
+
+		public Tags(string name, bool check){
+			Name = name;
+			TextColour = Color.White;
+			isChecked = check;
+		}
+
 		/** Is identifier.
 		 **/
 		public string Name {

@@ -4,6 +4,8 @@ using SuncorpNetwork.Data.ViewModel;
 using SuncorpNetwork.Data;
 using Xamarin.Forms;
 using Microsoft.WindowsAzure.MobileServices;
+using System.ComponentModel;
+using System.Threading.Tasks;
 
 namespace SuncorpNetwork
 {
@@ -14,6 +16,7 @@ namespace SuncorpNetwork
 		public Add (){
 			this.Title = "Add";
 			this.BackgroundColor = Color.FromHex ("#0DA195");
+
 			this.Children.Add (new BaseView {
 				Title = "Project",
 				BackgroundColor = Color.FromHex("#0DA195"),
@@ -61,6 +64,7 @@ namespace SuncorpNetwork
 		private string Location{ get; set; }
 		private string Details { get; set; }
 		private string Expertise { get; set; }
+		private string Email { get; set; }
 
 		private Grid createContentGrid(){
 			Grid content = new Grid ();
@@ -146,9 +150,7 @@ namespace SuncorpNetwork
 				WidthRequest = 400
 			};
 
-			tagBtn.Clicked += (object sender, EventArgs e) => {
-				tagClicked();
-			};
+			tagBtn.Clicked += tagClicked;
 
 			tagStack.Children.Add (tagLabel);
 			tagStack.Children.Add (tagBtn);
@@ -261,6 +263,7 @@ namespace SuncorpNetwork
 			
 			StackLayout footer = new StackLayout {
 				Padding = new Thickness(25,0,25,0),
+				Spacing = 45,
 				Orientation = StackOrientation.Horizontal,
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
@@ -309,10 +312,19 @@ namespace SuncorpNetwork
 			if (ProjectTitle != "") {
 				if (Details != "") {
 					if (Expertise != "") {
-						ProjectDetails newProject = new ProjectDetails (first, last, Title, Details, Expertise);
+						string tags = "";
+						foreach (string tagName in tlist.tagChecked.Keys) {
+							bool isChecked;
+							tlist.tagChecked.TryGetValue (tagName, out isChecked);
+							if(isChecked){
+								tags += tagName + "|";
+							}
+						}
+
+						ProjectDetails newProject = new ProjectDetails (first, last, Title, Details, Expertise, tags);
 						var database = new ProjectDetailsDatabase ();
 						database.InsertOrUpdateProject (newProject);
-						insertItem (newProject);
+						//insertItem (newProject);
 						DisplayAlert ("Created", "The project has been saved", "Ok");
 						switchPage (new Home ());
 					} else {errorMsg("Expertise Wanted");}
@@ -324,9 +336,103 @@ namespace SuncorpNetwork
 			DisplayAlert ("Error", "The " + error + " section was not filled in, please fill it in and try again.", "Ok");
 		}
 
-		private void tagClicked(){
+		private TagList tlist = new TagList();
+		private bool tagLock = false;
 
+		private string newTagName;
+
+		/** Create the tag choices temporary page.
+		 **/
+		public void createTagChoices(){
+			Button done = new Button {
+				Text = "Done", 
+				BackgroundColor = Color.White,
+				TextColor = Color.Black
+			};
+			done.Clicked += sendBack;
+
+			StackLayout options = tlist.createTagListStack (done);
+
+			Entry newTag = new Entry {
+				BackgroundColor = Color.White,
+				TextColor = Color.Black,
+				Placeholder = "Add the tag here..."
+			};
+			newTag.PropertyChanged += (object sender, PropertyChangedEventArgs e) => {
+				newTagName = ((Entry)sender).Text;
+			};
+
+			Button addNew = new Button {
+				Text = "Add New Tag",
+				BackgroundColor = Color.White,
+				TextColor = Color.Black
+			};
+			addNew.Clicked += addNewClicked;
+
+			options.Children.Add (newTag);
+			options.Children.Add (addNew);
+
+			navigateToTemporaryPage (options);
 		}
+
+		/** Navigate to a new page
+		 * 	stack: the layout view to use
+		 **/
+		public async void navigateToTemporaryPage(StackLayout stack){
+			// Create the temporary page
+			await Navigation.PushModalAsync (new BaseView {
+				Padding = new Thickness(15,5,15,5),
+				BackgroundColor = Color.FromHex("#0DA195"),
+				Content = stack
+			});
+		}
+
+		private async void addNewClicked(object sender, EventArgs e){
+			// Check to see if there is a tag
+			if(newTagName != ""){
+				// Check if user error/accident
+				var response = await DisplayAlert("Confirmation", "Do you wish to add " + newTagName 
+														+ ". Warning, doing this will uncheck all tags selected so far.", 
+													"No, take me back", "Yes, add it");
+				// No = true and yes is false hence !response
+				if (!response) {
+					if (!tlist.tagChecked.ContainsKey (newTagName)) {
+						// Add new tag to database
+						var database = new TagDatabase ();
+						Tag t = new Tag (newTagName);
+						database.InsertOrUpdateTag (t);
+						tlist.addToDictionary (t.TagName);
+
+						// Reload list
+						await Navigation.PopModalAsync ();
+						createTagChoices ();
+					} else {
+						await DisplayAlert ("Error:", "The tag name is already in the list, please check the entry field and try again.", "Back");
+					}
+				} 
+			}else {
+				await DisplayAlert ("Error:", "The tag name was not specified, please check the entry field and try again.", "Back");
+			}
+		}
+
+		/**	Tag button click event
+		 * 	Pre: 	Object: the object that calls this event
+		 * 			SelectedItemChangedEventArgs: The event arguments.
+		 **/
+		private void tagClicked(object sender, EventArgs e){
+			if(!tagLock){
+				tagLock = true;
+				createTagChoices ();
+			}
+		}
+
+		/**	Return to the main screen
+		 **/
+		public async void sendBack(object sender, EventArgs e){
+			await Navigation.PopModalAsync ();
+			tagLock = false;
+		}
+
 		public static MobileServiceClient MobileService = new MobileServiceClient(
 			"https://suncorpnetwork.azure-mobile.net/",
 			"nWaDxQYaSGAIlEYlJtiiGNWeVkqXST96"
@@ -341,10 +447,106 @@ namespace SuncorpNetwork
 				DisplayAlert ("ERROR", e.ToString(), "Done");
 			}
 		}
+
 		private Grid setupBusinessPage(){
 			Grid content = createContentGrid ();
 			StackLayout bodyStack = createBodyStack ();
 
+			StackLayout sloganStack = new StackLayout {
+				Orientation = StackOrientation.Horizontal,
+				Padding = new Thickness(10)
+			};
+
+			Label sloganLabel = new Label {
+				Text = "Slogan:\t",
+				TextColor = Color.White,
+				FontSize = 20
+			};
+
+			Entry sloganEntry = new Entry {
+				BackgroundColor = Color.White,
+				TextColor = Color.Black,
+				MinimumWidthRequest = 400,
+				WidthRequest = 400
+			};
+
+			StackLayout imageStack = new StackLayout {
+				Orientation = StackOrientation.Horizontal,
+				Padding = new Thickness(10)
+			};
+
+			Label imageLabel = new Label {
+				Text = "Logo:\t\t",
+				TextColor = Color.White,
+				FontSize = 20
+			};
+
+			Button imageSelector = new Button {
+				BackgroundColor = Color.White,
+				TextColor = Color.Black,
+				MinimumWidthRequest = 400,
+				WidthRequest = 400
+			};
+			imageStack.Children.Add (imageLabel);
+			imageStack.Children.Add (imageSelector);
+
+			StackLayout locationStack = new StackLayout {
+				Orientation = StackOrientation.Horizontal,
+				Padding = new Thickness(10)
+			};
+
+			Label locationLabel = new Label {
+				Text = "Address:\t",
+				TextColor = Color.White,
+				FontSize = 20
+			};
+
+			Entry locationEntry = new Entry {
+				BackgroundColor = Color.White,
+				TextColor = Color.Black,
+				MinimumWidthRequest = 400,
+				WidthRequest = 400
+			};
+			locationStack.Children.Add (locationLabel);
+			locationStack.Children.Add (locationEntry);
+
+			StackLayout emailStack = new StackLayout {
+				Orientation = StackOrientation.Horizontal,
+				Padding = new Thickness(10)
+			};
+
+			Label emailLabel = new Label {
+				Text = "Email:\t\t",
+				TextColor = Color.White,
+				FontSize = 20
+			};
+
+			Entry emailEntry = new Entry {
+				BackgroundColor = Color.White,
+				TextColor = Color.Black,
+				MinimumWidthRequest = 400,
+				WidthRequest = 400
+			};
+
+			emailEntry.TextChanged += (object sender, TextChangedEventArgs e) => {
+				Email = e.NewTextValue;
+			};
+
+			emailStack.Children.Add (emailLabel);
+			emailStack.Children.Add (emailEntry);
+
+			Button submit = new Button {
+				BackgroundColor = Color.White,
+				TextColor = Color.Black
+			};
+
+			submit.Clicked += businessSubmit;
+
+			bodyStack.Children.Add (sloganStack);
+			bodyStack.Children.Add (imageStack);
+			bodyStack.Children.Add (locationStack);
+			bodyStack.Children.Add (emailStack);
+			bodyStack.Children.Add (submit);
 			ScrollView scroll = createScroll ();
 			scroll.Content = bodyStack;
 
@@ -352,6 +554,10 @@ namespace SuncorpNetwork
 			content.Children.Add(createFooter (), 0, 1);
 			return content;
 		}
+
+		public async void businessSubmit(Object sender, EventArgs e){
+			await DisplayAlert ("Complete", "Congratulations on forming a business", "Done");
+			switchPage (new Home ());
+		}
 	}
 }
-

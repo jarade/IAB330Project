@@ -23,7 +23,6 @@
 					Placeholder = "password"
 					/>
 	
-
 			<StackLayout HorizontalOptions="CenterAndExpand"
 						 Orientation = "Horizontal"
 						 Spacing = "25">	
@@ -37,7 +36,7 @@
 							/>	
 
 				<Button 	BackgroundColor = "White"
-							Text = "Cancel"
+							Text = "Clear"
 							TextColor = "Black"
 							Clicked = "cancelBtnClicked"
 							WidthRequest = "100"

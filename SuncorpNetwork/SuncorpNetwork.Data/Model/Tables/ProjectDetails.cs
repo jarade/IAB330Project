@@ -38,6 +38,16 @@ namespace SuncorpNetwork.Data
 			TimeStamp =  DateTime.Now;
 		}
 
+		public ProjectDetails(string firstName, string lastName, string title, string info, string exp, string tags){
+			FirstName = firstName;
+			LastName = lastName;
+			Title = title;
+			Information = info;
+			HasTags = tags;
+			ExpertiseWanted = exp;
+			TimeStamp =  DateTime.Now;
+		}
+
 		public ProjectDetails(string firstName, string lastName, string info, DateTime date){
 			FirstName = firstName;
 			LastName = lastName;

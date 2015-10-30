@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using System.Linq;
 using System.Collections.Generic;
 using SQLite.Net;
+using System.Diagnostics;
 
 namespace SuncorpNetwork.Data
 {
@@ -28,19 +29,30 @@ namespace SuncorpNetwork.Data
 		/// </summary>
 		/// <returns>The items.</returns>
 		public List<Tag> GetItems(){
-			var items = database.Table<Tag> ().ToList<Tag> ();
-			return items;
+	
+			Debug.WriteLine ("Get Item Start");
+			try{
+				var items = database.Table<Tag> ().ToList<Tag> ();
+				return items;
+			}catch(Exception e){
+				Debug.WriteLine ("Error: " + e.ToString());
+			}
+			return new List<Tag>();
 		}
 
 		/// <summary>
-		/// Inserts the or update project.
+		/// Inserts the or update tag.
 		/// </summary>
 		/// <returns>The or update project.</returns>
-		/// <param name="project">Project.</param>
-		public int InsertOrUpdateProject(Tag tag){
+		/// <param name="tag">Tag.</param>
+		public int InsertOrUpdateTag(Tag tag){
 			return 	database.Table<Tag> ().Where (
 				x => x.TagName == tag.TagName).Any ()
 				? database.Update (tag) : database.Insert (tag);
+		}
+
+		public void DeleteAllItems(){
+			database.DeleteAll<Tag> ();
 		}
 	}
 }

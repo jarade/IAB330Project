@@ -1,17 +1,12 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 7 (Jelly Bean)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\Login.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\SubPages\Add.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Add.cs" Line="335" Column="24" />
-      <File FileName="SuncorpNetwork.Data\Model\Tables\ProjectDetails.cs" Line="17" Column="28" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\TagList.cs" Line="1" Column="1" />
-      <File FileName="Droid\MainActivity.cs" Line="10" Column="45" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\Notifications.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\newsfeedPost.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="109" Column="30" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="24" Column="3" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Login.xaml" Line="44" Column="20" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Login.xaml.cs" Line="21" Column="21" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="56" Column="42" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="58" Column="19" />
+      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\newsfeedPost.cs" Line="117" Column="1" />
+      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\TagList.cs" Line="21" Column="20" />
+      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Add.cs" Line="214" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -16,7 +16,7 @@ namespace SuncorpNetwork.Droid
 		#region ISqlite implementation
 
 		public SQLiteConnection GetConnection (){
-			const string sqliteFilename = "database.db3";
+			const string sqliteFilename = "suncorpdatabase.db3";
 			var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
 			var path = Path.Combine (documentsPath, sqliteFilename);
 			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();

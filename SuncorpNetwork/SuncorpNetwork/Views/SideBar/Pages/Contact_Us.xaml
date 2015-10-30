@@ -13,7 +13,7 @@
 		</Grid.RowDefinitions>
 
 			<StackLayout 
-						Padding = "5,5,5,5"
+						Padding = "0,0,0,0"
 						x:Name = "content"
 						Orientation = "Vertical"
 						HorizontalOptions = "CenterAndExpand"
@@ -111,52 +111,59 @@
 			</StackLayout>
 
 			<!-- Footer Start -->
-				<Frame 
-						Grid.Row = "1"
-						Padding = "0,0,0,0"
-						BackgroundColor = "#007064"
-						OutlineColor = "Transparent" 
-					>
-					<StackLayout 
-								Orientation = "Horizontal"
-								HorizontalOptions = "CenterAndExpand"
-								>
-						<Button 
+						<Frame 
+								Grid.Row = "2"
+								Padding = "25,0,25,0"
 								BackgroundColor = "#007064"
-								Image = "ic_chat_white_24dp.png"
-								Clicked = "messageBtnClicked"
-								WidthRequest = "50"
-							/>
+								OutlineColor = "Transparent" 
+							>
+							<StackLayout  Padding = "25,0,25,0"
+										Orientation = "Horizontal"
+										HorizontalOptions = "CenterAndExpand"
+										Spacing = "45"
+										>
+								
+								<Button 
+										Scale = "2"
+										BackgroundColor = "Transparent"
+										Image = "ic_chat_white_24dp.png"
+										Clicked = "messageBtnClicked"
+										WidthRequest = "50"
+									/>
 
-						<Button
-								BackgroundColor = "#007064"
-								Image = "ic_notifications_white_24dp.png"
-								Clicked = "alertBtnClicked"
-								WidthRequest = "50"
-							/>
+								<Button
+										Scale = "2"
+										BackgroundColor = "Transparent"
+										Image = "ic_notifications_white_24dp.png"
+										Clicked = "alertBtnClicked"
+										WidthRequest = "50"
+									/>
 
-						<Button
-								BackgroundColor = "#007064"
-								Image = "ic_account_balance_white_24dp.png"
-								Clicked = "homeBtnClicked"
-								WidthRequest = "50"
-							/>
+								<Button
+										Scale = "2"
+										BackgroundColor = "Transparent"
+										Image = "ic_account_balance_white_24dp.png"
+										Clicked = "homeBtnClicked"
+										WidthRequest = "50"
+									/>
 
-						<Button
-								BackgroundColor = "#007064"
-								Image = "ic_add_circle_white_24dp.png"
-								Clicked = "addBtnClicked"
-								WidthRequest = "50"
-							/>
+								<Button
+										Scale = "2"
+										BackgroundColor = "Transparent"
+										Image = "ic_add_circle_white_24dp.png"
+										Clicked = "addBtnClicked"
+										WidthRequest = "50"
+									/>
 
-						<Button
-								BackgroundColor = "#007064"
-								Image = "ic_account_circle_white_24dp.png"
-								Clicked = "profileBtnClicked"
-								WidthRequest = "50"
-							/>
-					</StackLayout>
-				</Frame>
-			<!-- Footer End -->
+								<Button
+										Scale = "2"
+										BackgroundColor = "Transparent"
+										Image = "ic_account_circle_white_24dp.png"
+										Clicked = "profileBtnClicked"
+										WidthRequest = "50"
+									/>
+							</StackLayout>
+						</Frame>
+					<!-- Footer End -->
 	</Grid>
 </BaseView>
