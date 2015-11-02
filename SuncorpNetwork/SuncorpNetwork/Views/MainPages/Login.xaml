@@ -15,6 +15,7 @@
 					TextColor = "Black"
 					Placeholder = "Username"
 					x:Name = "emailField"
+					Text = "testingemail@email.com"
 					/>
 
 			<Entry	

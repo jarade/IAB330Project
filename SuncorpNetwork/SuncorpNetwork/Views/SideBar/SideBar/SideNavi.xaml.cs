@@ -10,10 +10,22 @@ namespace SuncorpNetwork
 		public SideNavi ()
 		{
 			var menuPage = new MenuPage ();
+			menuPage.BackgroundColor = Color.FromHex("#0DA195");
+			menuPage.Menu.BackgroundColor = Color.FromHex("#0DA195");
 			menuPage.Menu.ItemSelected += (sender, e) => NavigateTo (e.SelectedItem as MenuItem);
 			Master = menuPage;
-
 			Detail = setupPage(new Home());
+		}
+
+		public SideNavi (string email)
+		{
+			var menuPage = new MenuPage ();
+			menuPage.BackgroundColor = Color.FromHex("#0DA195");
+			menuPage.Menu.BackgroundColor = Color.FromHex("#0DA195");
+
+			menuPage.Menu.ItemSelected += (sender, e) => NavigateTo (e.SelectedItem as MenuItem);
+			Master = menuPage;
+			Detail = setupPage(new Home(email));
 		}
 
 		public void NavigateTo (MenuItem menu){
@@ -32,7 +44,8 @@ namespace SuncorpNetwork
 		private NavigationPage setupPage(Page displayPage){
 			var page = new NavigationPage (displayPage);
 			page.BarBackgroundColor = Color.FromHex("#007064");
-			page.HeightRequest = 50;
+			page.BarTextColor = Color.White;
+			page.HeightRequest = 75;
 			return page;
 		}
 	}

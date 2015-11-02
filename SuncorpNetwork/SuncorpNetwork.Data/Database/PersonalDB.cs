@@ -39,6 +39,12 @@ namespace SuncorpNetwork.Data
 			return new List<PersonalDetails>();
 		}
 
+		public bool IsEmail(string email){
+			return 	database.Table<PersonalDetails> ().Where (
+				x => x.Email == email).Any()
+				? true : false;
+		}
+
 		/// <summary>
 		/// Gets the personal details of the email.
 		/// </summary>

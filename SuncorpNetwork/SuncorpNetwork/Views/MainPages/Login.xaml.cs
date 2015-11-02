@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using SuncorpNetwork.Data;
 
 namespace SuncorpNetwork
 {
@@ -15,11 +16,17 @@ namespace SuncorpNetwork
 		}
 
 		public async void loginBtnClicked(object sender, EventArgs e){
-			//var database = new PersonalDB ();
+			var database = new PersonalDB ();
 			//bool accepted = database.GetEmail (emailField.text);
 			// if accepted {
-			await Navigation.PushModalAsync (new SideNavi ());
-			// } else { DisplayAlert("Error", "Your email is not correct.", "Done"); }
+			string email = emailField.Text;
+			bool isEmail = database.IsEmail (email);
+			//await DisplayAlert(email, isEmail.ToString(), "Done");
+			if (isEmail) {
+				await Navigation.PushModalAsync (new SideNavi (email));
+			} else { 
+				await DisplayAlert("Error", "Your email or password is not correct.", "Done"); 
+			}
 		}
 
 		public void cancelBtnClicked(object sender, EventArgs e){

@@ -10,7 +10,7 @@ namespace SuncorpNetwork
 
 		public MenuPage ()
 		{
-			//Icon = "icon.png";//"settings.png";
+			Icon = "profile_filler.png";//"settings.png";
 			Title = "menu"; // The Title property must be set.
 			BackgroundColor = Color.FromHex ("333333");
 

@@ -53,13 +53,20 @@ namespace SuncorpNetwork.Data
 
 			// Create the shown elements
 			ListView lView = new ListView {
-				BackgroundColor = Color.Transparent
+				BackgroundColor = Color.FromHex("#007064"),
 			};
 
 			// Setup those elements
 			lView.ItemSelected += noSelection;
 			lView.ItemTapped += tappedSelection;
 
+			StackLayout cellLayout = new StackLayout {
+
+			};
+
+			ViewCell v = new ViewCell {
+				View = cellLayout
+			};
 
 			DataTemplate template = new DataTemplate (typeof (ImageCell));
 			template.SetBinding(ImageCell.TextProperty, "Name");
