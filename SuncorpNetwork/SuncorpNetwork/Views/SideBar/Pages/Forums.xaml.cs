@@ -36,6 +36,11 @@ namespace SuncorpNetwork
 			// Navigate to the Page.
 			switchPage(new PersonalProfile ());
 		}
+		public async void Subforum1Clicked (object sender, EventArgs e)
+		{
+			SideNavi curNavi = (SideNavi)this.Parent.Parent;
+			curNavi.switchTo(new Forum1());
+		}
 
 		private void switchPage(Page page){
 			SideNavi curNavi = (SideNavi)this.Parent.Parent;
