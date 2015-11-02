@@ -43,6 +43,7 @@ namespace SuncorpNetwork
 
 		private NavigationPage setupPage(Page displayPage){
 			var page = new NavigationPage (displayPage);
+			page.Icon = "profile_filler.png";
 			page.BarBackgroundColor = Color.FromHex("#007064");
 			page.BarTextColor = Color.White;
 			page.HeightRequest = 75;

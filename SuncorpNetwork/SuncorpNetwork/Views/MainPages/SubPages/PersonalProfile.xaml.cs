@@ -18,13 +18,13 @@ namespace SuncorpNetwork
 			var database = new PersonalDB ();
 			PersonalDetails item = database.GetDetails(((App)Application.Current).UserEmail);
 			//TheDetails.ProfilePic = ImageSource.FromFile("images.jpg");
-			TheDetails.FirstName = item.FirstName;
+			//TheDetails.FirstName = item.FirstName;
 			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
 
-			TheDetails.Pros = "Xamarin,IOS Development, Android Development";
-			TheDetails.Overview = "I develop cross-platform mobile apps including games for iOS, Android & Windows platforms. I know everything about mobile development including adnetworks integration, in-app purchases on every platform, social functionality (login/sharing etc), cross-platform back-end services like Parse. oDesk has recognized me as one of their top Mobile Developers. See the badge on the right of my profile for more information ";
+			item.Pros = "Xamarin,IOS Development, Android Development";
+			item.Overview = "I develop cross-platform mobile apps including games for iOS, Android & Windows platforms. I know everything about mobile development including adnetworks integration, in-app purchases on every platform, social functionality (login/sharing etc), cross-platform back-end services like Parse. oDesk has recognized me as one of their top Mobile Developers. See the badge on the right of my profile for more information ";
 
-			BindingContext = TheDetails;
+			BindingContext = item;
 			InitializeComponent ();
 		}
 

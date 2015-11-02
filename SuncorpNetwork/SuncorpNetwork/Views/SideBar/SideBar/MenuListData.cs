@@ -10,7 +10,7 @@ namespace SuncorpNetwork
 			this.Add (new MenuItem () { 
 				Title = "Searching Businesses", 
 				IconSource = "icon.png",
-				TargetType = typeof(Searching_Business)
+				TargetType = typeof(MapPage)
 			});
 
 			this.Add (new MenuItem () { 

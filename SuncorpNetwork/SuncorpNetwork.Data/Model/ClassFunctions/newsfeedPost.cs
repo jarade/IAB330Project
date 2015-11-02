@@ -126,7 +126,7 @@ namespace SuncorpNetwork.Data
 		 **/
 		public Grid createLabelGrid(string user, DateTime date){
 			string nameText = user;
-			string dataTimeText = date.Date.ToString();
+			string dataTimeText = date.ToLocalTime ().ToString ();
 
 			// Setup the label grid that holds the labels name and dateTime
 			Grid labelGrid = new Grid {

@@ -35,7 +35,7 @@ namespace SuncorpNetwork.Data
 			Information = info;
 			HasTags = "";
 			ExpertiseWanted = exp;
-			TimeStamp =  DateTime.Now;
+			TimeStamp = DateTime.Now;
 		}
 
 		public ProjectDetails(string firstName, string lastName, string title, string info, string exp, string tags){
@@ -45,7 +45,7 @@ namespace SuncorpNetwork.Data
 			Information = info;
 			HasTags = tags;
 			ExpertiseWanted = exp;
-			TimeStamp =  DateTime.Now;
+			TimeStamp = DateTime.UtcNow;
 		}
 
 		public ProjectDetails(string firstName, string lastName, string info, DateTime date){

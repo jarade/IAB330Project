@@ -28,6 +28,7 @@ namespace SuncorpNetwork
 			//DisplayAlert ("Trial", "The user logged in is:" + ,  "Ok");
 			StartUp ();
 		}
+
 		private void StartUp(){
 			InitializeComponent ();
 			createSearchBy ();

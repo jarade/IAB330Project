@@ -2,44 +2,38 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using SuncorpNetwork.Data;
 
 namespace SuncorpNetwork
 {
-	public partial class Searching_Business : BaseView
+	public class MapPage: BaseView
 	{
-		public Searching_Business ()
+		MallListView list;
+		SearchBar searchbar;
+
+		public MapPage ()
 		{
-			InitializeComponent ();
-		}
+			Title = "Chandler Mall";
+			BackgroundColor = Color.FromHex("#0DA195");
+			list = new MallListView ();
 
-		public void messageBtnClicked(object sender, EventArgs e){
-			// Navigate to the Page.
-			switchPage(new Messages ());
-		}
+			searchbar = new SearchBar () {
+				Placeholder = "Search",
+			};
 
-		public void alertBtnClicked(object sender, EventArgs e){
-			// Navigate to the Page.
-			switchPage(new Alert ());
-		}
+			searchbar.TextChanged += (sender, e) => list.FilterLocations (searchbar.Text);
+			searchbar.SearchButtonPressed += (sender, e) => {
+				list.FilterLocations (searchbar.Text);
+			};
 
-		public void homeBtnClicked(object sender, EventArgs e){
-			// Navigate to the Page.
-			switchPage(new Home ());
-		}
+			var stack = new StackLayout () {
+				Children = {
+					searchbar,
+					list
+				}
+			};
 
-		public void addBtnClicked(object sender, EventArgs e){
-			// Navigate to the Page.
-			switchPage(new Add ());
-		}
-
-		public void profileBtnClicked(object sender, EventArgs e){
-			// Navigate to the Page.
-			switchPage(new PersonalProfile ());
-		}
-
-		private void switchPage(Page page){
-			SideNavi curNavi = (SideNavi)this.Parent.Parent;
-			curNavi.switchTo(page);
+			Content = stack;
 		}
 	}
 }

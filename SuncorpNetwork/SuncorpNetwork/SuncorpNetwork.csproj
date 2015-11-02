@@ -82,7 +82,6 @@
     <Compile Include="Views\baseView.cs" />
     <Compile Include="ViewModel\MyEditor.cs" />
     <Compile Include="Views\MainPages\SubPages\Add.cs" />
-    <Compile Include="Views\SideBar\Pages\MapPage.cs" />
     <Compile Include="Views\SideBar\Pages\Forum1.xaml.cs">
       <DependentUpon>Forum1.xaml</DependentUpon>
     </Compile>

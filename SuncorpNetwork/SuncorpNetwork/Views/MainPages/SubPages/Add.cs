@@ -308,26 +308,34 @@ namespace SuncorpNetwork
 		}
 
 		private void saveProject (){
-			string first = "Jarrod";
-			string last = "Eades";
 
 			if (ProjectTitle != "") {
 				if (Details != "") {
 					if (Expertise != "") {
 						string tags = "";
+						// Add tags as string
 						foreach (string tagName in tlist.tagChecked.Keys) {
 							bool isChecked;
 							tlist.tagChecked.TryGetValue (tagName, out isChecked);
 							if(isChecked){
-								tags += tagName + "|";
+								if (tags != "") {
+									tags += tagName + "|";
+								} else {
+									tags = tagName;
+								}
 							}
 						}
+						// Get personal information 
+						var personalInfo = new PersonalDB ();
+						PersonalDetails pd = personalInfo.GetDetails (((App)Application.Current).UserEmail);
 
-						ProjectDetails newProject = new ProjectDetails (first, last, Title, Details, Expertise, tags);
+						// Create the project table
+						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, Title, Details, Expertise, tags);
 						var database = new ProjectDetailsDatabase ();
 						database.InsertOrUpdateProject (newProject);
 						//insertItem (newProject);
-						DisplayAlert ("Created", "The project has been saved", "Ok");
+
+						DisplayAlert ("Created", "The project has been created", "Ok");
 						switchPage (new Home ());
 					} else {errorMsg("Expertise Wanted");}
 				} else {errorMsg("Details");}

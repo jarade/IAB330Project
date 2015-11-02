@@ -14,7 +14,7 @@ namespace SuncorpNetwork {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class Searching_Business : BaseView {
+    public partial class Searching_Business : ContentPage {
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Searching_Business));
