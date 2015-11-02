@@ -11,59 +11,19 @@ namespace SuncorpNetwork
 
 		public PersonalProfile ()
 		{
-			TheDetails = new PersonalDetails();
-			TheDetails.FirstName = "Chou";
-			TheDetails.LastName = "Chou";
-			TheDetails.Email = "lu.03566@gmail.com";
-			TheDetails.Availability = false ;
-			if (TheDetails.Availability == false) {
-				TheDetails.Availability_2 = "Not Available";
-			} else {
-				TheDetails.Availability_2 = "Available";
-			}
-
-			var database = new PersonalDB ();
-			string email = "lu.03566@gmail.com";
-			TheDetails.FirstName = "FRED";
-			database.InsertOrUpdatePersonalDetails (TheDetails);
-			//database.GetDetails (email);
-			var items = database.GetItems();
-			int p = ((List<PersonalDetails>)items).Count;
-			// if p == 1 then do stuff else could not find
-			PersonalDetails item = database.GetDetails(email);
-			//TheDetails.ProfilePic = ImageSource.FromFile("images.jpg");
-			TheDetails.FirstName = item.FirstName;
-			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
-
-			TheDetails.Pros = "Xamarin,IOS Development, Android Development";
-			TheDetails.Overview = "I develop cross-platform mobile apps including games for iOS, Android & Windows platforms. I know everything about mobile development including adnetworks integration, in-app purchases on every platform, social functionality (login/sharing etc), cross-platform back-end services like Parse. oDesk has recognized me as one of their top Mobile Developers. See the badge on the right of my profile for more information ";
-			BindingContext = TheDetails;
-			InitializeComponent ();
+			setup ();
 		}
 
-
-		public PersonalProfile (PersonalDetails other_details)
-		{
-			if (other_details.Availability == false ) {
-				other_details.Availability_2 = "Not Available";
-			}
-
+		public void setup(){
 			var database = new PersonalDB ();
-			string email = other_details.Email;
-
-			database.InsertOrUpdatePersonalDetails (TheDetails);
-			//database.GetDetails (email);
-			var items = database.GetItems();
-			int p = ((List<PersonalDetails>)items).Count;
-			// if p == 1 then do stuff else could not find
-			PersonalDetails item = database.GetDetails(email);
+			PersonalDetails item = database.GetDetails(UserEmail);
 			//TheDetails.ProfilePic = ImageSource.FromFile("images.jpg");
-
 			TheDetails.FirstName = item.FirstName;
 			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
 
 			TheDetails.Pros = "Xamarin,IOS Development, Android Development";
 			TheDetails.Overview = "I develop cross-platform mobile apps including games for iOS, Android & Windows platforms. I know everything about mobile development including adnetworks integration, in-app purchases on every platform, social functionality (login/sharing etc), cross-platform back-end services like Parse. oDesk has recognized me as one of their top Mobile Developers. See the badge on the right of my profile for more information ";
+
 			BindingContext = TheDetails;
 			InitializeComponent ();
 		}

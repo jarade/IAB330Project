@@ -25,7 +25,7 @@ namespace SuncorpNetwork
 
 			menuPage.Menu.ItemSelected += (sender, e) => NavigateTo (e.SelectedItem as MenuItem);
 			Master = menuPage;
-			Detail = setupPage(new Home(email));
+			Detail = setupPage(new Home());
 		}
 
 		public void NavigateTo (MenuItem menu){

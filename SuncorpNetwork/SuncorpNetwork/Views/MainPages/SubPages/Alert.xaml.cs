@@ -8,12 +8,14 @@ namespace SuncorpNetwork
 {
 	public partial class Alert : ContentPage
 	{
+
 		public Alert ()
 		{
+			DisplayAlert ("Email", "There is no email", "OK");
 			InitializeComponent ();
 			listNotifications ();
 		}
-			
+
 		private Notification[] createAlerts(){
 			Notification noteNotRead = new Notification {
 				Title = "Test Not Read", 

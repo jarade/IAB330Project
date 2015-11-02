@@ -14,6 +14,11 @@ namespace SuncorpNetwork
 		AddViewModel a = new AddViewModel();
 
 		public Add (){
+			DisplayAlert ("Email", "There is no email", "OK");
+			startup ();
+		}
+
+		public void startup(){
 			this.Title = "Add";
 			this.BackgroundColor = Color.FromHex ("#0DA195");
 
@@ -29,7 +34,7 @@ namespace SuncorpNetwork
 				Content = setupBusinessPage()
 			});
 		}
-			
+
 		public void messageBtnClicked(object sender, EventArgs e){
 			// Navigate to the Page.
 			switchPage(new Messages ());

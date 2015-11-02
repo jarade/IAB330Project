@@ -23,7 +23,8 @@ namespace SuncorpNetwork
 			bool isEmail = database.IsEmail (email);
 			//await DisplayAlert(email, isEmail.ToString(), "Done");
 			if (isEmail) {
-				await Navigation.PushModalAsync (new SideNavi (email));
+				((App)Application.Current).UserEmail = email;
+				await Navigation.PushModalAsync (new SideNavi ());
 			} else { 
 				await DisplayAlert("Error", "Your email or password is not correct.", "Done"); 
 			}

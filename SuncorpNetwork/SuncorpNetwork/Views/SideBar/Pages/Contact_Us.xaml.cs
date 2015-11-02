@@ -8,10 +8,21 @@ namespace SuncorpNetwork
 {
 	public partial class Contact_Us : BaseView
 	{
+		private string UserEmail { get; set; }
 		MyEditor subjectEditor;
 
 		public Contact_Us ()
 		{
+			DisplayAlert ("Email", "There is no email", "OK");
+			InitializeComponent ();
+
+			createCustomEditor ();
+			problemPicker.SelectedIndex = 0;
+		}
+
+		public Contact_Us (string email)
+		{
+			UserEmail = email;
 			InitializeComponent ();
 
 			createCustomEditor ();

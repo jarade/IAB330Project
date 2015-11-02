@@ -7,8 +7,10 @@ namespace SuncorpNetwork
 {
 	public partial class Messages : ContentPage
 	{
+
 		public Messages ()
 		{
+			DisplayAlert ("Email", "There is no email", "OK");
 			InitializeComponent ();
 		}
 

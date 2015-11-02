@@ -6,6 +6,8 @@ namespace SuncorpNetwork
 {
 	public class App : Application
 	{
+		public string UserEmail { get; set; }
+
 		public App ()
 		{
 			MainPage = GetMainPage();// The root page of your application

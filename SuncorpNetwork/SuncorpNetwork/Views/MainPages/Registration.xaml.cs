@@ -18,6 +18,8 @@ namespace SuncorpNetwork
 			string fn = entryFirstName.Text;
 			string ln = entryLastName.Text;
 			string em = entryEmail.Text;
+			string pw = "password";
+
 			if (fn != "") {
 				if (ln != "") {
 					if (em != "") {
@@ -25,14 +27,20 @@ namespace SuncorpNetwork
 						var database = new PersonalDB ();
 						database.InsertOrUpdatePersonalDetails (pd);
 						PersonalDetails item = database.GetDetails(em);
-						await DisplayAlert ("Alert", "Registered Successfully: " + item.Email, "OK");
+						AddRegistration (em, pw);
 
-
-
-
+						// navigate here
 					}
 				}
 			}
+		}
+
+		public async void AddRegistration(string email, string password){
+			var database = new LoginTable ();
+			LoginDetails details = new LoginDetails (email, password);
+			database.InsertOrUpdate (details);
+
+			//await DisplayAlert ("Alert", "Registered Successfully: " + database.GetItems().Count.ToString(), "OK");
 		}
 	}
 }

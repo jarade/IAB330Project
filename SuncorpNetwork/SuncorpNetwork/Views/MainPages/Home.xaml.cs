@@ -16,7 +16,7 @@ namespace SuncorpNetwork
 		private newsfeedPost post = new newsfeedPost ();
 		private TagList tlist = new TagList();
 		private int NewsCounter {set; get;}
-		private string UserEmail { get{ return UserEmail; } set{ /*Do Nothing*/}}
+
 		public static MobileServiceClient MobileService = new MobileServiceClient(
 			"https://suncorpnetwork.azure-mobile.net/",
 			"nWaDxQYaSGAIlEYlJtiiGNWeVkqXST96"
@@ -24,14 +24,10 @@ namespace SuncorpNetwork
 
 		public Home ()
 		{
-			DisplayAlert ("Trial", "There is no user logged in.", "Ok");
+			//((App)Application.Current).UserEmail - use this for email thats logged in
+			//DisplayAlert ("Trial", "The user logged in is:" + ,  "Ok");
 			StartUp ();
 		}
-		public Home(string email){
-			UserEmail = email;
-			StartUp ();
-		}
-
 		private void StartUp(){
 			InitializeComponent ();
 			createSearchBy ();
