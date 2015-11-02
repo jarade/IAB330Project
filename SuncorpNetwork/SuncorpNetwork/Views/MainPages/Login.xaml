@@ -28,30 +28,29 @@
 			<StackLayout HorizontalOptions="Center"
 						 Orientation = "Horizontal"
 						 Spacing = "15">	
+				<Button 	BackgroundColor = "White"
+							Text = "Clear"
+							TextColor = "Black"
+							Clicked = "cancelBtnClicked"
+							WidthRequest = "140"
+							HeightRequest = "50"
+							/>
 
 				<Button		BackgroundColor = "White"
 							Text = "Login"
 							TextColor = "Black"
 							Clicked = "loginBtnClicked"
-							WidthRequest = "100"
+							WidthRequest = "140"
 							HeightRequest = "50"
 							/>	
+			</StackLayout>
 
-				<Button 	BackgroundColor = "White"
-							Text = "Clear"
-							TextColor = "Black"
-							Clicked = "cancelBtnClicked"
-							WidthRequest = "100"
-							HeightRequest = "50"
-							/>
-
-				<Button 	BackgroundColor = "White"
+			<Button 	BackgroundColor = "White"
 							Clicked = "registerBtnClicked"
 							Text = "Register"
 							TextColor = "Black"
 							WidthRequest = "100"
 							HeightRequest = "50"
 							/>
-			</StackLayout>
 		</StackLayout>
 </BaseView>

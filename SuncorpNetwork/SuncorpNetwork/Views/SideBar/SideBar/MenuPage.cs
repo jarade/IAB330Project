@@ -17,10 +17,13 @@ namespace SuncorpNetwork
 			Menu = new MenuListView ();
 
 			var menuLabel = new ContentView {
-				Padding = new Thickness (10, 36, 0, 5),
+				Padding = 10,
 				Content = new Label {
-					TextColor = Color.FromHex ("AAAAAA"),
-					Text = "MENU"
+					TextColor = Color.White,
+					Text = "Menu",
+					XAlign = TextAlignment.Center,
+					FontSize = 20,
+					FontAttributes = FontAttributes.Bold
 				}
 			};
 

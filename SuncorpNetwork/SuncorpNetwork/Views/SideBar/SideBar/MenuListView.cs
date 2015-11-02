@@ -12,11 +12,11 @@ namespace SuncorpNetwork
 
 			ItemsSource = data;
 			VerticalOptions = LayoutOptions.FillAndExpand;
-			BackgroundColor = Color.Transparent;
-
+			BackgroundColor = Color.FromHex("#0DA195");
 
 			var cell = new DataTemplate (typeof(ImageCell));
 			cell.SetBinding (TextCell.TextProperty, "Title");
+			cell.SetBinding (TextCell.TextColorProperty, "TextColour");
 			cell.SetBinding (ImageCell.ImageSourceProperty, "IconSource");
 
 			ItemTemplate = cell;

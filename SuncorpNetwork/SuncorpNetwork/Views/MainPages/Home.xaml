@@ -73,7 +73,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 							<StackLayout  Padding = "25,0,25,0"
 										Orientation = "Horizontal"
 										HorizontalOptions = "CenterAndExpand"
-										Spacing = "15"
+										Spacing = "10"
 										>
 								
 								<Button 

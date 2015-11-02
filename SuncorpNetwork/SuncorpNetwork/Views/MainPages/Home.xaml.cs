@@ -24,6 +24,7 @@ namespace SuncorpNetwork
 
 		public Home ()
 		{
+			var database = new ProjectDetailsDatabase ();
 			//((App)Application.Current).UserEmail - use this for email thats logged in
 			//DisplayAlert ("Trial", "The user logged in is:" + ,  "Ok");
 			StartUp ();
@@ -41,20 +42,30 @@ namespace SuncorpNetwork
 			TagsBtn.Clicked += tagBtnOnClick;
 		}
 
-		private void insertDummyRow(ProjectDetailsDatabase database){
-			string[] s = {"IT"};
-			if(s != null){
-				ProjectDetails p = new ProjectDetails ("Jarrod", "Eades");
-				p.Information = "Some basic information.";
-				database.InsertOrUpdateProject (p);
+		public List<ProjectDetails> sortByTags(){
+			var database = new ProjectDetailsDatabase ();
+			List<string> tags = new List<string> ();
+
+			foreach (string tagName in tlist.tagChecked.Keys) {
+				bool isChecked;
+				tlist.tagChecked.TryGetValue (tagName, out isChecked);
+				if(isChecked){
+					tags.Add (tagName);
+				}
+			}
+
+			// If tags are selected then get items that contain at least one tag else get all items
+			if (tags.Count > 0) {
+				return database.GetItemsWithTags (tags).OrderByDescending (x => x.TimeStamp).ToList();;
+			} else {
+				return database.GetItems ().OrderByDescending (x => x.TimeStamp).ToList();
 			}
 		}
 
 		public void setupDatabaseFeed(){
 			var database = new ProjectDetailsDatabase ();
-			var databaseItems = database.GetItems ().OrderByDescending( x => x.TimeStamp);
-			//var rows = getItems ();
-
+			var databaseItems = sortByTags ();
+		
 			int current = NewsCounter;
 			foreach (ProjectDetails item in databaseItems) {
 				if (current+4 >= NewsCounter) {
@@ -114,6 +125,13 @@ namespace SuncorpNetwork
 		public async void sendBack(object sender, EventArgs e){
 			await Navigation.PopModalAsync ();
 			tagLock = false;
+
+			// Reset News Feed
+			foreach(View v in NewsSection.Children.ToList()){
+				NewsSection.Children.RemoveAt (0);
+			}
+
+			setupDatabaseFeed ();
 		}
 
 		/** Navigate to a new page

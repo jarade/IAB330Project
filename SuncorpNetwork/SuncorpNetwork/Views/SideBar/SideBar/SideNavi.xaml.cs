@@ -10,7 +10,7 @@ namespace SuncorpNetwork
 		public SideNavi ()
 		{
 			var menuPage = new MenuPage ();
-			menuPage.BackgroundColor = Color.FromHex("#0DA195");
+			menuPage.BackgroundColor = Color.FromHex("#007064");
 			menuPage.Menu.BackgroundColor = Color.FromHex("#0DA195");
 			menuPage.Menu.ItemSelected += (sender, e) => NavigateTo (e.SelectedItem as MenuItem);
 			Master = menuPage;

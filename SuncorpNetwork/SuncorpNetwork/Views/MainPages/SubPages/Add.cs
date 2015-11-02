@@ -14,7 +14,6 @@ namespace SuncorpNetwork
 		AddViewModel a = new AddViewModel();
 
 		public Add (){
-			DisplayAlert ("Email", "There is no email", "OK");
 			startup ();
 		}
 
@@ -108,7 +107,7 @@ namespace SuncorpNetwork
 			};
 
 			Label titleLabel = new Label {
-				Text = "*Title:\t\t\t",
+				Text = "*Title:\t\t",
 				TextColor = Color.White,
 				FontSize = 16
 			};
@@ -135,36 +134,13 @@ namespace SuncorpNetwork
 			Grid content = createContentGrid ();
 			StackLayout bodyStack = createBodyStack ();
 
-			StackLayout tagStack = new StackLayout {
-				Orientation = StackOrientation.Horizontal,
-				Padding = new Thickness (10)
-			};
-
-			Label tagLabel = new Label {
-				Text = "*Tags:\t\t\t",
-				TextColor = Color.White,
-				FontSize = 16
-			};
-
-			Button tagBtn = new Button{
-				Text = "Select Tags",
-				TextColor = Color.Black,
-				BackgroundColor = Color.White,
-				WidthRequest = 250
-			};
-
-			tagBtn.Clicked += tagClicked;
-
-			tagStack.Children.Add (tagLabel);
-			tagStack.Children.Add (tagBtn);
-
 			StackLayout locationStack = new StackLayout {
 				Orientation = StackOrientation.Horizontal,
 				Padding = new Thickness(10)
 			};
 
 			Label locationLabel = new Label {
-				Text = "Location:\t",
+				Text = "Location:",
 				TextColor = Color.White,
 				FontSize = 16
 			};
@@ -181,6 +157,30 @@ namespace SuncorpNetwork
 
 			locationStack.Children.Add (locationLabel);
 			locationStack.Children.Add (locationEntry);
+
+			StackLayout tagStack = new StackLayout {
+				Orientation = StackOrientation.Horizontal,
+				Padding = new Thickness (10)
+			};
+
+			Label tagLabel = new Label {
+				Text = "*Tags:\t\t",
+				TextColor = Color.White,
+				FontSize = 16
+			};
+
+			Button tagBtn = new Button{
+				Text = "Select Tags",
+				TextColor = Color.Black,
+				BackgroundColor = Color.White,
+				WidthRequest = 250,
+				HeightRequest = 40
+			};
+
+			tagBtn.Clicked += tagClicked;
+
+			tagStack.Children.Add (tagLabel);
+			tagStack.Children.Add (tagBtn);
 
 			StackLayout detailsStack = new StackLayout {
 				Orientation = StackOrientation.Vertical
@@ -226,8 +226,8 @@ namespace SuncorpNetwork
 			peopleStack.Children.Add (peopleLabel);
 			peopleStack.Children.Add (peopleEditor);
 
-			bodyStack.Children.Add (tagStack);
 			bodyStack.Children.Add (locationStack);
+			bodyStack.Children.Add (tagStack);
 			bodyStack.Children.Add (detailsStack);
 			bodyStack.Children.Add(peopleStack);
 
@@ -319,7 +319,7 @@ namespace SuncorpNetwork
 							tlist.tagChecked.TryGetValue (tagName, out isChecked);
 							if(isChecked){
 								if (tags != "") {
-									tags += tagName + "|";
+									tags += "|" + tagName;
 								} else {
 									tags = tagName;
 								}
@@ -470,15 +470,17 @@ namespace SuncorpNetwork
 			Label sloganLabel = new Label {
 				Text = "Slogan:\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Entry sloganEntry = new Entry {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 250
 			};
+
+			sloganStack.Children.Add (sloganLabel);
+			sloganStack.Children.Add (sloganEntry);
 
 			StackLayout imageStack = new StackLayout {
 				Orientation = StackOrientation.Horizontal,
@@ -488,14 +490,15 @@ namespace SuncorpNetwork
 			Label imageLabel = new Label {
 				Text = "Logo:\t\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Button imageSelector = new Button {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 280,
+				HeightRequest = 40,
+				Text = "Select Image"
 			};
 			imageStack.Children.Add (imageLabel);
 			imageStack.Children.Add (imageSelector);
@@ -508,14 +511,13 @@ namespace SuncorpNetwork
 			Label locationLabel = new Label {
 				Text = "Address:\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Entry locationEntry = new Entry {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 250
 			};
 			locationStack.Children.Add (locationLabel);
 			locationStack.Children.Add (locationEntry);
@@ -528,14 +530,13 @@ namespace SuncorpNetwork
 			Label emailLabel = new Label {
 				Text = "Email:\t\t",
 				TextColor = Color.White,
-				FontSize = 20
+				FontSize = 16
 			};
 
 			Entry emailEntry = new Entry {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				MinimumWidthRequest = 400,
-				WidthRequest = 400
+				WidthRequest = 280
 			};
 
 			emailEntry.TextChanged += (object sender, TextChangedEventArgs e) => {
@@ -547,7 +548,8 @@ namespace SuncorpNetwork
 
 			Button submit = new Button {
 				BackgroundColor = Color.White,
-				TextColor = Color.Black
+				TextColor = Color.Black,
+				Text = "Submit"
 			};
 
 			submit.Clicked += businessSubmit;

@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using System.Linq;
 using System.Collections.Generic;
 using SQLite.Net;
+using System.Diagnostics;
 
 namespace SuncorpNetwork.Data
 {
@@ -33,6 +34,32 @@ namespace SuncorpNetwork.Data
 			return items;
 		}
 
+		public List<ProjectDetails> GetItemsWithTags(List<string> tags){
+			try{
+				var items = database.Table<ProjectDetails> ().ToList<ProjectDetails> ();
+				List<ProjectDetails> results = new List<ProjectDetails> ();
+
+				foreach (ProjectDetails item in items) {
+					
+					string allTags = item.HasTags;
+					string[] allTagsSep = allTags.Split ('|');
+
+					foreach (string tag in allTagsSep) {
+						if(tags.Contains(tag)){
+							if(!results.Contains(item)){
+								results.Add (item);
+							}
+						}
+					}
+				}
+				return results;
+
+			}catch(Exception e){
+				Debug.WriteLine("Exception: " + e);
+			}
+			return new List<ProjectDetails>();
+		}
+
 		/// <summary>
 		/// Inserts the or update project.
 		/// </summary>
@@ -42,6 +69,10 @@ namespace SuncorpNetwork.Data
 			return 	database.Table<ProjectDetails> ().Where (
 						x => x.id == project.id).Any ()
 					? database.Update (project) : database.Insert (project);
+		}
+
+		public void DeleteAllItems(){
+			database.DeleteAll<ProjectDetails> ();
 		}
 	}
 }

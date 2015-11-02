@@ -60,18 +60,7 @@ namespace SuncorpNetwork.Data
 			lView.ItemSelected += noSelection;
 			lView.ItemTapped += tappedSelection;
 
-			StackLayout cellLayout = new StackLayout {
-
-			};
-
-			ViewCell v = new ViewCell {
-				View = cellLayout
-			};
-
-			DataTemplate template = new DataTemplate (typeof (ImageCell));
-			template.SetBinding(ImageCell.TextProperty, "Name");
-			template.SetBinding(ImageCell.TextColorProperty, "TextColour");
-			template.SetBinding (ImageCell.ImageSourceProperty, "checkImage");
+			DataTemplate template = new DataTemplate (typeof (customCellTags));
 
 			lView.ItemsSource = tagAr;
 			lView.ItemTemplate = template;
@@ -94,7 +83,7 @@ namespace SuncorpNetwork.Data
 		 **/
 		public void tappedSelection(object sender, ItemTappedEventArgs e){
 			((Tags)e.Item).isChecked = !((Tags)e.Item).isChecked;
-			((ListView)sender).ItemTemplate = tagsChoiceListViewData();
+			((ListView)sender).ItemTemplate = new DataTemplate (typeof (customCellTags));
 			tagChecked.Remove (((Tags)e.Item).Name); 
 			tagChecked.Add(((Tags)e.Item).Name, ((Tags)e.Item).isChecked);
 		}
@@ -104,19 +93,6 @@ namespace SuncorpNetwork.Data
 		 **/
 		public void noSelection (object sender, SelectedItemChangedEventArgs e){
 			((ListView)sender).SelectedItem = null;
-		}
-
-		/** Create a DataTemplate for the tags list view.
-		 * 	Post: DataTemplate - the newly created DataTemplate
-		 **/
-		public DataTemplate tagsChoiceListViewData(){
-			DataTemplate template = new DataTemplate (typeof (ImageCell));
-
-			template.SetBinding(ImageCell.TextProperty, "Name");
-			template.SetBinding(ImageCell.TextColorProperty, "TextColour");
-			template.SetBinding (ImageCell.ImageSourceProperty, "checkImage");
-
-			return template;
 		}
 	}
 }
