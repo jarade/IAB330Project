@@ -87,6 +87,8 @@
     <Compile Include="Database\SqliteDroid.cs" />
     <Compile Include="Renderers\MyEditorRenderer.cs" />
     <Compile Include="Renderers\RoundedGridRenderer.cs" />
+    <Compile Include="Renderers\AddTabbedRenderer.cs" />
+    <Compile Include="Renderers\CustomListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

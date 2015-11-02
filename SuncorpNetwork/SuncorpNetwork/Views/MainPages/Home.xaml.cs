@@ -16,7 +16,7 @@ namespace SuncorpNetwork
 		private newsfeedPost post = new newsfeedPost ();
 		private TagList tlist = new TagList();
 		private int NewsCounter {set; get;}
-
+		private string UserEmail { get{ return UserEmail; } set{ /*Do Nothing*/}}
 		public static MobileServiceClient MobileService = new MobileServiceClient(
 			"https://suncorpnetwork.azure-mobile.net/",
 			"nWaDxQYaSGAIlEYlJtiiGNWeVkqXST96"
@@ -24,6 +24,15 @@ namespace SuncorpNetwork
 
 		public Home ()
 		{
+			DisplayAlert ("Trial", "There is no user logged in.", "Ok");
+			StartUp ();
+		}
+		public Home(string email){
+			UserEmail = email;
+			StartUp ();
+		}
+
+		private void StartUp(){
 			InitializeComponent ();
 			createSearchBy ();
 			NewsCounter = 0;
@@ -34,9 +43,13 @@ namespace SuncorpNetwork
 
 			TagsBtn.Clicked += tagBtnOnClick;
 		}
-			
+
 		public void Scrolled(){
+<<<<<<< HEAD
 			DisplayAlert("H","H","H");
+=======
+			///DisplayAlert("H","H","H",);
+>>>>>>> origin/master
 		}
 		private void insertDummyRow(ProjectDetailsDatabase database){
 			string[] s = {"IT"};

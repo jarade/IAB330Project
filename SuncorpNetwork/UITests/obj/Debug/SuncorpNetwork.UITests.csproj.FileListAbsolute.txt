@@ -1,3 +1,12 @@
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\SuncorpNetwork.UITests.dll
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\SuncorpNetwork.UITests.pdb
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\nunit.framework.dll
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\Xamarin.UITest.dll
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\nunit.framework.xml
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\Xamarin.UITest.xml
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.dll
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.pdb
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\SuncorpNetwork.UITests.dll
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\SuncorpNetwork.UITests.pdb
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\mscorlib.dll
