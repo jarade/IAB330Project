@@ -139,5 +139,6 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\D
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Messages.xaml.g.cs
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\PersonalProfile.xaml.g.cs
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Registration.xaml.g.cs
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Forum1.xaml.g.cs
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.dll
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.pdb

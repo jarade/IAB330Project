@@ -36,7 +36,7 @@ namespace SuncorpNetwork
 		}
 			
 		public void Scrolled(){
-			DisplayAlert("H","H","H",);
+			DisplayAlert("H","H","H");
 		}
 		private void insertDummyRow(ProjectDetailsDatabase database){
 			string[] s = {"IT"};
