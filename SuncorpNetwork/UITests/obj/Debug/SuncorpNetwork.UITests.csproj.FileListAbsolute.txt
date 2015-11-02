@@ -7,17 +7,3 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\bin\Debug\Xa
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.dll
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.pdb
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\SuncorpNetwork.UITests.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\SuncorpNetwork.UITests.pdb
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\mscorlib.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\nunit.framework.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\Xamarin.UITest.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\nunit.framework.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\Xamarin.UITest.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normidna.nlp
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfc.nlp
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfd.nlp
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfkc.nlp
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfkd.nlp
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.pdb

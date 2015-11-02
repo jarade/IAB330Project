@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace SuncorpNetwork
 {
-	public partial class InsuranceFinance : ContentPage
+	public partial class InsuranceFinance : ContentPage{
 
 		public InsuranceFinance ()
 		{

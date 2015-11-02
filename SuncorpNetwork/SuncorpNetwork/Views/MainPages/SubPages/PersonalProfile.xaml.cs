@@ -16,7 +16,7 @@ namespace SuncorpNetwork
 
 		public void setup(){
 			var database = new PersonalDB ();
-			PersonalDetails item = database.GetDetails(UserEmail);
+			PersonalDetails item = database.GetDetails(((App)Application.Current).UserEmail);
 			//TheDetails.ProfilePic = ImageSource.FromFile("images.jpg");
 			TheDetails.FirstName = item.FirstName;
 			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
