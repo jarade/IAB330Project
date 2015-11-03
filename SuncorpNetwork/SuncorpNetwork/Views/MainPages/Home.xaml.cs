@@ -56,7 +56,7 @@ namespace SuncorpNetwork
 
 			// If tags are selected then get items that contain at least one tag else get all items
 			if (tags.Count > 0) {
-				return database.GetItemsWithTags (tags).OrderByDescending (x => x.TimeStamp).ToList();;
+				return database.GetItemsWithTags (tags).OrderByDescending (x => x.TimeStamp).ToList();
 			} else {
 				return database.GetItems ().OrderByDescending (x => x.TimeStamp).ToList();
 			}

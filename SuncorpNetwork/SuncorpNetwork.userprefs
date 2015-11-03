@@ -1,14 +1,12 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean) Food" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\SubPages\Add.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\MainPages\Login.xaml.cs" Line="22" Column="35" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="8" Column="35" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuPage.cs" Line="9" Column="22" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\SideNavi.xaml.cs" Line="48" Column="28" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListData.cs" Line="50" Column="41" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListView.cs" Line="10" Column="3" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="175" Column="52" />
+      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Alert.xaml.cs" Line="64" Column="57" />
+      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Add.cs" Line="346" Column="7" />
+      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\customAlertCells.cs" Line="73" Column="5" />
+      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\Notifications.cs" Line="47" Column="36" NotebookId="1" />
+      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListData.cs" Line="11" Column="12" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

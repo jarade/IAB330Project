@@ -26,7 +26,7 @@ namespace SuncorpNetwork.Data
 			LastName = lastName;
 			Information = "";
 			HasTags = "";
-			TimeStamp = DateTime.Now;
+			TimeStamp = DateTime.UtcNow;
 		}
 
 		public ProjectDetails(string firstName, string lastName, string title, string info, string exp){

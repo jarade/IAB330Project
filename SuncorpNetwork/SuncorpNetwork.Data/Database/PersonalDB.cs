@@ -45,24 +45,13 @@ namespace SuncorpNetwork.Data
 				? true : false;
 		}
 
-		/// <summary>
-		/// Gets the personal details of the email.
-		/// </summary>
-		/// <returns>The details.</returns>
-		/// <param name="email">Email.</param>
 		public PersonalDetails GetDetails(string email){
 			var item = database.Table<PersonalDetails> ().Where (
 				x => x.Email == email
 			           );
-			Debug.WriteLine ("Item: " + (item.ToList().ElementAt(0)).ToString ());
 			return (PersonalDetails)item.ToList().ElementAt(0);
 		}
-
-		/// <summary>
-		/// Inserts the or update tag.
-		/// </summary>
-		/// <returns>The or update project.</returns>
-		/// <param name="tag">Tag.</param>
+			
 		public int InsertOrUpdatePersonalDetails(PersonalDetails PD){
 			return 	database.Table<PersonalDetails> ().Where (
 				x => x.Email == PD.Email).Any()

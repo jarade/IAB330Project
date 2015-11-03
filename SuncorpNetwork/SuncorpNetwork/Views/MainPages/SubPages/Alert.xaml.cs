@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 using SuncorpNetwork.Data;
+using System.Diagnostics;
+using System.Linq;
 
 namespace SuncorpNetwork
 {
@@ -11,51 +13,46 @@ namespace SuncorpNetwork
 
 		public Alert ()
 		{
-			DisplayAlert ("Email", "There is no email", "OK");
 			InitializeComponent ();
 			listNotifications ();
 		}
 
-		private Notification[] createAlerts(){
-			Notification noteNotRead = new Notification {
-				Title = "Test Not Read", 
-				Details = "This is a test notification.",
-				HasRead = false,
-			};
+		//string dataTimeText = date.ToLocalTime ().ToString ();
 
-			Notification noteRead = new Notification{
-			Title = "Test Read",
-			Details = "This is a test notification.",
-			HasRead = true,
-			};
+		private List<Notification> createAlerts(){
 
-			Notification longNoteUnread = new Notification{
-				Title = "Test Long and Not Read",
-				Details = "This is a test notification. This notification has alot more text than the others. That is what makes this a long notification.",
-				HasRead = false,
-			};
-
-			Notification[] notes = {
-				longNoteUnread,
-				noteNotRead, noteNotRead, noteNotRead, noteNotRead,
-				noteRead, noteRead, noteRead,
-			};
-				
+			try{
+				var database = new NotificationsTable ();
+				//database.DeleteAllItems();
+				var items = database.GetItemsWithout (((App)Application.Current).UserEmail).OrderByDescending(x => x.TimeStamp).ToList();
+				return items;
+			}catch(Exception e){
+				Debug.WriteLine ("Exception: " + e.ToString ());
+			}
+			List<Notification> notes = new List<Notification> ();
 			return notes;
 		}
 
 		private void listNotifications(){
-			Notification[] notificationsArr = createAlerts ();
-			ListView notificationList = new ListView {
-				BackgroundColor = Color.Black,
-				HasUnevenRows = true
-			};
+			try{
+				List<Notification> notifications = createAlerts ();
+				ListView notificationList = new ListView {
+					BackgroundColor = Color.FromHex("#007064"),
+					HasUnevenRows = true
+				};
 
-			notificationList.ItemsSource = notificationsArr;
-			notificationList.ItemTemplate = listViewData();
-			notificationList.ItemSelected += noSelection;
-			notificationList.ItemTapped += tappedSelection;
-			NotificationListSection.Children.Add (notificationList);
+				notificationList.ItemsSource = notifications;
+
+				notificationList.ItemTemplate = listViewData();
+
+				// Set events
+				notificationList.ItemSelected += noSelection;
+				notificationList.ItemTapped += tappedSelection;
+
+				NotificationListSection.Children.Add (notificationList);
+				}catch(Exception e){
+					Debug.WriteLine ("Exception: " + e.ToString());
+				}
 		}
 
 		/**	Mark the selection to read
@@ -64,6 +61,10 @@ namespace SuncorpNetwork
 		 **/
 		private void tappedSelection(object sender, ItemTappedEventArgs e){
 			((Notification)e.Item).HasRead = true;
+			((Notification)e.Item).Source = "profile_filler.png";
+			var notiDB = new NotificationsTable ();
+			notiDB.InsertOrUpdate ((Notification)e.Item);
+
 			((ListView)sender).ItemTemplate = listViewData();
 		}
 
@@ -79,11 +80,7 @@ namespace SuncorpNetwork
 		 * 	Post: DataTemplate - the newly created DataTemplate
 		 **/
 		private DataTemplate listViewData(){
-			DataTemplate template = new DataTemplate (typeof (ImageCell));
-			template.SetBinding(ImageCell.TextProperty, "Title");
-			template.SetBinding (ImageCell.DetailProperty, "Details");
-			template.SetBinding (ImageCell.ImageSourceProperty, "HasReadIconSource");
-
+			DataTemplate template = new DataTemplate (typeof (customAlertCells));
 			return template;
 		}
 

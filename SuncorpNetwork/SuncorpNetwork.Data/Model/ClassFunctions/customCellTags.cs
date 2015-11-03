@@ -19,7 +19,6 @@ namespace SuncorpNetwork.Data
 			l.SetBinding (Label.TextColorProperty, "TextColour");
 
 			Image i = new Image {
-
 			};
 
 			i.SetBinding (Image.SourceProperty, "checkImage");

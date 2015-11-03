@@ -341,8 +341,22 @@ namespace SuncorpNetwork
 						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, Title, Details, Expertise, tags, ((App)Application.Current).UserEmail);
 						var database = new ProjectDetailsDatabase ();
 						database.InsertOrUpdateProject (newProject);
+
 						//insertItem (newProject);
 
+						var notificationTable = new NotificationsTable ();
+						Notification notification = new Notification {
+							PosterEmail = ((App)Application.Current).UserEmail,
+							Poster = pd.FirstName + " " + pd.LastName,
+							Title = ProjectTitle,
+							HasRead = false,
+							TimeStamp = DateTime.UtcNow,
+							Type = "Project",
+							Source = "icon.png",
+							CompositePrimaryKey = ((App)Application.Current).UserEmail + ProjectTitle,
+						};
+
+						notificationTable.InsertOrUpdate (notification);
 						DisplayAlert ("Created", "The project has been created", "Ok");
 						switchPage (new Home ());
 					} else {errorMsg("Expertise Wanted");}

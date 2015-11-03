@@ -29,7 +29,6 @@ namespace SuncorpNetwork.Data
 		/// </summary>
 		/// <returns>The items.</returns>
 		public List<Tag> GetItems(){
-			Debug.WriteLine ("Get Item Start");
 			try{
 				var items = database.Table<Tag> ().ToList<Tag> ();
 				return items;
