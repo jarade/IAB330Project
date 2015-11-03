@@ -6,13 +6,13 @@ namespace SuncorpNetwork
 {
 	public class MenuPage : ContentPage
 	{
-		public ListView Menu { get; set; }
+		public MenuListView Menu { get; set; }
 
 		public MenuPage ()
 		{
 			Icon = "profile_filler.png";//"settings.png";
 			Title = "menu"; // The Title property must be set.
-			BackgroundColor = Color.FromHex ("333333");
+			BackgroundColor = Color.FromHex ("#007064");
 
 			Menu = new MenuListView ();
 
@@ -27,9 +27,10 @@ namespace SuncorpNetwork
 				}
 			};
 
-			var layout = new StackLayout { 
-				Spacing = 0, 
-				VerticalOptions = LayoutOptions.FillAndExpand
+			StackLayout layout = new StackLayout { 
+				VerticalOptions = LayoutOptions.FillAndExpand,
+				Orientation = StackOrientation.Vertical,
+				Spacing = 0
 			};
 
 			layout.Children.Add (menuLabel);

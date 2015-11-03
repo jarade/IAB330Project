@@ -42,8 +42,8 @@
     <Compile Include="Database\TagDatabase.cs" />
     <Compile Include="Model\Tables\ProjectDetails.cs" />
     <Compile Include="Model\Tables\Tag.cs" />
-    <Compile Include="Model\ClassFunctions\Notifications.cs" />
     <Compile Include="Model\ClassFunctions\newsfeedPost.cs" />
+    <Compile Include="Model\ClassFunctions\Notifications.cs" />
     <Compile Include="Model\ClassFunctions\TagList.cs" />
     <Compile Include="Model\ClassFunctions\Tags.cs" />
     <Compile Include="Model\Tables\Location.cs" />

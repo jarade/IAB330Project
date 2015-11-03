@@ -37,7 +37,7 @@ namespace SuncorpNetwork.Data
 			};
 
 			readMore.Clicked += (sender, e) => {
-				navigateTo(0);
+				navigateTo(project.PosterEmail);
 			};
 				
 			// Add children
@@ -176,7 +176,7 @@ namespace SuncorpNetwork.Data
 		/**	Navigate to the page associated with the id
 		 * 	Pre: int id - the id of the post.
 		 **/
-		private void navigateTo(int id){
+		private void navigateTo(string email){
 			// Database connection
 
 			// Get row with id in ProjectDetailsDB.

@@ -14,6 +14,8 @@ namespace SuncorpNetwork
 		AddViewModel a = new AddViewModel();
 
 		public Add (){
+			//var database = new ProjectDetailsDatabase ();
+			//database.DeleteAllItems ();
 			startup ();
 		}
 
@@ -87,7 +89,9 @@ namespace SuncorpNetwork
 		private ScrollView createScroll(){
 			ScrollView scroll = new ScrollView{
 				Padding = new Thickness(5,5,5,5),
-				Orientation = ScrollOrientation.Vertical
+				Orientation = ScrollOrientation.Vertical,
+				HorizontalOptions = LayoutOptions.Center,
+				VerticalOptions = LayoutOptions.Center
 			};
 
 			return scroll;
@@ -249,8 +253,10 @@ namespace SuncorpNetwork
 
 			submitStack.Children.Add (submitProject);
 			bodyStack.Children.Add (submitStack);
+
 			ScrollView scroll = createScroll ();
 			scroll.Content = bodyStack;
+
 			content.Children.Add (scroll, 0, 0);
 			content.Children.Add (createFooter (), 0, 1);
 			return content;
@@ -258,16 +264,18 @@ namespace SuncorpNetwork
 		
 		private Frame createFooter(){
 			Frame frame = new Frame {
-				Padding = new Thickness (25, 0, 25, 0),
+				Padding = new Thickness (15, 0, 15, 0),
 				BackgroundColor = Color.FromHex ("#007064"),
-				OutlineColor = Color.Transparent
+				OutlineColor = Color.Transparent,
+				HeightRequest = 50
 			};
 			
 			StackLayout footer = new StackLayout {
-				Padding = new Thickness(25,0,25,0),
-				Spacing = 15,
+				Padding = new Thickness(0,0,0,0),
+				Spacing = 10,
 				Orientation = StackOrientation.Horizontal,
-				HorizontalOptions = LayoutOptions.CenterAndExpand
+				HorizontalOptions = LayoutOptions.Center,
+				VerticalOptions = LayoutOptions.Center
 			};
 
 			Button message = createButton ("ic_chat_white_24dp.png");
@@ -298,7 +306,7 @@ namespace SuncorpNetwork
 
 		private Button createButton(string source){
 			Button newButton = new Button {
-				Scale = 2,
+				Scale = 1.5,
 				BackgroundColor = Color.Transparent,
 				Image = source,
 				WidthRequest = 50
@@ -330,7 +338,7 @@ namespace SuncorpNetwork
 						PersonalDetails pd = personalInfo.GetDetails (((App)Application.Current).UserEmail);
 
 						// Create the project table
-						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, Title, Details, Expertise, tags);
+						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, Title, Details, Expertise, tags, ((App)Application.Current).UserEmail);
 						var database = new ProjectDetailsDatabase ();
 						database.InsertOrUpdateProject (newProject);
 						//insertItem (newProject);
