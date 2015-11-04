@@ -26,6 +26,8 @@ namespace SuncorpNetwork {
         
         private Switch respondSwitch;
         
+        private StackLayout refrerence;
+        
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Contact_Us));
             content = this.FindByName<StackLayout>("content");
@@ -33,6 +35,7 @@ namespace SuncorpNetwork {
             problemPicker = this.FindByName<Picker>("problemPicker");
             subjectSection = this.FindByName<StackLayout>("subjectSection");
             respondSwitch = this.FindByName<Switch>("respondSwitch");
+            refrerence = this.FindByName<StackLayout>("refrerence");
         }
     }
 }

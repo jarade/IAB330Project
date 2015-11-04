@@ -78,3 +78,9 @@ D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawab
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\images.jpg
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\R.cs.flag
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\uploadflags.txt
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\contact.png
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\settings.png
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\forums.png
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\business.png
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\learning.png
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\searching.png
