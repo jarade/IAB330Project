@@ -88,12 +88,10 @@
       <DependentUpon>Forum1Content.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\Forum1PostGenerator.cs" />
-    <Compile Include="Model\Forum1Post.cs" />
     <Compile Include="Views\SideBar\Pages\Forum1.xaml.cs">
       <DependentUpon>Forum1.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Forum1ContentViewModel.cs" />
-    <Compile Include="Data\ISQLite1.cs" />
     <Compile Include="Views\SideBar\Pages\Forum1CreatePost.xaml.cs">
       <DependentUpon>Forum1CreatePost.xaml</DependentUpon>
     </Compile>

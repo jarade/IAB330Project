@@ -17,13 +17,17 @@ namespace SuncorpNetwork
 			InitializeComponent ();
 		}
 
-			public void OnItemTapped(object o, ItemTappedEventArgs e){
-				var local_fpost = e.Item as Forum1Post;
-				if (e != null) {
-					DisplayAlert("Aha!",String.Format("The content is {0}",
-						local_fpost.Forum1PostContent),"OK");
-				}
-			}
+		private Forum1Post Post;
+
+		public Forum1Content(Forum1Post post){
+			f1vm = new Forum1ContentViewModel ();
+			BindingContext = f1vm;
+			Post = post;
+			InitializeComponent ();
+			DisplayAlert("Aha!","The content is"+Post.Forum1PostContent,"OK");
+		}
+
+
 
 			public async void navigateToTemporaryPage(StackLayout stack){
 				// Create the temporary page

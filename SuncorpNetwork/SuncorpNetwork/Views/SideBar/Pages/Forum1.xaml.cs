@@ -22,6 +22,7 @@ namespace SuncorpNetwork
 			if (e != null) {
 				DisplayAlert("Aha!",String.Format("The content is {0}",
 				local_fpost.Forum1PostContent),"OK");
+				switchPage(new Forum1Content(local_fpost as Forum1Post));
 
 			}
 		}
