@@ -19,6 +19,8 @@ public final class R {
         public static int icon=0x7f020005;
         public static int images=0x7f020006;
         public static int profile_filler=0x7f020007;
+        public static int suncorp_transparent=0x7f020008;
+        public static int suncorp_transparent2=0x7f020009;
     }
     public static final class string {
         public static int ApplicationName=0x7f030001;

@@ -1,12 +1,25 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean) Food" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\SubPages\Add.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Lollipop)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\SideBar\Pages\Forum1CreatePost.xaml">
     <Files>
-      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Alert.xaml.cs" Line="64" Column="57" />
-      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Add.cs" Line="346" Column="7" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\customAlertCells.cs" Line="73" Column="5" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\Notifications.cs" Line="47" Column="36" NotebookId="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\SideBar\MenuListData.cs" Line="11" Column="12" NotebookId="1" />
+      <File FileName="SuncorpNetwork\ViewModel\Forum1ContentViewModel.cs" Line="15" Column="18" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1Content.xaml.cs" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Services\Forum1PostGenerator.cs" Line="22" Column="9" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1.xaml.cs" Line="13" Column="18" />
+      <File FileName="SuncorpNetwork\Data\ISQLite1.cs" Line="6" Column="8" />
+      <File FileName="SuncorpNetwork\Data\Forum1Database.cs" Line="25" Column="28" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1.xaml" Line="39" Column="38" />
+      <File FileName="SuncorpNetwork\Model\Forum1Post.cs" Line="2" Column="13" />
+      <File FileName="SuncorpNetwork\SuncorpNetwork.cs" Line="9" Column="40" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1CreatePost.xaml" Line="11" Column="63" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1CreatePost.xaml.cs" Line="24" Column="1" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forums.xaml.cs" Line="42" Column="21" />
+      <File FileName="Droid\SQLite_Android.cs" Line="26" Column="5" />
+      <File FileName="SuncorpNetwork.Data\Database\LoginTable.cs" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\PersonalProfile.xaml" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\PersonalProfile.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
