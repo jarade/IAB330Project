@@ -13,7 +13,6 @@ namespace SuncorpNetwork
 
 		public Contact_Us ()
 		{
-			DisplayAlert ("Email", "There is no email", "OK");
 			InitializeComponent ();
 
 			createCustomEditor ();

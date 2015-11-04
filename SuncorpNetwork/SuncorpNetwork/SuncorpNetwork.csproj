@@ -150,7 +150,6 @@
     <Folder Include="Views\SideBar\SideBar\" />
     <Folder Include="Model\" />
     <Folder Include="Services\" />
-    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MainPages\Home.xaml">

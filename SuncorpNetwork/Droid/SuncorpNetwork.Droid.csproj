@@ -145,6 +145,12 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_notifications_white_24dp.png" />
     <AndroidResource Include="Resources\drawable\profile_filler.png" />
     <AndroidResource Include="Resources\drawable\images.jpg" />
+    <AndroidResource Include="Resources\drawable\contact.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\forums.png" />
+    <AndroidResource Include="Resources\drawable\business.png" />
+    <AndroidResource Include="Resources\drawable\learning.png" />
+    <AndroidResource Include="Resources\drawable\searching.png" />
     <AndroidResource Include="Resources\drawable\suncorp_transparent.png" />
     <AndroidResource Include="Resources\drawable\suncorp_transparent2.png" />
   </ItemGroup>

@@ -10,42 +10,42 @@ namespace SuncorpNetwork
 		{
 			this.Add (new MenuItem () { 
 				Title = "Searching Businesses", 
-				IconSource = "icon.png",
+				IconSource = "searching.png",
 				TargetType = typeof(MapPage),
 				Background = Color.FromHex("#0DA195")
 			});
 
 			this.Add (new MenuItem () { 
 				Title = "Learning Resources", 
-				IconSource = "icon.png",
+				IconSource = "learning.png",
 				TargetType = typeof(Learning_Resources),
 				Background = Color.FromHex("#0DA195")
 			});
 
 			this.Add (new MenuItem () { 
 				Title = "Insurance/Finance", 
-				IconSource = "icon.png",
+				IconSource = "business.png",
 				TargetType = typeof(InsuranceFinance),
 				Background = Color.FromHex("#0DA195")
 			});
 
 			this.Add (new MenuItem () {
 				Title = "Forums",
-				IconSource = "icon.png",
+				IconSource = "forums.png",
 				TargetType = typeof(Forums),
 				Background = Color.FromHex("#0DA195")
 			});
 
 			this.Add (new MenuItem () {
 				Title = "Settings",
-				IconSource = "icon.png",
+				IconSource = "settings.png",
 				TargetType = typeof(Settings),
 				Background = Color.FromHex("#0DA195")
 			});
 
 			this.Add (new MenuItem () {
 				Title = "Contact Us",
-				IconSource = "icon.png",
+				IconSource = "contact.png",
 				TargetType = typeof(Contact_Us),
 				Background = Color.FromHex("#0DA195")
 			});

@@ -12,12 +12,13 @@
 			<RowDefinition Height = "1.2*"/>
 		</Grid.RowDefinitions>
 		<ScrollView
-							Grid.Row = "0"
-							Orientation = "Vertical"
-							Padding = "0, 10, 10, 15"
-						>
+						Grid.Row = "0"
+						Orientation = "Vertical"
+						Padding = "10"	
+						HorizontalOptions = "CenterAndExpand"
+						VerticalOptions = "CenterAndExpand"
+					>
 			<StackLayout 
-						Padding = "0,0,0,0"
 						x:Name = "content"
 						Orientation = "Vertical"
 						HorizontalOptions = "CenterAndExpand"
@@ -117,8 +118,24 @@
 							TextColor = "White"
 							FontSize = "16"
 						/>
-				
-			</StackLayout>
+						<StackLayout 
+										x:Name = "refrerence"
+										Orientation = "Vertical"
+										HorizontalOptions = "CenterAndExpand"
+										VerticalOptions = "EndAndExpand"
+								>
+							<Label
+								Text = "Learning, Insurance/Finance, Forums, Settings, Contact Us Images From: http://www.flaticon.com/packs/glypho/ Made by: bogdan rosu On: 4/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
+							<Label
+								Text = "Searching Business Image Icon made by Freepik from www.flaticon.com On: 4/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
+						</StackLayout>
+				</StackLayout>
 			</ScrollView>
 								<!-- Footer Start -->
 						<Frame 
