@@ -22,11 +22,12 @@ public final class R {
         public static int icon=0x7f020008;
         public static int images=0x7f020009;
         public static int learning=0x7f02000a;
-        public static int profile_filler=0x7f02000b;
-        public static int searching=0x7f02000c;
-        public static int settings=0x7f02000d;
-        public static int suncorp_transparent=0x7f02000e;
-        public static int suncorp_transparent2=0x7f02000f;
+        public static int menu=0x7f02000b;
+        public static int profile_filler=0x7f02000c;
+        public static int searching=0x7f02000d;
+        public static int settings=0x7f02000e;
+        public static int suncorp_transparent=0x7f02000f;
+        public static int suncorp_transparent2=0x7f020010;
     }
     public static final class string {
         public static int ApplicationName=0x7f030001;

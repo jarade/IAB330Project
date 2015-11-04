@@ -57,12 +57,9 @@
     <Compile Include="Model\ClassFunctions\customAlertCells.cs" />
     <Compile Include="Database\NotificationsTable.cs" />
     <Compile Include="Interface\IAlertBackgroundColorConverter.cs" />
-<<<<<<< HEAD
     <Compile Include="RoundedBoxView.cs" />
-=======
     <Compile Include="Database\Forum1DB.cs" />
     <Compile Include="Model\Tables\Forum1Post.cs" />
->>>>>>> e0d6f88825129a276eb5f6416685767c4bc55f44
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

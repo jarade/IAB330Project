@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\SuncorpNetwork.Data.dll
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\SuncorpNetwork.Data.pdb
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.dll
@@ -15,26 +14,5 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.dll
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.pdb
-=======
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\SuncorpNetwork.Data.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\SuncorpNetwork.Data.pdb
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.Extras.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Microsoft.Practices.ServiceLocation.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\SQLite.Net.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Core.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Xaml.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.pdb
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.Extras.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Core.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Xaml.xml
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.dll
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.pdb
->>>>>>> origin/master

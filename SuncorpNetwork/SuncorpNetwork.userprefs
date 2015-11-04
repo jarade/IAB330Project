@@ -1,12 +1,4 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.4df1358c05188fcb" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\SubPages\PersonalProfile.xaml.cs">
-    <Files>
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="44" Column="36" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\newsfeedPost.cs" Line="162" Column="7" />
-      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\PersonalProfile.xaml.cs" Line="21" Column="33" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Lollipop)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork.Data\Database\Forum1DB.cs">
     <Files>
@@ -25,7 +17,6 @@
       <File FileName="SuncorpNetwork\RoundedBoxView.cs" Line="8" Column="3" />
       <File FileName="Droid\RoundedBoxRendered.cs" Line="14" Column="4" />
       <File FileName="SuncorpNetwork.Data\Model\Tables\Forum1Post.cs" Line="11" Column="32" />
->>>>>>> e0d6f88825129a276eb5f6416685767c4bc55f44
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
