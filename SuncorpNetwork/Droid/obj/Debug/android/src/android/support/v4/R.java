@@ -12,22 +12,24 @@ public final class R {
     }
     public static final class drawable {
         public static int business=0x7f020000;
-        public static int contact=0x7f020001;
-        public static int forums=0x7f020002;
-        public static int ic_account_balance_white_24dp=0x7f020003;
-        public static int ic_account_circle_white_24dp=0x7f020004;
-        public static int ic_add_circle_white_24dp=0x7f020005;
-        public static int ic_chat_white_24dp=0x7f020006;
-        public static int ic_notifications_white_24dp=0x7f020007;
-        public static int icon=0x7f020008;
-        public static int images=0x7f020009;
-        public static int learning=0x7f02000a;
-        public static int menu=0x7f02000b;
-        public static int profile_filler=0x7f02000c;
-        public static int searching=0x7f02000d;
-        public static int settings=0x7f02000e;
-        public static int suncorp_transparent=0x7f02000f;
-        public static int suncorp_transparent2=0x7f020010;
+        public static int checked=0x7f020001;
+        public static int contact=0x7f020002;
+        public static int forums=0x7f020003;
+        public static int ic_account_balance_white_24dp=0x7f020004;
+        public static int ic_account_circle_white_24dp=0x7f020005;
+        public static int ic_add_circle_white_24dp=0x7f020006;
+        public static int ic_chat_white_24dp=0x7f020007;
+        public static int ic_notifications_white_24dp=0x7f020008;
+        public static int icon=0x7f020009;
+        public static int images=0x7f02000a;
+        public static int learning=0x7f02000b;
+        public static int menu=0x7f02000c;
+        public static int profile_filler=0x7f02000d;
+        public static int searching=0x7f02000e;
+        public static int settings=0x7f02000f;
+        public static int suncorp_transparent=0x7f020010;
+        public static int suncorp_transparent2=0x7f020011;
+        public static int unchecked=0x7f020012;
     }
     public static final class string {
         public static int ApplicationName=0x7f030001;

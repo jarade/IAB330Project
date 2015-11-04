@@ -141,6 +141,12 @@
 								TextColor = "White"
 								FontSize = "8"
 							/>
+
+							<Label
+								Text = "Tag Icon made by Google from www.flaticon.com  On: 4/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
 						</StackLayout>
 				</StackLayout>
 			</ScrollView>

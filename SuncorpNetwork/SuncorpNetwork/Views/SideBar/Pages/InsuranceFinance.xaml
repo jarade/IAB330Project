@@ -19,6 +19,68 @@
 								BackgroundColor = "#007064"
 								OutlineColor = "Transparent" 
 							>
+					<StackLayout HorizontalOptions="Center"
+						 Orientation = "Horizontal"
+						 Spacing = "15">
+
+				<Button		BackgroundColor = "White"
+							Text = "Life Insurance"
+							TextColor = "Black"
+							Clicked = "tab1"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+				<Button		BackgroundColor = "White"
+							Text = "Tailored Income Protection Insurance"
+							TextColor = "Black"
+							Clicked = "tab2"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+
+				<Button		BackgroundColor = "White"
+							Text = "Trauma Insurance"
+							TextColor = "Black"
+							Clicked = "tab3"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+
+				<Button		BackgroundColor = "White"
+							Text = "Home Loan Protection Insurance"
+							TextColor = "Black"
+							Clicked = "tab4"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+
+				<Button		BackgroundColor = "White"
+							Text = "TPD Insurance"
+							TextColor = "Black"
+							Clicked = "tab5"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+
+				<Button		BackgroundColor = "White"
+							Text = "Why seek advice?"
+							TextColor = "Black"
+							Clicked = "tab6"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+
+				<Button		BackgroundColor = "White"
+							Text = "Your Appointment"
+							TextColor = "Black"
+							Clicked = "tab7"
+							WidthRequest = "70"
+							HeightRequest = "25"
+							/>	
+				</StackLayout>
+
+
+
 							<StackLayout  Padding = "25,0,25,0"
 										Orientation = "Horizontal"
 										HorizontalOptions = "CenterAndExpand"
@@ -68,4 +130,7 @@
 						</Frame>
 					<!-- Footer End -->
 				</Grid>
+
+
+
 </ContentPage>

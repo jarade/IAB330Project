@@ -29,7 +29,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 								>
 							<Picker	
 									BackgroundColor = "White"
-									HeightRequest = "40"
+									HeightRequest = "70"
 									WidthRequest = "100"
 									Title="Sort By"
 									x:Name="SortByPicker"
@@ -41,7 +41,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 									x:Name = "TagsBtn"
 									BorderRadius="0"
 									BorderWidth="0"
-									BackgroundColor = "#0DA195"
+									BackgroundColor = "#007064"
 									HeightRequest = "40"
 									WidthRequest = "100"
 								/>

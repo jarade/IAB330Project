@@ -48,9 +48,9 @@ namespace SuncorpNetwork.Data
 
 				// If checked image needs to be displayed
 				if (isChecked) {
-					sourceImageFileName = "profile_filler.png";//"checked.png";
+					sourceImageFileName = "checked.png";
 				} else {
-					sourceImageFileName = "icon.png";//"unchecked.png";
+					sourceImageFileName = "unchecked.png";
 				}
 
 				return sourceImageFileName;

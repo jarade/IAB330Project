@@ -21,19 +21,21 @@
 
 		<!-- Footer Start -->
 						<Frame 
-								Grid.Row = "1"
-								Padding = "25,0,25,0"
+								Grid.Row = "2"
+								Padding = "15,0,15,0"
 								BackgroundColor = "#007064"
-								OutlineColor = "Transparent" 
+								OutlineColor = "Transparent"
+								HeightRequest = "50" 
 							>
-							<StackLayout  Padding = "25,0,25,0"
+							<StackLayout  Padding = "15,0,15,0"
 										Orientation = "Horizontal"
-										HorizontalOptions = "CenterAndExpand"
-										Spacing = "15"
+										HorizontalOptions = "Center"
+										VerticalOptions = "Center"
+										Spacing = "10"
 										>
 								
 								<Button 
-										Scale = "2"
+										Scale = "1.5"
 										BackgroundColor = "Transparent"
 										Image = "ic_chat_white_24dp.png"
 										Clicked = "messageBtnClicked"
@@ -41,7 +43,7 @@
 									/>
 
 								<Button
-										Scale = "2"
+										Scale = "1.5"
 										BackgroundColor = "Transparent"
 										Image = "ic_notifications_white_24dp.png"
 										Clicked = "alertBtnClicked"
@@ -49,7 +51,7 @@
 									/>
 
 								<Button
-										Scale = "2"
+										Scale = "1.5"
 										BackgroundColor = "Transparent"
 										Image = "ic_account_balance_white_24dp.png"
 										Clicked = "homeBtnClicked"
@@ -57,7 +59,7 @@
 									/>
 
 								<Button
-										Scale = "2"
+										Scale = "1.5"
 										BackgroundColor = "Transparent"
 										Image = "ic_add_circle_white_24dp.png"
 										Clicked = "addBtnClicked"
@@ -65,7 +67,7 @@
 									/>
 
 								<Button
-										Scale = "2"
+										Scale = "1.5"
 										BackgroundColor = "Transparent"
 										Image = "ic_account_circle_white_24dp.png"
 										Clicked = "profileBtnClicked"

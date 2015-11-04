@@ -26,6 +26,7 @@ namespace SuncorpNetwork.Data
 			Label info = createFeedLabel (infoText, 14);
 			Label tagFooter = createFeedLabel (footerText, 12);
 			tagFooter.VerticalOptions = LayoutOptions.EndAndExpand;
+
 			// Create the readmore link
 			Button readMore = new Button {
 				Text = "Read More...",
@@ -92,13 +93,14 @@ namespace SuncorpNetwork.Data
 
 			// Setup the inner grid that holds profile picture + label grid
 			Grid innerGrid = new Grid {
-				Padding = 5
+				Padding = 0,
+				ColumnSpacing = 5
 			};
 			ColumnDefinition c = new ColumnDefinition();
 			ColumnDefinition c1 = new ColumnDefinition();
 			ColumnDefinition c2 = new ColumnDefinition();
 
-			c.Width = new GridLength(1, GridUnitType.Star);
+			c.Width = new GridLength(2, GridUnitType.Star);
 			innerGrid.ColumnDefinitions.Insert(0, c);
 
 			c1.Width = new GridLength(2, GridUnitType.Star);;
@@ -110,8 +112,8 @@ namespace SuncorpNetwork.Data
 			// Create the profile image
 			RoundedBoxView profileImage = new RoundedBoxView {
 				Source = profileImageLoc,
-				HeightRequest = 50,
-				WidthRequest = 50
+				HeightRequest = 100,
+				WidthRequest = 100
 			};
 
 			innerGrid.Children.Add (profileImage, 0 ,0);
