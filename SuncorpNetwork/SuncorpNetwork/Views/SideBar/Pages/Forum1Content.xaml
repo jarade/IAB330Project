@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Forum1Content" BackgroundColor= "#0DA195">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "8*"/>
+			<RowDefinition Height = "1*"/>
+			<RowDefinition Height = "1.2*"/>
+		</Grid.RowDefinitions>
+<!--Forum posts start-->
+	<ScrollView> 
+	<StackLayout Padding="30" 	Grid.Row = "0">
+		<Label Text = "Posts" FontSize="Large" FontAttributes= "Bold" />
+		<ListView x:Name= "Forum1PostList" ItemsSource="{Binding Fpost1}" ItemTapped="OnItemTapped">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout Padding = "10">
+								<Label Text="{Binding Forum1PostTitle}" FontSize="18" TextColor="White" FontAttributes = "Bold" />
+							</StackLayout>
+						</ViewCell.View>
+				</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+	</ScrollView>
+<!--Forum posts End-->
+<!--Footer start-->
+	<StackLayout  						Grid.Row = "1"
+										HorizontalOptions = "End"
+										VerticalOptions = "Center"
+										>
+				<Button 
+										Scale = "1"
+										Text = "Create a new post"
+										HorizontalOptions = "FillAndExpand"
+										/>
+									</StackLayout>
+	<Frame 
+								Grid.Row = "2"
+								Padding = "15,0,15,0"
+								BackgroundColor = "#007064"
+								OutlineColor = "Transparent"
+								HeightRequest = "50" 
+							>
+							<StackLayout  Padding = "15,0,15,0"
+										Orientation = "Horizontal"
+										HorizontalOptions = "Center"
+										VerticalOptions = "Center"
+										Spacing = "10"
+										>
+								
+								<Button 
+										Scale = "1.5"
+										BackgroundColor = "Transparent"
+										Image = "ic_chat_white_24dp.png"
+										Clicked = "messageBtnClicked"
+										WidthRequest = "50"
+									/>
+
+								<Button
+										Scale = "1.5"
+										BackgroundColor = "Transparent"
+										Image = "ic_notifications_white_24dp.png"
+										Clicked = "alertBtnClicked"
+										WidthRequest = "50"
+									/>
+
+								<Button
+										Scale = "1.5"
+										BackgroundColor = "Transparent"
+										Image = "ic_account_balance_white_24dp.png"
+										Clicked = "homeBtnClicked"
+										WidthRequest = "50"
+									/>
+
+								<Button
+										Scale = "1.5"
+										BackgroundColor = "Transparent"
+										Image = "ic_add_circle_white_24dp.png"
+										Clicked = "addBtnClicked"
+										WidthRequest = "50"
+									/>
+
+								<Button
+										Scale = "1.5"
+										BackgroundColor = "Transparent"
+										Image = "ic_account_circle_white_24dp.png"
+										Clicked = "profileBtnClicked"
+										WidthRequest = "50"
+									/>
+							</StackLayout>
+						</Frame>
+					<!-- Footer End -->
+				</Grid>
+</BaseView>

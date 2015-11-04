@@ -16,11 +16,17 @@ namespace SuncorpNetwork {
     
     public partial class PersonalProfile : ContentPage {
         
-        private Image profilePic;
+        private StackLayout Content;
+        
+        private Image profile_pic;
+        
+        private Button MsgBtn;
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(PersonalProfile));
-            profilePic = this.FindByName<Image>("profilePic");
+            Content = this.FindByName<StackLayout>("Content");
+            profile_pic = this.FindByName<Image>("profile_pic");
+            MsgBtn = this.FindByName<Button>("MsgBtn");
         }
     }
 }

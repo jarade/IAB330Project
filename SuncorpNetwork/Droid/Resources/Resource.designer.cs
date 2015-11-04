@@ -88,6 +88,12 @@ namespace SuncorpNetwork.Droid
 			// aapt resource value: 0x7f02000d
 			public const int settings = 2130837517;
 			
+			// aapt resource value: 0x7f02000e
+			public const int suncorp_transparent = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int suncorp_transparent2 = 2130837519;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

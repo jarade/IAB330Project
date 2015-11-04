@@ -16,8 +16,8 @@
 	<ScrollView>
 		<StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="5" Spacing="10">
 
-			<StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="5" Spacing="10">
-			<Image x:Name = "profilePic" Source="images.jpg" />
+			<StackLayout x:Name="Content" Orientation="Horizontal" VerticalOptions="Start" Padding="5" Spacing="10">
+			<Image x:Name = "profile_pic"/>
 				<StackLayout Orientation="Vertical"  VerticalOptions="StartAndExpand" Padding="5" Spacing="20">
 
 
@@ -38,7 +38,9 @@
 					</StackLayout>
 
 				<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-					<Button		BackgroundColor = "White"
+					<Button		
+							x:Name = "MsgBtn"
+							BackgroundColor = "White"
 							Text = "Message"
 							FontSize = "8"
 							TextColor = "Black"

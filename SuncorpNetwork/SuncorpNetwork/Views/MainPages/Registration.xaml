@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Registration">
+<BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Registration" BackgroundColor="#0DA195">
+		
 
-		<StackLayout Orientation="Vertical" Padding="30" Spacing="10">
+		<StackLayout Orientation="Vertical" Padding="30" Spacing= "80">
+
+		  <StackLayout VerticalOptions="Center" HorizontalOptions="Center" 	Padding="20" BackgroundColor = "Transparent" >
+    	  <Image Source="suncorp_transparent2"/>
+
+ 		   </StackLayout>
+
+ 		<StackLayout Orientation="Vertical" Padding="30" Spacing= "15">
 		<StackLayout Orientation="Horizontal" Spacing="5">
 		<Label Text ="First Name:" Font = "Large" />
 		<Entry x:Name="entryFirstName" HorizontalOptions="FillAndExpand"/>
@@ -27,4 +35,6 @@
 		/>	
 
 	</StackLayout>
+	 		   </StackLayout>
+
 </BaseView>

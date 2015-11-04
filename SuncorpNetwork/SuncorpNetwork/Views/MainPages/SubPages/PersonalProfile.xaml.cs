@@ -11,13 +11,15 @@ namespace SuncorpNetwork
 
 		public PersonalProfile ()
 		{
+
 			setup ();
 		}
 
 		public void setup(){
 			var database = new PersonalDB ();
 			PersonalDetails item = database.GetDetails(((App)Application.Current).UserEmail);
-			//TheDetails.ProfilePic = ImageSource.FromFile("images.jpg");
+			item.ProfilePic = "images.jpg";
+
 			//TheDetails.FirstName = item.FirstName;
 			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
 
@@ -26,6 +28,18 @@ namespace SuncorpNetwork
 
 			BindingContext = item;
 			InitializeComponent ();
+			var pic = new RoundedBoxView(){
+				WidthRequest = 100,
+				HeightRequest = 100,
+				HorizontalOptions = LayoutOptions.Center,
+			};
+			pic.Source = "images.jpg";
+
+			Content.Children.Insert (0, pic);
+
+			if (((App)Application.Current).UserEmail == item.Email) {
+				MsgBtn.IsVisible = false;
+			}
 		}
 
 		public void messageBtnClicked(object sender, EventArgs e){

@@ -14,7 +14,7 @@ namespace SuncorpNetwork {
     using Xamarin.Forms.Xaml;
     
     
-    public partial class Forum1 : ContentPage {
+    public partial class Forum1 : BaseView {
         
         private ListView Forum1PostList;
         

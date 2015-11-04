@@ -9,7 +9,21 @@ namespace SuncorpNetwork
 
 		public InsuranceFinance ()
 		{
-			InitializeComponent ();
+			InitializeComponent ();			
+
+			StackLayout layout = new StackLayout(){
+				Spacing = 20,
+				Padding = 20,
+			};
+
+			var photo = new RoundedBoxView(){
+				WidthRequest = 100,
+				HeightRequest = 100,
+				HorizontalOptions = LayoutOptions.Center,
+			};
+			photo.Source = ImageSource.FromFile("images.jpg");
+			layout.Children.Add(photo);
+			this.Content = layout;
 		}
 
 		public void messageBtnClicked(object sender, EventArgs e){
