@@ -8,22 +8,12 @@
 		</Grid.RowDefinitions>
 <!--Forum posts start-->
 	<ScrollView> 
-	<StackLayout Padding="30" 	Grid.Row = "0">
-		<Label Text = "Posts" FontSize="Large" FontAttributes= "Bold" />
-		<ListView x:Name= "Forum1PostList" ItemsSource="{Binding Fpost1}">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<ViewCell.View>
-							<StackLayout Padding = "10">
-								<Label Text="{Binding Forum1Content}" FontSize="18" TextColor="White" FontAttributes = "Bold" />
-							</StackLayout>
-						</ViewCell.View>
-				</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-	</StackLayout>
+		<StackLayout Padding="30" 	Grid.Row = "0">
+			<Label Text = "Content" FontSize="Large" FontAttributes= "Bold" />
+				<StackLayout Padding = "10">
+					<Label Text="{Binding Forum1Content}" FontSize="18" TextColor="White" FontAttributes = "Bold" />
+				</StackLayout>
+			</StackLayout>
 	</ScrollView>
 <!--Forum posts End-->
 <!--Footer start-->

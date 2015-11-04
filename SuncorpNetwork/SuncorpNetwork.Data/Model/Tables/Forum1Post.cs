@@ -16,11 +16,7 @@ namespace SuncorpNetwork
 		}
 
 		public Forum1Post ( string postTitle, string postContent, string authorName)
-		{
-
-
-
-			 
+		{			 
 			Forum1PostTitle = postTitle;
 			Forum1PostContent = postContent;
 			AuthorName = authorName;
