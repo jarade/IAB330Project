@@ -80,19 +80,22 @@ namespace SuncorpNetwork.Droid
 			public const int learning = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int profile_filler = 2130837515;
+			public const int menu = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int searching = 2130837516;
+			public const int profile_filler = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int settings = 2130837517;
+			public const int searching = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int suncorp_transparent = 2130837518;
+			public const int settings = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int suncorp_transparent2 = 2130837519;
+			public const int suncorp_transparent = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int suncorp_transparent2 = 2130837520;
 			
 			static Drawable()
 			{

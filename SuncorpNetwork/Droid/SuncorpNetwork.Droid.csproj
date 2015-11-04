@@ -95,7 +95,7 @@
     <Compile Include="Renderers\RoundedGridRenderer.cs" />
     <Compile Include="Renderers\AddTabbedRenderer.cs" />
     <Compile Include="Renderers\CustomListView.cs" />
-    <Compile Include="RoundedBoxRendered.cs" />
+    <Compile Include="Renderers\RoundedBoxRendered.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -153,6 +153,7 @@
     <AndroidResource Include="Resources\drawable\searching.png" />
     <AndroidResource Include="Resources\drawable\suncorp_transparent.png" />
     <AndroidResource Include="Resources\drawable\suncorp_transparent2.png" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

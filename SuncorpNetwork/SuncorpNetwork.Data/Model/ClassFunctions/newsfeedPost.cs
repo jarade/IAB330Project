@@ -108,11 +108,10 @@ namespace SuncorpNetwork.Data
 			innerGrid.ColumnDefinitions.Insert(2, c2);
 
 			// Create the profile image
-			Image profileImage = new Image {
+			RoundedBoxView profileImage = new RoundedBoxView {
 				Source = profileImageLoc,
-				HeightRequest = 25,
-				WidthRequest = 35,
-				BackgroundColor = Color.FromHex("#007064")
+				HeightRequest = 50,
+				WidthRequest = 50
 			};
 
 			innerGrid.Children.Add (profileImage, 0 ,0);

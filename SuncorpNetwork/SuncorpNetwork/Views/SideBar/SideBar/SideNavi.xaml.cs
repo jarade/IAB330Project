@@ -56,7 +56,7 @@ namespace SuncorpNetwork
 
 		private NavigationPage setupPage(Page displayPage){
 			var page = new NavigationPage (displayPage);
-			page.Icon = "profile_filler.png"; // Change this
+			page.Icon = "menu.png"; // Change this
 			page.BarBackgroundColor = Color.FromHex("#007064");
 			page.BarTextColor = Color.White;
 			BackgroundColor = Color.FromHex("#007064");

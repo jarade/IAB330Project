@@ -31,7 +31,7 @@
 								Spacing = "15"
 							>
 							<Label
-								Text = "Email:		"
+								Text = "Email:"
 								TextColor = "White"
 								FontSize = "14"
 							/>
@@ -40,7 +40,7 @@
 									x:Name = "emailAddress"
 									BackgroundColor = "White"
 									TextColor = "Black"
-									WidthRequest = "300"
+									WidthRequest = "250"
 							/>
 					</StackLayout>
 
@@ -129,8 +129,15 @@
 								TextColor = "White"
 								FontSize = "8"
 							/>
+
 							<Label
 								Text = "Searching Business Image Icon made by Freepik from www.flaticon.com On: 4/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
+
+							<Label
+								Text = "Menu Icon made by Freepik from www.flaticon.com  On: 4/11/2015"
 								TextColor = "White"
 								FontSize = "8"
 							/>

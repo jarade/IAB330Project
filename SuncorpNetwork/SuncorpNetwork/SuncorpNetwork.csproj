@@ -83,7 +83,6 @@
     <Compile Include="ViewModel\MyEditor.cs" />
     <Compile Include="Views\MainPages\SubPages\Add.cs" />
     <Compile Include="Views\SideBar\SideBar\sideCustomViewCell.cs" />
-    <Compile Include="RoundedBoxView.cs" />
     <Compile Include="Views\SideBar\Pages\Forum1Content.xaml.cs">
       <DependentUpon>Forum1Content.xaml</DependentUpon>
     </Compile>

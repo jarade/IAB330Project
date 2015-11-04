@@ -33,7 +33,7 @@ namespace SuncorpNetwork
 				HeightRequest = 100,
 				HorizontalOptions = LayoutOptions.Center,
 			};
-			pic.Source = "images.jpg";
+			pic.SetBinding (RoundedBoxView.SourceProperty, "ProfilePic");
 
 			Content.Children.Insert (0, pic);
 
