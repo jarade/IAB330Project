@@ -3,9 +3,12 @@
 xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 x:Class="SuncorpNetwork.tab1detail">
-	<ContentPage.Content>
-
 	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "9*"/>
+			<RowDefinition Height = "1.2*"/>
+		</Grid.RowDefinitions>
+
 		<Label Grid.Row = 0
 				Text = "Life insurance is designed to provide your family with financial security if you die or a diagnosed with a terminal illness. The lump sum that is paid out can give your family the security and freedom to make choices about their future. 
 
@@ -43,73 +46,62 @@ This information is general advice and doesn't take into account your objectives
                     VerticalOptions = "CenterAndExpand"
                     HorizontalOptions = "CenterAndExpand"
  />
-							<StackLayout  Padding = "25,0,25,0"
-										Orientation = "Horizontal"
-										HorizontalOptions = "CenterAndExpand"
-										Spacing = "15"
-										>
-								
-								<Button 
-										Scale = "2"
-										BackgroundColor = "Transparent"
-										Image = "ic_chat_white_24dp.png"
-										Clicked = "messageBtnClicked"
-										WidthRequest = "50"
-									/>
+					<!-- Footer Start -->
+				<Frame 
+						Grid.Row = "2"
+						Padding = "15,0,15,0"
+						BackgroundColor = "#007064"
+						OutlineColor = "Transparent"
+						HeightRequest = "50" 
+					>
+					<StackLayout  Padding = "15,0,15,0"
+								Orientation = "Horizontal"
+								HorizontalOptions = "Center"
+								VerticalOptions = "Center"
+								Spacing = "10"
+								>
+						
+						<Button 
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_chat_white_24dp.png"
+								Clicked = "messageBtnClicked"
+								WidthRequest = "50"
+							/>
 
-								<Button
-										Scale = "2"
-										BackgroundColor = "Transparent"
-										Image = "ic_notifications_white_24dp.png"
-										Clicked = "alertBtnClicked"
-										WidthRequest = "50"
-									/>
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_notifications_white_24dp.png"
+								Clicked = "alertBtnClicked"
+								WidthRequest = "50"
+							/>
 
-								<Button
-										Scale = "2"
-										BackgroundColor = "Transparent"
-										Image = "ic_account_balance_white_24dp.png"
-										Clicked = "homeBtnClicked"
-										WidthRequest = "50"
-									/>
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_account_balance_white_24dp.png"
+								Clicked = "homeBtnClicked"
+								WidthRequest = "50"
+							/>
 
-								<Button
-										Scale = "2"
-										BackgroundColor = "Transparent"
-										Image = "ic_add_circle_white_24dp.png"
-										Clicked = "addBtnClicked"
-										WidthRequest = "50"
-									/>
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_add_circle_white_24dp.png"
+								Clicked = "addBtnClicked"
+								WidthRequest = "50"
+							/>
 
-								<Button
-										Scale = "2"
-										BackgroundColor = "Transparent"
-										Image = "ic_account_circle_white_24dp.png"
-										Clicked = "profileBtnClicked"
-										WidthRequest = "50"
-									/>
-							</StackLayout>
-						</Frame>
-					<!-- Footer End -->
-				</Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</ContentPage.Content>
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_account_circle_white_24dp.png"
+								Clicked = "profileBtnClicked"
+								WidthRequest = "50"
+							/>
+					</StackLayout>
+				</Frame>
+			<!-- Footer End -->
+		</Grid>
 </ContentPage>

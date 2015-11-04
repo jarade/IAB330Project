@@ -18,6 +18,7 @@ namespace SuncorpNetwork.Data
 
 			cell.SetBinding (TextCell.TextProperty, "Title");
 			cell.SetBinding (TextCell.DetailProperty, "Subtitle");
+			cell.SetBinding (TextCell.TextColorProperty, "TextColour");
 
 			ItemTemplate = cell;
 

@@ -338,7 +338,7 @@ namespace SuncorpNetwork
 						PersonalDetails pd = personalInfo.GetDetails (((App)Application.Current).UserEmail);
 
 						// Create the project table
-						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, Title, Details, Expertise, tags, ((App)Application.Current).UserEmail);
+						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, ProjectTitle, Details, Expertise, tags, ((App)Application.Current).UserEmail);
 						var database = new ProjectDetailsDatabase ();
 						database.InsertOrUpdateProject (newProject);
 
@@ -352,7 +352,7 @@ namespace SuncorpNetwork
 							HasRead = false,
 							TimeStamp = DateTime.UtcNow,
 							Type = "Project",
-							Source = "icon.png",
+							Source = "unread.png",
 							CompositePrimaryKey = ((App)Application.Current).UserEmail + ProjectTitle,
 						};
 

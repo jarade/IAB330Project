@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+<BaseView 	xmlns="http://xamarin.com/schemas/2014/forms" 
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 				x:Class="SuncorpNetwork.Searching_Business"
 				Title="Searching Businesses"
@@ -9,73 +9,26 @@
 	<Grid>
 					<Grid.RowDefinitions>
 						<RowDefinition Height = "1*"/>
-						<RowDefinition Height = "9*"/>
+						<RowDefinition Height = "8*"/>
+						<RowDefinition Height = "1.2*"/>
 					</Grid.RowDefinitions>
-					<!-- Footer Start -->
-					<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup Grid.Row = "0">
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-    <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>{B280524F-FF80-49BC-BAFD-A3647C60B2AE}</SharedGUID>
-  </PropertyGroup>
-  <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>SearchBoxRecipe</Import_RootNamespace>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)SearchBoxRecipe.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Location.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Locations.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MallListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MapPage.cs" />
-  </ItemGroup>
-</Project>
-
-						<Frame 
-								Grid.Row = "1"
-								Padding = "0,0,0,0"
-								BackgroundColor = "#007064"
-								OutlineColor = "Transparent" 
-							>
-							<StackLayout 
-										Orientation = "Horizontal"
-										HorizontalOptions = "CenterAndExpand"
-										>
-								<Button 
-										BackgroundColor = "#007064"
-										Image = "ic_chat_white_24dp.png"
-										Clicked = "messageBtnClicked"
-										WidthRequest = "50"
-									/>
-
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_notifications_white_24dp.png"
-										Clicked = "alertBtnClicked"
-										WidthRequest = "50"
-									/>
-
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_account_balance_white_24dp.png"
-										Clicked = "homeBtnClicked"
-										WidthRequest = "50"
-									/>
-
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_add_circle_white_24dp.png"
-										Clicked = "addBtnClicked"
-										WidthRequest = "50"
-									/>
-
-								<Button
-										BackgroundColor = "#007064"
-										Image = "ic_account_circle_white_24dp.png"
-										Clicked = "profileBtnClicked"
-										WidthRequest = "50"
-									/>
-							</StackLayout>
-						</Frame>
-					<!-- Footer End -->
-				</Grid>
-</ContentPage>
+				
+		<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+			<PropertyGroup>
+				<MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+				<HasSharedItems>true</HasSharedItems>
+				<SharedGUID>{B280524F-FF80-49BC-BAFD-A3647C60B2AE}</SharedGUID>
+			</PropertyGroup>
+			<PropertyGroup Label="Configuration">
+				<Import_RootNamespace>SearchBoxRecipe</Import_RootNamespace>
+			</PropertyGroup>
+			<ItemGroup>
+				<Compile Include="$(MSBuildThisFileDirectory)SearchBoxRecipe.cs" />
+				<Compile Include="$(MSBuildThisFileDirectory)Location.cs" />
+				<Compile Include="$(MSBuildThisFileDirectory)Locations.cs" />
+				<Compile Include="$(MSBuildThisFileDirectory)MallListView.cs" />
+				<Compile Include="$(MSBuildThisFileDirectory)MapPage.cs" />
+			</ItemGroup>
+		</Project>
+	</Grid>
+</BaseView>

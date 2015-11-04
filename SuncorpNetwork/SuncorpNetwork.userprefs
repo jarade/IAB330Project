@@ -1,38 +1,10 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.4df1358c05188fcb" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork.Data\Model\ClassFunctions\Tags.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean) Food" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\SideBar\Pages\tab1detail.xaml">
     <Files>
-      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\Add.cs" Line="510" Column="16" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Searching_Business.xaml.cs" Line="11" Column="10" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\tab1detail.xaml" Line="101" Column="28" />
       <File FileName="SuncorpNetwork\Views\SideBar\Pages\Contact_Us.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\TagList.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\Tags.cs" Line="51" Column="42" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\InsuranceFinance.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\InsuranceFinance.xaml.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\tab1detail.xaml.cs" Line="9" Column="3" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\tab1detail.xaml" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Lollipop)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Services\Forum1PostGenerator.cs">
-    <Files>
-      <File FileName="SuncorpNetwork.Data\Model\Tables\Forum1Post.cs" Line="31" Column="1" />
-      <File FileName="SuncorpNetwork.Data\Database\Forum1DB.cs" Line="10" Column="15" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1CreatePost.xaml.cs" Line="18" Column="59" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1CreatePost.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Login.xaml" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml.cs" Line="28" Column="6" />
-      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\newsfeedPost.cs" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1.xaml" Line="20" Column="44" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1.xaml.cs" Line="12" Column="14" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Forum1Content.xaml" Line="13" Column="68" />
-      <File FileName="SuncorpNetwork\Services\Forum1PostGenerator.cs" Line="26" Column="26" />
-      <File FileName="SuncorpNetwork.Data\SuncorpNetwork.Data.csproj" Line="1" Column="1" />
-      <File FileName="SuncorpNetwork\Views\MainPages\Registration.xaml" Line="33" Column="1" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\InsuranceFinance.xaml.cs" Line="19" Column="26" />
-      <File FileName="..\..\..\..\..\..\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" Line="4097" Column="5" />
->>>>>>> e0c89ae5fd8f38997eb43785edafc9dc26500aeb
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -27,25 +27,12 @@ namespace SuncorpNetwork.Data
 			Label tagFooter = createFeedLabel (footerText, 12);
 			tagFooter.VerticalOptions = LayoutOptions.EndAndExpand;
 
-			// Create the readmore link
-			Button readMore = new Button {
-				Text = "Read More...",
-				TextColor = Color.FromHex("#007064"),
-				FontSize = 12,
-				BackgroundColor = Color.Transparent,
-				VerticalOptions = LayoutOptions.EndAndExpand,
-				HorizontalOptions = LayoutOptions.EndAndExpand
-			};
 
-			readMore.Clicked += (sender, e) => {
-				navigateTo(project.PosterEmail);
-			};
 				
 			// Add children
 			grid.Children.Add (createInnerGrid(project.FirstName + " " + project.LastName, project.TimeStamp),0, 2, 0, 1);
 			grid.Children.Add (info, 0, 2, 1, 2);
 			grid.Children.Add (tagFooter, 0, 1, 2, 3);
-			grid.Children.Add (readMore, 1, 2, 2, 3);
 
 			return grid;
 		}

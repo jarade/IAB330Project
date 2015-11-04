@@ -125,87 +125,105 @@
 										VerticalOptions = "EndAndExpand"
 								>
 							<Label
-								Text = "Learning, Insurance/Finance, Forums, Settings, Contact Us Images From: http://www.flaticon.com/packs/glypho/ Made by: bogdan rosu On: 4/11/2015"
+								Text = "Learning, Insurance/Finance, Forums, Settings, Contact Us Images From: http://www.flaticon.com/packs/glypho/ Made by: bogdan rosu Accessed: 4/11/2015"
 								TextColor = "White"
 								FontSize = "8"
 							/>
 
 							<Label
-								Text = "Searching Business Image Icon made by Freepik from www.flaticon.com On: 4/11/2015"
+								Text = "Searching Business Image Icon made by Freepik from www.flaticon.com Accessed: 4/11/2015"
 								TextColor = "White"
 								FontSize = "8"
 							/>
 
 							<Label
-								Text = "Menu Icon made by Freepik from www.flaticon.com  On: 4/11/2015"
+								Text = "Menu Icon made by Freepik from www.flaticon.com  Accessed: 4/11/2015"
 								TextColor = "White"
 								FontSize = "8"
 							/>
 
 							<Label
-								Text = "Tag Icon made by Google from www.flaticon.com  On: 4/11/2015"
+								Text = "Tag Icon made by Google from www.flaticon.com  Accessed: 4/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
+
+							<Label
+								Text = "Unread Icon made by SimpleIcon from www.flaticon.com  Accessed: 5/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
+
+							<Label
+								Text = "Read Icon made by Freepik from www.flaticon.com  Accessed: 5/11/2015"
+								TextColor = "White"
+								FontSize = "8"
+							/>
+
+							<Label
+								Text = "_______________________________________________________________________"
 								TextColor = "White"
 								FontSize = "8"
 							/>
 						</StackLayout>
 				</StackLayout>
 			</ScrollView>
-								<!-- Footer Start -->
-						<Frame 
-								Grid.Row = "1"
-								Padding = "15,0,15,0"
-								BackgroundColor = "#007064"
-								OutlineColor = "Transparent"
-								HeightRequest = "50" 
+			<!-- Footer Start -->
+			<Frame 
+					Grid.Row = "1"
+					Padding = "15,0,15,0"
+					BackgroundColor = "#007064"
+					OutlineColor = "Transparent"
+					HeightRequest = "50" 
+				>
+				<StackLayout  Padding = "15,0,15,0"
+							Orientation = "Horizontal"
+							HorizontalOptions = "Center"
+							VerticalOptions = "Center"
+							Spacing = "10"
 							>
-							<StackLayout  Padding = "15,0,15,0"
-										Orientation = "Horizontal"
-										HorizontalOptions = "Center"
-										VerticalOptions = "Center"
-										Spacing = "10"
-										>
-								
-								<Button 
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_chat_white_24dp.png"
-										Clicked = "messageBtnClicked"
-										WidthRequest = "50"
-									/>
+					
+					<Button 
+							Scale = "1.5"
+							BackgroundColor = "Transparent"
+							Image = "ic_chat_white_24dp.png"
+							Clicked = "messageBtnClicked"
+							WidthRequest = "50"
+						/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_notifications_white_24dp.png"
-										Clicked = "alertBtnClicked"
-										WidthRequest = "50"
-									/>
+					<Button
+							Scale = "1.5"
+							BackgroundColor = "Transparent"
+							Image = "ic_notifications_white_24dp.png"
+							Clicked = "alertBtnClicked"
+							WidthRequest = "50"
+						/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_account_balance_white_24dp.png"
-										Clicked = "homeBtnClicked"
-										WidthRequest = "50"
-									/>
+					<Button
+							Scale = "1.5"
+							BackgroundColor = "Transparent"
+							Image = "ic_account_balance_white_24dp.png"
+							Clicked = "homeBtnClicked"
+							WidthRequest = "50"
+						/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_add_circle_white_24dp.png"
-										Clicked = "addBtnClicked"
-										WidthRequest = "50"
-									/>
+					<Button
+							Scale = "1.5"
+							BackgroundColor = "Transparent"
+							Image = "ic_add_circle_white_24dp.png"
+							Clicked = "addBtnClicked"
+							WidthRequest = "50"
+						/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_account_circle_white_24dp.png"
-										Clicked = "profileBtnClicked"
-										WidthRequest = "50"
-									/>
-							</StackLayout>
-						</Frame>
-					<!-- Footer End -->
+					<Button
+							Scale = "1.5"
+							BackgroundColor = "Transparent"
+							Image = "ic_account_circle_white_24dp.png"
+							Clicked = "profileBtnClicked"
+							WidthRequest = "50"
+						/>
+				</StackLayout>
+			</Frame>
+			<!-- Footer End -->
 	</Grid>
 </BaseView>

@@ -67,11 +67,13 @@ namespace SuncorpNetwork
 			var databaseItems = sortByTags ();
 		
 			int current = NewsCounter;
+			// TODO add more posts on scroll down, havent figured out how to do the scrolled event thing yet.
 			foreach (ProjectDetails item in databaseItems) {
-				if (current+4 >= NewsCounter) {
+				if (current+9 >= NewsCounter) {
 					NewsCounter++;
 
 					Grid g = post.createNewsPost (item);
+					g.Children.Add (readMoreButton(item.id), 1, 2, 2, 3);
 
 					NewsSection.Children.Add (g);
 				} else {
@@ -80,6 +82,23 @@ namespace SuncorpNetwork
 			}
 		}
 
+		private Button readMoreButton(int id){
+			// Create the readmore link
+			Button readMore = new Button {
+				Text = "Read More...",
+				TextColor = Color.FromHex("#007064"),
+				FontSize = 12,
+				BackgroundColor = Color.Transparent,
+				VerticalOptions = LayoutOptions.EndAndExpand,
+				HorizontalOptions = LayoutOptions.EndAndExpand
+			};
+
+			readMore.Clicked += (sender, e) => {
+				switchPage(new Project(id));
+			};
+
+			return readMore;
+		}
 		private async Task<List<ProjectDetails>> getItems(){
 			return await MobileService.GetTable<ProjectDetails> ().OrderBy (x => x.TimeStamp).ToListAsync ();
 		}
