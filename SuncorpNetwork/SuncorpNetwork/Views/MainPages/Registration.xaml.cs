@@ -30,6 +30,8 @@ namespace SuncorpNetwork
 						AddRegistration (em, pw);
 
 						// navigate here
+						((App)Application.Current).UserEmail = em;
+						await Navigation.PushModalAsync (new SideNavi ());
 					}
 				}
 			}

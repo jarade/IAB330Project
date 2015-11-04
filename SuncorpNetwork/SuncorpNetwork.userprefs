@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean) Food" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Model\Forum1Post.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.4df1358c05188fcb" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\MainPages\SubPages\PersonalProfile.xaml.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Model\Forum1Post.cs" Line="4" Column="1" />
+      <File FileName="SuncorpNetwork\Views\MainPages\Home.xaml" Line="44" Column="36" />
+      <File FileName="SuncorpNetwork.Data\Model\ClassFunctions\newsfeedPost.cs" Line="162" Column="7" />
+      <File FileName="SuncorpNetwork\Views\MainPages\SubPages\PersonalProfile.xaml.cs" Line="21" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

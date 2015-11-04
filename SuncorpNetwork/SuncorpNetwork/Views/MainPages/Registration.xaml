@@ -2,39 +2,105 @@
 <BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Registration" BackgroundColor="#0DA195">
 		
 
-		<StackLayout Orientation="Vertical" Padding="30" Spacing= "80">
+		<StackLayout Orientation="Vertical" Padding="30" Spacing= "50"
+				>
 
-		  <StackLayout VerticalOptions="Center" HorizontalOptions="Center" 	Padding="20" BackgroundColor = "Transparent" >
-    	  <Image Source="suncorp_transparent2"/>
+			<StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center" 	
+					Padding="30" BackgroundColor = "Transparent" >
+    	  		<Image Source="suncorp_transparent2"/>
+ 			</StackLayout>
 
- 		   </StackLayout>
+	 		<StackLayout Orientation="Vertical" 
+	 					Padding="10" 
+	 					Spacing= "10"
+	 					VerticalOptions = "CenterAndExpand"
+					>
+				<StackLayout Orientation="Horizontal" Spacing="20">
+					<Label 
+							Text ="First Name:" 
+							TextColor = "White"
+							FontSize = "14" 
+							VerticalOptions = "Center"
+						/>
+					<Entry 	
+							x:Name="entryFirstName" 
+							HorizontalOptions="FillAndExpand"
+							BackgroundColor = "White"
+							TextColor = "Black"
+							WidthRequest = "150"
+						/>
+				</StackLayout>
 
- 		<StackLayout Orientation="Vertical" Padding="30" Spacing= "15">
-		<StackLayout Orientation="Horizontal" Spacing="5">
-		<Label Text ="First Name:" Font = "Large" />
-		<Entry x:Name="entryFirstName" HorizontalOptions="FillAndExpand"/>
+				<StackLayout Orientation="Horizontal" Spacing="20">
+					<Label 
+							Text ="Last Name:" 
+							TextColor = "White"
+							FontSize = "14" 
+							VerticalOptions = "Center"
+
+						/>
+					<Entry 
+							x:Name="entryLastName" 
+							HorizontalOptions="FillAndExpand"
+							BackgroundColor = "White"
+							TextColor = "Black"
+							WidthRequest = "150"
+						/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal" Spacing="20">
+					<Label 
+							Text ="Email:\t" 
+							TextColor = "White"
+							FontSize = "14" 
+							VerticalOptions = "Center"
+						/>
+					<Entry 
+							x:Name="entryEmail" 
+							HorizontalOptions="FillAndExpand"
+							BackgroundColor = "White"
+							TextColor = "Black"
+							WidthRequest = "150"
+						/>
+				</StackLayout>
+					<StackLayout Orientation="Horizontal" Spacing="20">
+						<Label 
+								Text ="Password:" 
+								TextColor = "White"
+								FontSize = "14" 
+								VerticalOptions = "Center"
+							/>
+						<Entry 
+								HorizontalOptions="FillAndExpand"
+								BackgroundColor = "White"
+								TextColor = "Black"
+								WidthRequest = "150"
+							/>
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" Spacing="20">
+						<Label 
+								Text ="Confirmation:" 
+								TextColor = "White"
+								FontSize = "14" 
+								VerticalOptions = "Center"
+							/>
+						<Entry 
+								HorizontalOptions="FillAndExpand"
+								BackgroundColor = "White"
+								TextColor = "Black"
+								WidthRequest = "150"
+							/>
+					</StackLayout>
+				<StackLayout>
+					<Button		
+							BackgroundColor = "White"
+							Text = "Register"
+							TextColor = "Black"
+							HeightRequest = "50"
+							Clicked = "SubmitReg"
+					/>	
+				</StackLayout>
 		</StackLayout>
-
-		<StackLayout Orientation="Horizontal" Spacing="5">
-		<Label Text ="Last Name:" Font = "Large" />
-		<Entry x:Name="entryLastName" HorizontalOptions="FillAndExpand"/>
-		</StackLayout>
-
-		<StackLayout Orientation="Horizontal" Spacing="5">
-		<Label Text ="Email:" Font = "Large" />
-		<Entry x:Name="entryEmail" HorizontalOptions="FillAndExpand"/>
-		</StackLayout>
-
-		<Button		HorizontalOptions="End"
-			BackgroundColor = "White"
-			Text = "Register"
-			TextColor = "Black"
-			WidthRequest = "100"
-			HeightRequest = "50"
-			Clicked = "SubmitReg"
-		/>	
-
 	</StackLayout>
-	 		   </StackLayout>
-
 </BaseView>

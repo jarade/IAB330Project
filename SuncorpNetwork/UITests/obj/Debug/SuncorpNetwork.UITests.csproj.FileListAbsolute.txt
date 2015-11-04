@@ -19,6 +19,5 @@ D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfc.
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfd.nlp
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfkc.nlp
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\bin\Debug\normnfkd.nlp
-D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.csprojResolveAssemblyReference.cache
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.dll
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\UITests\obj\Debug\SuncorpNetwork.UITests.pdb

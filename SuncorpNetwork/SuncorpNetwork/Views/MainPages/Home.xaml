@@ -41,6 +41,7 @@ Original Author: Jarrod Eades Created: 9/09/2015
 									x:Name = "TagsBtn"
 									BorderRadius="0"
 									BorderWidth="0"
+									BackgroundColor = "#0DA195"
 									HeightRequest = "40"
 									WidthRequest = "100"
 								/>
