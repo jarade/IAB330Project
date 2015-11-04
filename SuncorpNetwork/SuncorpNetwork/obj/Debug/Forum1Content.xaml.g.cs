@@ -16,11 +16,8 @@ namespace SuncorpNetwork {
     
     public partial class Forum1Content : BaseView {
         
-        private ListView Forum1PostList;
-        
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Forum1Content));
-            Forum1PostList = this.FindByName<ListView>("Forum1PostList");
         }
     }
 }

@@ -24,7 +24,65 @@ namespace SuncorpNetwork
 			BindingContext = f1vm;
 			Post = post;
 			InitializeComponent ();
-			DisplayAlert("Aha!","The content is"+Post.Forum1PostContent,"OK");
+			StackLayout layout = new StackLayout(){
+				Spacing = 20,
+			};
+
+			StackLayout layout2 = new StackLayout(){
+				Spacing = 20,
+			};
+
+			StackLayout layout3 = new StackLayout(){
+				Padding = 20,
+				Spacing = 135,
+			};
+
+
+			Label label = new Label{
+				Text = Post.Forum1PostTitle,
+				FontSize = 18,
+				TextColor = Color.White
+			};
+					
+			Label label2 = new Label{
+				Text = Post.Forum1PostContent,
+				FontSize = 14,
+				TextColor = Color.White
+			};
+
+			BoxView label3 = new BoxView{
+				HeightRequest = 1,
+				Color = Color.Black,
+				HorizontalOptions = LayoutOptions.FillAndExpand
+			};
+
+			Label label4 = new Label {
+				Text = "Add Comment",
+				FontSize = 18,
+				TextColor = Color.White
+			};
+
+			Editor label5 = new Editor {
+				BackgroundColor = Color.White,
+					WidthRequest = 20	
+			};
+
+			var photo = new RoundedBoxView(){
+				WidthRequest = 60,
+				HeightRequest = 60,
+				HorizontalOptions = LayoutOptions.Center,
+			};
+			photo.Source = ImageSource.FromFile("images.jpg");
+			layout.Children.Add(photo);
+			layout.Children.Add(label);
+			layout.Children.Add(label3);
+			layout.Children.Add(label2);
+			layout2.Children.Add(label4);
+			layout2.Children.Add(label5);
+			layout3.Children.Add (layout);
+			layout3.Children.Add (layout2);
+			this.Content = layout3;
+
 		}
 
 

@@ -14,5 +14,6 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.dll
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork.Data\obj\Debug\SuncorpNetwork.Data.pdb
