@@ -26,7 +26,6 @@ namespace SuncorpNetwork
 						PersonalDetails pd = new PersonalDetails (fn,ln,em);
 						var database = new PersonalDB ();
 						database.InsertOrUpdatePersonalDetails (pd);
-						PersonalDetails item = database.GetDetails(em);
 						AddRegistration (em, pw);
 
 						// navigate here

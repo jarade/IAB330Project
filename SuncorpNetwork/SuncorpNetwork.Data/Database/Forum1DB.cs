@@ -38,6 +38,21 @@ namespace SuncorpNetwork.Data
 			}
 			return new List<Forum1Post>();
 		}
+
+		public int InsertNewPost(Forum1Post forum1post){
+			return 	database.Table<Forum1Post> ().Where (
+				x => x.ID == forum1post.ID).Any()
+				? database.Update (forum1post) : database.Insert (forum1post);
+		}
+
+		public PersonalDetails GetDetails(string email){
+			var item = database.Table<PersonalDetails> ().Where (
+				x => x.Email == email
+			);
+			return (PersonalDetails)item.ToList().ElementAt(0);
+		}
+
+
 			
 		}
 	}

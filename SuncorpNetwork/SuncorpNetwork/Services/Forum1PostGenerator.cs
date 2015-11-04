@@ -21,7 +21,7 @@ namespace SuncorpNetwork
 			//fpost 1 = variable hold datas, Forum1Post = get set method, post_f1 = temporary data 
 			List<Forum1Post> fpost1 = new List<Forum1Post>();
 
-			for (int i = 0; i < 2; i++) {
+			for (int i = 0; i < 100; i++) {
 				string title   = Forum1PostTitle [i];
 				string content_f1 = Forum1PostContent [i];
 				Forum1Post post_f1 = new Forum1Post();

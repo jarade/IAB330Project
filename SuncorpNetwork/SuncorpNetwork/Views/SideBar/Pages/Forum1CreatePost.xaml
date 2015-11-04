@@ -1,14 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Forum1CreatePost">
-	<ContentPage.Content>
 	<StackLayout Padding="40">
 		<Entry x:Name="PostTitle" Placeholder="Title" />
 		<Entry x:Name="PostContent" Placeholder="Content" />
-		<Entry x:Name="PostAuthor" Placeholder="Author Name" />
-	</StackLayout>
 	<StackLayout Orientation="Horizontal">
 		<Button x:Name="Submit" Text="Submit" Clicked="OnSubmit" /> 
 		<Button x:Name="Cancel" Text="Cancel" Clicked="OnCancel" /> 
 	</StackLayout>
-	</ContentPage.Content>
+	</StackLayout>
 </ContentPage>
