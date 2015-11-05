@@ -22,43 +22,26 @@
 
 
 					<StackLayout Orientation="Horizontal">
-					<Label Text = "First name:" Font = "Medium"/> <Label Text="{Binding FirstName}" Font = "Medium" />
+					<Label Text = "First name:" Font = "Medium" TextColor="White"/> <Label Text="{Binding FirstName}" Font = "Medium" TextColor="White"/>
 					</StackLayout>
 
 					<StackLayout Orientation="Horizontal">
-					<Label Text = "Last name:" Font = "Medium" /> <Label Text="{Binding LastName}" Font = "Medium" />
+					<Label Text = "Last name:" Font = "Medium" TextColor="White"/> <Label Text="{Binding LastName}" Font = "Medium" TextColor="White"/>
 					</StackLayout>
 
 					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-					<Label Text = "Email:" Font = "Medium" /> <Label Text="{Binding Email}" Font = "Medium" />
+					<Label Text = "Email:" Font = "Medium" TextColor="White"/> <Label Text="{Binding Email}" Font = "Medium" TextColor="White"/>
 					</StackLayout>
 
 					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-					<Label Text = "Availability:" Font = "Medium" /> <Label Text="{Binding Availability_2}" Font = "Medium" />
+					<Label Text = "Availability:" Font = "Medium" TextColor="White"/> <Label Text="{Binding Availability_2}" Font = "Medium" TextColor="White"/>
 					</StackLayout>
 
 				<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-					<Button		
-							x:Name = "MsgBtn"
+
+					<Button	
+							Clicked = "EditBtn"
 							BackgroundColor = "White"
-							Text = "Message"
-							FontSize = "8"
-							TextColor = "Black"
-							WidthRequest = "65"
-							HeightRequest = "30"
-							Clicked = "MsgBtnClicked"
-							/>
-
-					<Button		BackgroundColor = "White"
-							Text = "Follow"
-							FontSize = "8"
-							TextColor = "Black"
-							WidthRequest = "65"
-							HeightRequest = "30"
-							Clicked = "FollowBtnClicked"
-							/>
-
-					<Button		BackgroundColor = "White"
 							Text = "Edit"
 							FontSize = "8"
 							TextColor = "Black"
@@ -71,68 +54,77 @@
 
 				</StackLayout>
 			</StackLayout>
-			<Label Text ="Overview" FontAttributes="Bold" FontSize="Large"/>
-			<Label Text ="{Binding Overview}" FontSize="Small" />
-			<Label Text ="Commendations" FontAttributes="Bold" FontSize="Large"/>
+			<Label Text ="Overview" FontAttributes="Bold" FontSize="Large" TextColor="White"/>
+			<Label Text ="{Binding Overview}" FontSize="Small" TextColor="White"/>
+			<BoxView Color="Black" HeightRequest="1"/>
+			<Label Text ="Work History and Feedback" FontAttributes="Bold" FontSize="Large" TextColor="White"/>
+			<StackLayout x:Name="History1" Orientation="Horizontal" VerticalOptions="Center">
+				<StackLayout Orientation="Vertical" Spacing="10">
+				<Label Text="Feb 2015- Sep 2015" FontSize="12" />
+				<Label Text="Develop a Windows 8 App based on our mobile App" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+				<Label Text="Great work. We will work together if there are any similar Jobs in the future." FontSize="Small" FontAttributes="Italic" TextColor="White"/>
+				<BoxView Color="Gray" HeightRequest="1"/>
+				</StackLayout>
+			</StackLayout>
 
 		</StackLayout>
 	</ScrollView>
 		<!-- Footer Start -->
-			<Frame 
-					Grid.Row = "1"
-					Padding = "15,0,15,0"
-					BackgroundColor = "#007064"
-					OutlineColor = "Transparent"
-					HeightRequest = "50" 
-				>
-				<StackLayout  Padding = "15,0,15,0"
-							Orientation = "Horizontal"
-							HorizontalOptions = "Center"
-							VerticalOptions = "Center"
-							Spacing = "10"
-							>
-					
-					<Button 
-							Scale = "1.5"
-							BackgroundColor = "Transparent"
-							Image = "ic_chat_white_24dp.png"
-							Clicked = "messageBtnClicked"
-							WidthRequest = "50"
-						/>
+		<Frame 
+				Grid.Row = "1"
+				Padding = "15,0,15,0"
+				BackgroundColor = "#007064"
+				OutlineColor = "Transparent"
+				HeightRequest = "50" 
+			>
+			<StackLayout  Padding = "15,0,15,0"
+						Orientation = "Horizontal"
+						HorizontalOptions = "Center"
+						VerticalOptions = "Center"
+						Spacing = "10"
+						>
+				
+				<Button 
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_chat_white_24dp.png"
+						Clicked = "messageBtnClicked"
+						WidthRequest = "50"
+					/>
 
-					<Button
-							Scale = "1.5"
-							BackgroundColor = "Transparent"
-							Image = "ic_notifications_white_24dp.png"
-							Clicked = "alertBtnClicked"
-							WidthRequest = "50"
-						/>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_notifications_white_24dp.png"
+						Clicked = "alertBtnClicked"
+						WidthRequest = "50"
+					/>
 
-					<Button
-							Scale = "1.5"
-							BackgroundColor = "Transparent"
-							Image = "ic_account_balance_white_24dp.png"
-							Clicked = "homeBtnClicked"
-							WidthRequest = "50"
-						/>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_account_balance_white_24dp.png"
+						Clicked = "homeBtnClicked"
+						WidthRequest = "50"
+					/>
 
-					<Button
-							Scale = "1.5"
-							BackgroundColor = "Transparent"
-							Image = "ic_add_circle_white_24dp.png"
-							Clicked = "addBtnClicked"
-							WidthRequest = "50"
-						/>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_add_circle_white_24dp.png"
+						Clicked = "addBtnClicked"
+						WidthRequest = "50"
+					/>
 
-					<Button
-							Scale = "1.5"
-							BackgroundColor = "Transparent"
-							Image = "ic_account_circle_white_24dp.png"
-							Clicked = "profileBtnClicked"
-							WidthRequest = "50"
-						/>
-				</StackLayout>
-			</Frame>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_account_circle_white_24dp.png"
+						Clicked = "profileBtnClicked"
+						WidthRequest = "50"
+					/>
+			</StackLayout>
+		</Frame>
 		<!-- Footer End -->
-				</Grid>
+	</Grid>
 </ContentPage>

@@ -94,6 +94,12 @@
     <Compile Include="Views\SideBar\Pages\Forum1CreatePost.xaml.cs">
       <DependentUpon>Forum1CreatePost.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainPages\SubPages\EditProfile.xaml.cs">
+      <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPages\SubPages\OthersProfile.xaml.cs">
+      <DependentUpon>OthersProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPages\SubPages\Project.xaml.cs">
       <DependentUpon>Project.xaml</DependentUpon>
     </Compile>

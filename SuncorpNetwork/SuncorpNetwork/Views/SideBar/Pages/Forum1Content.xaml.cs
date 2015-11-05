@@ -24,19 +24,37 @@ namespace SuncorpNetwork
 			BindingContext = f1vm;
 			Post = post;
 			InitializeComponent ();
+
 			StackLayout layout = new StackLayout(){
-				Spacing = 20,
+				Spacing = 10,
+				Orientation = StackOrientation.Horizontal
 			};
 
 			StackLayout layout2 = new StackLayout(){
-				Spacing = 20,
+				Spacing = 10,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 			};
 
 			StackLayout layout3 = new StackLayout(){
 				Padding = 20,
-				Spacing = 135,
+				Spacing = 155,
+				Orientation = StackOrientation.Vertical
 			};
 
+			StackLayout layout4 = new StackLayout(){
+				Spacing = 20,
+				Orientation = StackOrientation.Horizontal,
+			};
+
+			StackLayout layout5 = new StackLayout(){
+				Spacing = 20,
+				Orientation = StackOrientation.Vertical,
+			};
+
+			StackLayout layout6 = new StackLayout(){
+				Spacing = 20,
+				Orientation = StackOrientation.Horizontal,
+			};
 
 			Label label = new Label{
 				Text = Post.Forum1PostTitle,
@@ -64,24 +82,86 @@ namespace SuncorpNetwork
 
 			Editor label5 = new Editor {
 				BackgroundColor = Color.White,
-					WidthRequest = 20	
+				WidthRequest = 100,
+			};
+
+			BoxView label6 = new BoxView{
+				HeightRequest = 0.5,
+				Color = Color.White,
+				HorizontalOptions = LayoutOptions.FillAndExpand
+			};
+
+			BoxView label9 = new BoxView{
+				HeightRequest = 0.5,
+				Color = Color.White,
+				HorizontalOptions = LayoutOptions.FillAndExpand
+			};
+
+			Button label8 = new Button {
+				BackgroundColor = Color.White,
+				Text = "Add",
+				FontSize = 10,
+				HeightRequest = 40,
+				WidthRequest = 60,
+				TextColor = Color.Black,
+				HorizontalOptions = LayoutOptions.End,
 			};
 
 			var photo = new RoundedBoxView(){
-				WidthRequest = 60,
-				HeightRequest = 60,
+				WidthRequest = 45,
+				HeightRequest = 45,
 				HorizontalOptions = LayoutOptions.Center,
 			};
-			photo.Source = ImageSource.FromFile("images.jpg");
-			layout.Children.Add(photo);
-			layout.Children.Add(label);
-			layout.Children.Add(label3);
-			layout.Children.Add(label2);
+			photo.Source = ImageSource.FromFile("xen.jpg");
+
+			var photo2 = new RoundedBoxView(){
+				WidthRequest = 45,
+				HeightRequest = 45,
+				HorizontalOptions = LayoutOptions.Center,
+			};
+			photo2.Source = ImageSource.FromFile("images.jpg");
+
+			var photo3 = new RoundedBoxView(){
+				WidthRequest = 45,
+				HeightRequest = 45,
+				VerticalOptions = LayoutOptions.Center
+			};
+			photo3.Source = ImageSource.FromFile("images.jpg");
+
+			Label label7 = new Label{
+				Text = "You are real idiot",
+				FontSize = 14,
+				TextColor = Color.White
+			};
+
+			layout4.Children.Add(photo);
+			layout4.Children.Add(label2);
+
+			layout6.Children.Add(photo2);
+			layout6.Children.Add(label7);
+
+			layout5.Children.Add(label);
+			layout5.Children.Add(label3);
+			layout5.Children.Add (layout4);
+			layout5.Children.Add (label6);
+
+			layout5.Children.Add (layout6);
+			layout5.Children.Add (label9);
+
 			layout2.Children.Add(label4);
 			layout2.Children.Add(label5);
-			layout3.Children.Add (layout);
-			layout3.Children.Add (layout2);
-			this.Content = layout3;
+			layout2.Children.Add(label8);
+
+			//user's photo comment box
+			layout.Children.Add(photo3);
+			layout.Children.Add(layout2);
+
+//			layout3.Children.Add (layout5);
+//			layout3.Children.Add (layout);
+			Content.Children.Insert (0, layout5);
+			Content.Children.Insert (1, layout);
+
+			this.Content = Content;
 
 		}
 
