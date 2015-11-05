@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace SuncorpNetwork
 {
-	public partial class tab1detail : ContentPage
+	public partial class TabOneDetail : BaseView
 	{
-		public tab1detail ()
+		public TabOneDetail ()
 		{
-			//InitializeComponent ();
+			InitializeComponent ();
 		}
 
 		public void messageBtnClicked(object sender, EventArgs e){

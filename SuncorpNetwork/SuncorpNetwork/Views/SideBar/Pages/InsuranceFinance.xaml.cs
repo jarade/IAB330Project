@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace SuncorpNetwork
 {
-	public partial class InsuranceFinance : ContentPage{
+	public partial class InsuranceFinance : BaseView{
 
 		public void tab1(object sender, EventArgs e){
 		
-			switchPage (new tab1detail ());
+			switchPage (new TabOneDetail ());
 		}
 
 		public InsuranceFinance ()

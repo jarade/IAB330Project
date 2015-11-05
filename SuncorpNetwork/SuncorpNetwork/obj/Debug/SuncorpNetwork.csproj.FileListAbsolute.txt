@@ -46,3 +46,4 @@ D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\F
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.dll
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.pdb
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Project.xaml.g.cs
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\TabOneDetail.xaml.g.cs

@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Droid\SuncorpNetwork.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Jelly Bean) Food" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\SideBar\Pages\tab1detail.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuncorpNetwork\Views\SideBar\Pages\InsuranceFinance.xaml.cs">
     <Files>
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Searching_Business.xaml.cs" Line="11" Column="10" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\tab1detail.xaml" Line="101" Column="28" />
-      <File FileName="SuncorpNetwork\Views\SideBar\Pages\Contact_Us.xaml" Line="1" Column="1" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\TabOneDetail.xaml" Line="51" Column="98" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\TabOneDetail.xaml.cs" Line="43" Column="4" />
+      <File FileName="SuncorpNetwork\Views\SideBar\Pages\InsuranceFinance.xaml.cs" Line="8" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

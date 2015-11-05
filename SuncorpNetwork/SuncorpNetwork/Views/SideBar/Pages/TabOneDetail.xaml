@@ -1,16 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
-xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-x:Class="SuncorpNetwork.tab1detail">
+<BaseView 
+			xmlns="http://xamarin.com/schemas/2014/forms" 
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			x:Class="SuncorpNetwork.TabOneDetail">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height = "9*"/>
 			<RowDefinition Height = "1.2*"/>
 		</Grid.RowDefinitions>
 
-		<Label Grid.Row = 0
-				Text = "Life insurance is designed to provide your family with financial security if you die or a diagnosed with a terminal illness. The lump sum that is paid out can give your family the security and freedom to make choices about their future. 
+
+				<Label Grid.Row = "0"
+                   			 Font = "Large"
+                    		VerticalOptions = "CenterAndExpand"
+                   			 HorizontalOptions = "CenterAndExpand"
+				>
+				<Label.Text>
+				Life insurance is designed to provide your family with financial security if you die or a diagnosed with a terminal illness. The lump sum that is paid out can give your family the security and freedom to make choices about their future. 
 
 How much is enough?
 
@@ -41,14 +47,13 @@ To find out more about life insurance from the Suncorp Group, please read our As
 
  
 
-This information is general advice and doesn't take into account your objectives, financial situation or needs. You should consider the Product Disclosure Statement and consider obtaining financial advice before making any decision about this product. This product is jointly issued by Suncorp Life & Superannuation Limited ABN 87 073 979 530 AFSL 229880 and Suncorp Portfolio Services Limited ABN 61 063 427 958 AFSL 237905 RSE L0002059. This product is not a bank deposit or other bank liability. Financial product advice is provided by representatives of Suncorp Financial Services Pty Limited ABN 50 010 844 621 AFSL 229885. Products and services are provided by different entities in the Suncorp Group and each entity is not responsible for, does not guarantee and is not liable in any respect for products or services of other Suncorp entities.",
-                    Font = "Large"
-                    VerticalOptions = "CenterAndExpand"
-                    HorizontalOptions = "CenterAndExpand"
- />
-					<!-- Footer Start -->
+This information is general advice and doesn't take into account your objectives, financial situation or needs. You should consider the Product Disclosure Statement and consider obtaining financial advice
+before making any decision about this product. This product is jointly issued by Suncorp Life and Superannuation Limited ABN 87 073 979 530 AFSL 229880 and Suncorp Portfolio Services Limited ABN 61 063 427 958 AFSL 237905 RSE L0002059. This product is not a bank deposit or other bank liability. Financial product advice is provided by representatives of Suncorp Financial Services Pty Limited ABN 50 010 844 621 AFSL 229885. Products and services are provided by different entities in the Suncorp Group and each entity is not responsible for, does not guarantee and is not liable in any respect for products or services of other Suncorp entities.
+				</Label.Text>
+				</Label>
+		<!-- Footer Start -->
 				<Frame 
-						Grid.Row = "2"
+						Grid.Row = "1"
 						Padding = "15,0,15,0"
 						BackgroundColor = "#007064"
 						OutlineColor = "Transparent"
@@ -103,5 +108,5 @@ This information is general advice and doesn't take into account your objectives
 					</StackLayout>
 				</Frame>
 			<!-- Footer End -->
-		</Grid>
-</ContentPage>
+	</Grid>
+</BaseView>

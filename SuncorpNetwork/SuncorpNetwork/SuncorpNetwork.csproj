@@ -94,12 +94,11 @@
     <Compile Include="Views\SideBar\Pages\Forum1CreatePost.xaml.cs">
       <DependentUpon>Forum1CreatePost.xaml</DependentUpon>
     </Compile>
-    <None Include="Views\SideBar\Pages\tab1detail.xaml" />
-    <Compile Include="Views\SideBar\Pages\tab1detail.xaml.cs">
-      <DependentUpon>tab1detail.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\MainPages\SubPages\Project.xaml.cs">
       <DependentUpon>Project.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\TabOneDetail.xaml.cs">
+      <DependentUpon>TabOneDetail.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -207,6 +206,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainPages\SubPages\Project.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\TabOneDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
