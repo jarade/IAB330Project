@@ -20,13 +20,13 @@ namespace SuncorpNetwork {
         
         private Image profile_pic;
         
-        private Button MsgBtn;
+        private StackLayout History1;
         
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(PersonalProfile));
             Content = this.FindByName<StackLayout>("Content");
             profile_pic = this.FindByName<Image>("profile_pic");
-            MsgBtn = this.FindByName<Button>("MsgBtn");
+            History1 = this.FindByName<StackLayout>("History1");
         }
     }
 }

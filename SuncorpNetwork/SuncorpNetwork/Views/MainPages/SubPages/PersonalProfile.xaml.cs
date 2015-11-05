@@ -22,7 +22,7 @@ namespace SuncorpNetwork
 
 			//TheDetails.FirstName = item.FirstName;
 			//profilePic.Source = "images.jpg"//TheDetails.ProfilePic,
-
+			item.Availability_2 = "Busy";
 			item.Pros = "Xamarin,IOS Development, Android Development";
 			item.Overview = "I develop cross-platform mobile apps including games for iOS, Android & Windows platforms. I know everything about mobile development including adnetworks integration, in-app purchases on every platform, social functionality (login/sharing etc), cross-platform back-end services like Parse. oDesk has recognized me as one of their top Mobile Developers. See the badge on the right of my profile for more information ";
 
@@ -37,9 +37,21 @@ namespace SuncorpNetwork
 
 			Content.Children.Insert (0, pic);
 
-			if (((App)Application.Current).UserEmail == item.Email) {
-				MsgBtn.IsVisible = false;
-			}
+			var pic2 = new RoundedBoxView(){
+				WidthRequest = 45,
+				HeightRequest = 45,
+				HorizontalOptions = LayoutOptions.Center,
+			};
+			pic2.Source = ImageSource.FromFile("xen.jpg");
+
+			History1.Children.Insert (0, pic2);
+
+
+		}
+
+		public void EditBtn(object sender, EventArgs e){
+			// Navigate to the Page.
+			switchPage(new EditProfile ());
 		}
 
 		public void messageBtnClicked(object sender, EventArgs e){

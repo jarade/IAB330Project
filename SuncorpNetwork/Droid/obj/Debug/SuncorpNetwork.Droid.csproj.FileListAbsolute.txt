@@ -91,5 +91,6 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\xen.jpg
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\gears12.png
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\computer12.png
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\profile_pic1.jpg
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\R.cs.flag
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\uploadflags.txt

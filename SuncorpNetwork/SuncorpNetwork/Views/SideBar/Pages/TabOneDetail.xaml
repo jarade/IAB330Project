@@ -1,0 +1,222 @@
+<<<<<<< HEAD:SuncorpNetwork/SuncorpNetwork/Views/SideBar/Pages/tab1detail.xaml
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="SuncorpNetwork.tab1detail">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "9*"/>
+			<RowDefinition Height = "1.2*"/>
+		</Grid.RowDefinitions>
+
+		<Label Grid.Row = 0
+				Text = "Life insurance is designed to provide your family with financial security if you die or a diagnosed with a terminal illness. The lump sum that is paid out can give your family the security and freedom to make choices about their future. 
+
+How much is enough?
+
+While most people have some level of life insurance within their super fund, often it’s not enough. Likewise, insurance you bought years ago may no longer meet your needs, particularly if you’ve had major life changes such as a new job, new house or you’ve had a child.
+
+How much life insurance you’ll need depends largely on your personal situation. In most cases you should select an amount of cover that can help your family:
+
+Pay off the mortgage and other debts
+Meet ongoing household expenses
+Pay for your children’s education
+Pay for extra child care or home services
+Cover the cost of funeral expenses
+To discuss the level of life insurance that’s right for you, make an appointment with a Suncorp Financial Adviser.
+
+What does it cost?
+
+The cost of life insurance varies based on a range of factors including your age, gender, and the amount of cover you require. As an example, for the equivalent of $1.96 a day a 40 year old non-smoking man could buy a policy that pays a benefit of around $1.13 million*.
+
+* Based on an Asteron Life Complete policy for a non-smoking man age 40, with premiums paid annually.
+
+Life insurance from Suncorp
+
+Suncorp Financial Advisers can work with you to determine an appropriate level of cover for your needs. And because we undertake an assessment of your current situation and medical history, the insurance you’ll receive is likely to be more relevant and cost-effective.
+
+You can also access optional benefits including Total and Permanent Disablement (TPD) Cover and Child Cover.  To discuss your own insurance needs, make a no-obligation appointment with a Suncorp Financial Adviser.
+
+To find out more about life insurance from the Suncorp Group, please read our Asteron Life Complete Product Disclosure Statement.
+
+ 
+
+This information is general advice and doesn't take into account your objectives, financial situation or needs. You should consider the Product Disclosure Statement and consider obtaining financial advice before making any decision about this product. This product is jointly issued by Suncorp Life & Superannuation Limited ABN 87 073 979 530 AFSL 229880 and Suncorp Portfolio Services Limited ABN 61 063 427 958 AFSL 237905 RSE L0002059. This product is not a bank deposit or other bank liability. Financial product advice is provided by representatives of Suncorp Financial Services Pty Limited ABN 50 010 844 621 AFSL 229885. Products and services are provided by different entities in the Suncorp Group and each entity is not responsible for, does not guarantee and is not liable in any respect for products or services of other Suncorp entities.",
+                    Font = "Large"
+                    VerticalOptions = "CenterAndExpand"
+                    HorizontalOptions = "CenterAndExpand"
+ />
+					<!-- Footer Start -->
+				<Frame 
+						Grid.Row = "2"
+						Padding = "15,0,15,0"
+						BackgroundColor = "#007064"
+						OutlineColor = "Transparent"
+						HeightRequest = "50" 
+					>
+					<StackLayout  Padding = "15,0,15,0"
+								Orientation = "Horizontal"
+								HorizontalOptions = "Center"
+								VerticalOptions = "Center"
+								Spacing = "10"
+								>
+						
+						<Button 
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_chat_white_24dp.png"
+								Clicked = "messageBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_notifications_white_24dp.png"
+								Clicked = "alertBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_account_balance_white_24dp.png"
+								Clicked = "homeBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_add_circle_white_24dp.png"
+								Clicked = "addBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_account_circle_white_24dp.png"
+								Clicked = "profileBtnClicked"
+								WidthRequest = "50"
+							/>
+					</StackLayout>
+				</Frame>
+			<!-- Footer End -->
+		</Grid>
+</ContentPage>
+=======
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BaseView 
+			xmlns="http://xamarin.com/schemas/2014/forms" 
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			x:Class="SuncorpNetwork.TabOneDetail">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "9*"/>
+			<RowDefinition Height = "1.2*"/>
+		</Grid.RowDefinitions>
+
+
+				<Label Grid.Row = "0"
+                   			 Font = "Large"
+                    		VerticalOptions = "CenterAndExpand"
+                   			 HorizontalOptions = "CenterAndExpand"
+				>
+				<Label.Text>
+				Life insurance is designed to provide your family with financial security if you die or a diagnosed with a terminal illness. The lump sum that is paid out can give your family the security and freedom to make choices about their future. 
+
+How much is enough?
+
+While most people have some level of life insurance within their super fund, often it’s not enough. Likewise, insurance you bought years ago may no longer meet your needs, particularly if you’ve had major life changes such as a new job, new house or you’ve had a child.
+
+How much life insurance you’ll need depends largely on your personal situation. In most cases you should select an amount of cover that can help your family:
+
+Pay off the mortgage and other debts
+Meet ongoing household expenses
+Pay for your children’s education
+Pay for extra child care or home services
+Cover the cost of funeral expenses
+To discuss the level of life insurance that’s right for you, make an appointment with a Suncorp Financial Adviser.
+
+What does it cost?
+
+The cost of life insurance varies based on a range of factors including your age, gender, and the amount of cover you require. As an example, for the equivalent of $1.96 a day a 40 year old non-smoking man could buy a policy that pays a benefit of around $1.13 million*.
+
+* Based on an Asteron Life Complete policy for a non-smoking man age 40, with premiums paid annually.
+
+Life insurance from Suncorp
+
+Suncorp Financial Advisers can work with you to determine an appropriate level of cover for your needs. And because we undertake an assessment of your current situation and medical history, the insurance you’ll receive is likely to be more relevant and cost-effective.
+
+You can also access optional benefits including Total and Permanent Disablement (TPD) Cover and Child Cover.  To discuss your own insurance needs, make a no-obligation appointment with a Suncorp Financial Adviser.
+
+To find out more about life insurance from the Suncorp Group, please read our Asteron Life Complete Product Disclosure Statement.
+
+ 
+
+This information is general advice and doesn't take into account your objectives, financial situation or needs. You should consider the Product Disclosure Statement and consider obtaining financial advice
+before making any decision about this product. This product is jointly issued by Suncorp Life and Superannuation Limited ABN 87 073 979 530 AFSL 229880 and Suncorp Portfolio Services Limited ABN 61 063 427 958 AFSL 237905 RSE L0002059. This product is not a bank deposit or other bank liability. Financial product advice is provided by representatives of Suncorp Financial Services Pty Limited ABN 50 010 844 621 AFSL 229885. Products and services are provided by different entities in the Suncorp Group and each entity is not responsible for, does not guarantee and is not liable in any respect for products or services of other Suncorp entities.
+				</Label.Text>
+				</Label>
+		<!-- Footer Start -->
+				<Frame 
+						Grid.Row = "1"
+						Padding = "15,0,15,0"
+						BackgroundColor = "#007064"
+						OutlineColor = "Transparent"
+						HeightRequest = "50" 
+					>
+					<StackLayout  Padding = "15,0,15,0"
+								Orientation = "Horizontal"
+								HorizontalOptions = "Center"
+								VerticalOptions = "Center"
+								Spacing = "10"
+								>
+						
+						<Button 
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_chat_white_24dp.png"
+								Clicked = "messageBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_notifications_white_24dp.png"
+								Clicked = "alertBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_account_balance_white_24dp.png"
+								Clicked = "homeBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_add_circle_white_24dp.png"
+								Clicked = "addBtnClicked"
+								WidthRequest = "50"
+							/>
+
+						<Button
+								Scale = "1.5"
+								BackgroundColor = "Transparent"
+								Image = "ic_account_circle_white_24dp.png"
+								Clicked = "profileBtnClicked"
+								WidthRequest = "50"
+							/>
+					</StackLayout>
+				</Frame>
+			<!-- Footer End -->
+	</Grid>
+</BaseView>
+>>>>>>> origin/master:SuncorpNetwork/SuncorpNetwork/Views/SideBar/Pages/TabOneDetail.xaml

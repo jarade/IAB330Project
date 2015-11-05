@@ -45,5 +45,7 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\D
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Forum1Content.xaml.g.cs
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Forum1.xaml.g.cs
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Forum1CreatePost.xaml.g.cs
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\EditProfile.xaml.g.cs
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\OthersProfile.xaml.g.cs
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.dll
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\SuncorpNetwork.pdb
