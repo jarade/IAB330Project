@@ -17,6 +17,8 @@ D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\F
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Forum1CreatePost.xaml.g.cs
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Project.xaml.g.cs
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\TabOneDetail.xaml.g.cs
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\OtherProfile.xaml.g.cs
+D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\obj\Debug\Edit_Profile.xaml.g.cs
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\SuncorpNetwork.dll
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\SuncorpNetwork.pdb
 D:\IAB330\SuncorpNetwork\IAB330Project\SuncorpNetwork\SuncorpNetwork\bin\Debug\GalaSoft.MvvmLight.dll

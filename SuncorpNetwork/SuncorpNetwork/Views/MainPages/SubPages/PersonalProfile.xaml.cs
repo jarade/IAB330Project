@@ -51,7 +51,7 @@ namespace SuncorpNetwork
 
 		public void EditBtn(object sender, EventArgs e){
 			// Navigate to the Page.
-			switchPage(new EditProfile ());
+			switchPage(new Edit_Profile ());
 		}
 
 		public void messageBtnClicked(object sender, EventArgs e){
