@@ -13,6 +13,7 @@ namespace SuncorpNetwork
 		{
 			menuPage = new MenuPage ();
 			menuPage.BackgroundColor = Color.FromHex("#007064");
+			menuPage.Icon = "menu.png";
 
 			menuPage.Menu.ItemSelected += (sender, e) => {
 				// Reset the colour of the list items

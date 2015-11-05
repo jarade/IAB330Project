@@ -30,7 +30,7 @@
 							WidthRequest = "150"
 						/>
 				</StackLayout>
-	<StackLayout Orientation="Horizontal" Spacing="20">
+				<StackLayout Orientation="Horizontal" Spacing="20">
 					<Label 
 							Text ="Last Name:" 
 							TextColor = "White"
@@ -49,7 +49,7 @@
 
 				<StackLayout Orientation="Horizontal" Spacing="20">
 					<Label 
-							Text ="Email:\t" 
+							Text ="Email:		" 
 							TextColor = "White"
 							FontSize = "14" 
 							VerticalOptions = "Center"
@@ -62,7 +62,7 @@
 							WidthRequest = "150"
 						/>
 				</StackLayout>
-					<StackLayout Orientation="Horizontal" Spacing="20">
+				<StackLayout Orientation="Horizontal" Spacing="20">
 						<Label 
 								Text ="Password:" 
 								TextColor = "White"
@@ -75,9 +75,7 @@
 								TextColor = "Black"
 								WidthRequest = "150"
 							/>
-					</StackLayout>
->>>>>>> origin/master
-
+				</StackLayout>
 					<StackLayout Orientation="Horizontal" Spacing="20">
 						<Label 
 								Text ="Confirmation:" 

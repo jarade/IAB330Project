@@ -16,6 +16,9 @@ namespace SearchBoxRecipe
 
 		public double Longitude { get; set; }
 
+		private Color textColour = Color.White;
+		public Color TextColour { get{ return textColour; } set{ textColour = value; } }
+
 		public Location (string title, string subtitle)
 		{
 			this.Title = title;

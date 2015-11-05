@@ -2,7 +2,11 @@
 <BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Forum1Content" BackgroundColor= "#0DA195">
 	<Grid>
 		<Grid.RowDefinitions>
+<<<<<<< HEAD
 			<RowDefinition Height = "9*"/>
+=======
+			<RowDefinition Height = "8*"/>
+>>>>>>> origin/master
 			<RowDefinition Height = "1.2*"/>
 		</Grid.RowDefinitions>
 <!--Forum posts start-->
@@ -11,6 +15,7 @@
 			</StackLayout>
 	</ScrollView>
 <!--Forum posts End-->
+<<<<<<< HEAD
 <!--Footer start-->
 
 	<Frame 
@@ -34,40 +39,64 @@
 										Clicked = "messageBtnClicked"
 										WidthRequest = "50"
 									/>
+=======
+		<!-- Footer Start -->
+		<Frame 
+				Grid.Row = "1"
+				Padding = "15,0,15,0"
+				BackgroundColor = "#007064"
+				OutlineColor = "Transparent"
+				HeightRequest = "50" 
+			>
+			<StackLayout  Padding = "15,0,15,0"
+						Orientation = "Horizontal"
+						HorizontalOptions = "Center"
+						VerticalOptions = "Center"
+						Spacing = "10"
+						>
+				
+				<Button 
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_chat_white_24dp.png"
+						Clicked = "messageBtnClicked"
+						WidthRequest = "50"
+					/>
+>>>>>>> origin/master
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_notifications_white_24dp.png"
-										Clicked = "alertBtnClicked"
-										WidthRequest = "50"
-									/>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_notifications_white_24dp.png"
+						Clicked = "alertBtnClicked"
+						WidthRequest = "50"
+					/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_account_balance_white_24dp.png"
-										Clicked = "homeBtnClicked"
-										WidthRequest = "50"
-									/>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_account_balance_white_24dp.png"
+						Clicked = "homeBtnClicked"
+						WidthRequest = "50"
+					/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_add_circle_white_24dp.png"
-										Clicked = "addBtnClicked"
-										WidthRequest = "50"
-									/>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_add_circle_white_24dp.png"
+						Clicked = "addBtnClicked"
+						WidthRequest = "50"
+					/>
 
-								<Button
-										Scale = "1.5"
-										BackgroundColor = "Transparent"
-										Image = "ic_account_circle_white_24dp.png"
-										Clicked = "profileBtnClicked"
-										WidthRequest = "50"
-									/>
-							</StackLayout>
-						</Frame>
-					<!-- Footer End -->
-				</Grid>
+				<Button
+						Scale = "1.5"
+						BackgroundColor = "Transparent"
+						Image = "ic_account_circle_white_24dp.png"
+						Clicked = "profileBtnClicked"
+						WidthRequest = "50"
+					/>
+			</StackLayout>
+		</Frame>
+		<!-- Footer End -->
+	</Grid>
 </BaseView>

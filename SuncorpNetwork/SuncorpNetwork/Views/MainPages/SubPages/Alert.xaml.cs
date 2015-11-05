@@ -61,7 +61,7 @@ namespace SuncorpNetwork
 		 **/
 		private void tappedSelection(object sender, ItemTappedEventArgs e){
 			((Notification)e.Item).HasRead = true;
-			((Notification)e.Item).Source = "profile_filler.png";
+			((Notification)e.Item).Source = "read.png";
 			var notiDB = new NotificationsTable ();
 			notiDB.InsertOrUpdate ((Notification)e.Item);
 

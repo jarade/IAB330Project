@@ -34,6 +34,23 @@ namespace SuncorpNetwork.Data
 			return items;
 		}
 
+		public ProjectDetails GetItemWithId(int id){
+			try{
+				var items = database.Table<ProjectDetails> ().Where (
+					x => x.id == id);
+				if(items.Count() == 1){
+					List<ProjectDetails> item = items.ToList();
+					return item.First();
+				}else{
+					Debug.WriteLine("\nError: There doesn't exist a project or there are too many projects with this id (id == primary key so it will be the first one)");
+					return null;
+				}
+			}catch(Exception e){
+				Debug.WriteLine("\nException: " + e.ToString());
+				return null;
+			}
+		}
+
 		public List<ProjectDetails> GetItemsWithTags(List<string> tags){
 			try{
 				var items = database.Table<ProjectDetails> ().ToList<ProjectDetails> ();

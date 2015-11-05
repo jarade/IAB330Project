@@ -5,25 +5,16 @@ using Xamarin.Forms;
 
 namespace SuncorpNetwork
 {
-	public partial class InsuranceFinance : ContentPage{
+	public partial class InsuranceFinance : BaseView{
+
+		public void tab1(object sender, EventArgs e){
+		
+			switchPage (new TabOneDetail ());
+		}
 
 		public InsuranceFinance ()
 		{
-			InitializeComponent ();			
-
-			StackLayout layout = new StackLayout(){
-				Spacing = 20,
-				Padding = 20,
-			};
-
-			var photo = new RoundedBoxView(){
-				WidthRequest = 100,
-				HeightRequest = 100,
-				HorizontalOptions = LayoutOptions.Center,
-			};
-			photo.Source = ImageSource.FromFile("images.jpg");
-			layout.Children.Add(photo);
-			this.Content = layout;
+			InitializeComponent ();
 		}
 
 		public void messageBtnClicked(object sender, EventArgs e){

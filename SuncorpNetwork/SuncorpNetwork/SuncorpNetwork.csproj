@@ -94,11 +94,19 @@
     <Compile Include="Views\SideBar\Pages\Forum1CreatePost.xaml.cs">
       <DependentUpon>Forum1CreatePost.xaml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Views\MainPages\SubPages\EditProfile.xaml.cs">
       <DependentUpon>EditProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPages\SubPages\OthersProfile.xaml.cs">
       <DependentUpon>OthersProfile.xaml</DependentUpon>
+=======
+    <Compile Include="Views\MainPages\SubPages\Project.xaml.cs">
+      <DependentUpon>Project.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SideBar\Pages\TabOneDetail.xaml.cs">
+      <DependentUpon>TabOneDetail.xaml</DependentUpon>
+>>>>>>> origin/master
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -205,10 +213,17 @@
     <EmbeddedResource Include="Views\SideBar\Pages\Forum1CreatePost.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Views\MainPages\SubPages\EditProfile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainPages\SubPages\OthersProfile.xaml">
+=======
+    <EmbeddedResource Include="Views\MainPages\SubPages\Project.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SideBar\Pages\TabOneDetail.xaml">
+>>>>>>> origin/master
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

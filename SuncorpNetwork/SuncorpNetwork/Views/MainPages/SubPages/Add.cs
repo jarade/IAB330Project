@@ -338,7 +338,7 @@ namespace SuncorpNetwork
 						PersonalDetails pd = personalInfo.GetDetails (((App)Application.Current).UserEmail);
 
 						// Create the project table
-						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, Title, Details, Expertise, tags, ((App)Application.Current).UserEmail);
+						ProjectDetails newProject = new ProjectDetails (pd.FirstName, pd.LastName, ProjectTitle, Details, Expertise, tags, ((App)Application.Current).UserEmail);
 						var database = new ProjectDetailsDatabase ();
 						database.InsertOrUpdateProject (newProject);
 
@@ -352,7 +352,7 @@ namespace SuncorpNetwork
 							HasRead = false,
 							TimeStamp = DateTime.UtcNow,
 							Type = "Project",
-							Source = "icon.png",
+							Source = "unread.png",
 							CompositePrimaryKey = ((App)Application.Current).UserEmail + ProjectTitle,
 						};
 
@@ -506,11 +506,12 @@ namespace SuncorpNetwork
 
 			StackLayout imageStack = new StackLayout {
 				Orientation = StackOrientation.Horizontal,
-				Padding = new Thickness(10)
+				Padding = new Thickness(10),
+				Spacing = 20
 			};
 
 			Label imageLabel = new Label {
-				Text = "Logo:\t\t",
+				Text = "Logo:",
 				TextColor = Color.White,
 				FontSize = 16
 			};
@@ -518,7 +519,7 @@ namespace SuncorpNetwork
 			Button imageSelector = new Button {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				WidthRequest = 280,
+				WidthRequest = 250,
 				HeightRequest = 40,
 				Text = "Select Image"
 			};
@@ -558,7 +559,7 @@ namespace SuncorpNetwork
 			Entry emailEntry = new Entry {
 				BackgroundColor = Color.White,
 				TextColor = Color.Black,
-				WidthRequest = 280
+				WidthRequest = 250
 			};
 
 			emailEntry.TextChanged += (object sender, TextChangedEventArgs e) => {
