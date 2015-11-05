@@ -34,17 +34,6 @@ namespace SuncorpNetworkService
     {
         protected override void Seed(SuncorpNetworkContext context)
         {
-            List<ProjectDetails> projectDetails = new List<ProjectDetails>
-            {
-                new ProjectDetails { Id = Guid.NewGuid().ToString(), FirstName = "First item", LastName = "Last" },
-                new ProjectDetails { Id = Guid.NewGuid().ToString(), FirstName = "Second item", LastName = "Last" },
-            };
-
-            foreach (ProjectDetails todoItem in projectDetails)
-            {
-                context.Set<ProjectDetails>().Add(todoItem);
-            }
-
             base.Seed(context);
         }
     }

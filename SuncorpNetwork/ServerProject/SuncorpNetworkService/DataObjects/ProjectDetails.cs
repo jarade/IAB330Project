@@ -32,5 +32,8 @@ namespace SuncorpNetworkService.DataObjects
         public string HasTags {
             get; set;
         }
+        public string PosterEmail {
+            get; set;
+        }
     }
 }
