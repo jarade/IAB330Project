@@ -88,5 +88,8 @@ C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\suncorp_transparent.png
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\suncorp_transparent2.png
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\menu.png
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\xen.jpg
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\gears12.png
+C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\res\drawable\computer12.png
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\R.cs.flag
 C:\Users\User\Documents\GitHub\IAB330Project\SuncorpNetwork\Droid\obj\Debug\uploadflags.txt

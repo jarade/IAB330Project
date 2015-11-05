@@ -19,7 +19,7 @@
 										Orientation = "Horizontal"
 										HorizontalOptions = "Start"
 										VerticalOptions ="Start"
-										Spacing = "120"
+										Spacing = "80"
 										>
 
 								<StackLayout  
@@ -30,34 +30,34 @@
 
 								<Button 
 										BackgroundColor = "Transparent"
-										Scale = "2"
-										Image = "ic_chat_white_24dp.png"
+										Scale = "0.5"
+										Image = "computer12.png"
 										Clicked = "Subforum1Clicked"
-										WidthRequest = "50"
+										WidthRequest = "75"
 									/> 
-									<Label Text = "Forum1"
+									<Label Text = "Computing Forum"
 									FontSize = "Small"
 									TextColor = "Black"
 									HorizontalOptions = "CenterAndExpand"
 					
-									WidthRequest = "50" /> </StackLayout>
+									 /> </StackLayout>
 								<StackLayout  
 										Orientation = "Vertical"
 										Spacing = "5"
 										>
 								<Button 
 										BackgroundColor = "Transparent"
-										Scale = "2"
-										Image = "ic_notifications_white_24dp.png"
+										Scale = "0.5"
+										Image = "gears12.png"
 										Clicked = "Subforum1Clicked"
-										WidthRequest = "50"
+										WidthRequest = "75"
 									/> 
-									<Label Text = "Forum2"
+									<Label Text = "Engineering Forum"
 									FontSize = "Small"
 									TextColor = "Black"
 									HorizontalOptions = "CenterAndExpand"
 					
-									WidthRequest = "50" /> </StackLayout>
+									 /> </StackLayout>
 
 
 									   </StackLayout>

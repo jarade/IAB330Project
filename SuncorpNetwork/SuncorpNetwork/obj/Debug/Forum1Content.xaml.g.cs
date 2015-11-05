@@ -16,8 +16,11 @@ namespace SuncorpNetwork {
     
     public partial class Forum1Content : BaseView {
         
+        private StackLayout Content;
+        
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Forum1Content));
+            Content = this.FindByName<StackLayout>("Content");
         }
     }
 }

@@ -2,33 +2,19 @@
 <BaseView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuncorpNetwork.Forum1Content" BackgroundColor= "#0DA195">
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height = "8*"/>
-			<RowDefinition Height = "1*"/>
+			<RowDefinition Height = "9*"/>
 			<RowDefinition Height = "1.2*"/>
 		</Grid.RowDefinitions>
 <!--Forum posts start-->
 	<ScrollView> 
-		<StackLayout Padding="30" 	Grid.Row = "0">
-			<Label Text = "Content" FontSize="Large" FontAttributes= "Bold" />
-				<StackLayout Padding = "10">
-					<Label Text="{Binding Forum1Content}" FontSize="18" TextColor="White" FontAttributes = "Bold" />
-				</StackLayout>
+		<StackLayout x:Name="Content" Padding = "20" Spacing = "155" Orientation = "Vertical">
 			</StackLayout>
 	</ScrollView>
 <!--Forum posts End-->
 <!--Footer start-->
-	<StackLayout  						Grid.Row = "1"
-										HorizontalOptions = "End"
-										VerticalOptions = "Center"
-										>
-				<Button 
-										Scale = "1"
-										Text = "Create a new post"
-										HorizontalOptions = "FillAndExpand"
-										/>
-									</StackLayout>
+
 	<Frame 
-								Grid.Row = "2"
+								Grid.Row = "1"
 								Padding = "15,0,15,0"
 								BackgroundColor = "#007064"
 								OutlineColor = "Transparent"
